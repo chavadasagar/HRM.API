@@ -1,0 +1,9 @@
+23:11 23-12-2023
+----------------------------
+- Rename project (HRM.API)
+- Remobe some unnecessary module
+- Add Country State City json file and create seeder and configure with json file
+- Create migration 
+- Add git to manage code
+
+Next : Design employee table design
