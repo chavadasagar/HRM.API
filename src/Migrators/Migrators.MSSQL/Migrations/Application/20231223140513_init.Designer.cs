@@ -9,11 +9,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace Migrators.MSSQL.Migrations.Application
+namespace Migrators.MSSQL.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220524074146_migrations_24052022_5")]
-    partial class migrations_24052022_5
+    [Migration("20231223140513_init")]
+    partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -1004,8 +1004,8 @@ namespace Migrators.MSSQL.Migrations.Application
                     b.Property<decimal?>("TotalDiscount")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<long>("TotalQuantity")
-                        .HasColumnType("bigint");
+                    b.Property<decimal>("TotalQuantity")
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<decimal>("TotalTax")
                         .HasColumnType("decimal(18,2)");
@@ -1247,8 +1247,8 @@ namespace Migrators.MSSQL.Migrations.Application
                     b.Property<decimal?>("TotalDiscount")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<long>("TotalQuantity")
-                        .HasColumnType("bigint");
+                    b.Property<decimal>("TotalQuantity")
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<decimal>("TotalTax")
                         .HasColumnType("decimal(18,2)");
