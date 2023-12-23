@@ -1,0 +1,1 @@
+﻿global using HRM.API.Domain.Common.Contracts;

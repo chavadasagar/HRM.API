@@ -1,0 +1,10 @@
+{
+  "MailSettings": {
+    "DisplayName": "Ace Infoway Pvt. Ltd.",
+    "From": "animesh@aceinfoway.com",
+    "Host": "secure.emailsrvr.com",
+    "Password": "V5WqU*DE9#J4vda",
+    "Port": 587,
+    "UserName": "animesh@aceinfoway.com"
+  }
+}

@@ -1,0 +1,6 @@
+﻿namespace HRM.API.Application.Configuration;
+public class ConfigurationUpdateRequest
+{
+    public Guid Id { get; set; }
+    public string ConfigValue { get; set; } = default!;
+}
