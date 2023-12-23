@@ -1,5 +1,3 @@
-using HRM.API.Domain.Inventory;
-
 namespace HRM.API.Domain.Catalog;
 
 public class Product : AuditableEntity, IAggregateRoot
@@ -27,9 +25,6 @@ public class Product : AuditableEntity, IAggregateRoot
     public bool IsActive { get; private set; }
     public virtual Brand Brand { get; private set; } = default!;
     public virtual Category Category { get; private set; } = default!;
-    public virtual Unit Unit { get; private set; } = default!;
-    public List<PurchaseProduct>? PurchaseProducts { get; set; }
-    public List<PurchaseReturnProduct>? PurchaseReturnProducts { get; set; }
 
     public Product(string name, long pCode, string code, Guid brandId, Guid categoryId, Guid unitId, string? sKU, string? hSN, long? alertQuantity, string? barcode, string? description, decimal basePrice, decimal cGST, decimal sGST, decimal purchasePrice, short taxType, decimal profitMargin, decimal profitMarginAmount, decimal salesPrice, string? imagePath, bool isActive)
     {

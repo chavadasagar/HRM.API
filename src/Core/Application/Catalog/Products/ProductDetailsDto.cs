@@ -1,6 +1,4 @@
 using HRM.API.Application.Catalog.Brands;
-using HRM.API.Application.Catalog.Units;
-using HRM.API.Application.Inventory;
 
 namespace HRM.API.Application.Catalog.Products;
 
@@ -28,8 +26,5 @@ public class ProductDetailsDto : IDto
     public string? ImagePath { get; set; }
     public BrandDto Brand { get; set; } = default!;
     public CategoryDto Category { get; set; } = default!;
-    public UnitDto Unit { get; set; } = default!;
     public bool IsActive { get; set; }
-    public List<ProductByPurchaseProductDto>? PurchaseProducts { get; set; }
-    public List<ProductByPurchaseReturnProductDto>? PurchaseReturnProducts { get; set; }
 }

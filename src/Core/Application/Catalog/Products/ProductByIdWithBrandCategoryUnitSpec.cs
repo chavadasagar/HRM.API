@@ -6,6 +6,5 @@ public class ProductByIdWithBrandCategoryUnitSpec : Specification<Product, Produ
         Query
             .Where(p => p.Id == id)
             .Include(p => p.Brand)
-            .Include(p => p.Category)
-            .Include(p => p.Unit);
+            .Include(p => p.Category);
 }

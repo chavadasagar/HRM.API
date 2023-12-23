@@ -26,6 +26,4 @@ public class ProductDto : IDto
     public Guid UnitId { get; set; }
     public string UnitName { get; set; } = default!;
     public bool IsActive { get; set; }
-    public List<ProductByPurchaseProductDto>? PurchaseProducts { get; set; }
-    public List<ProductByPurchaseReturnProductDto>? PurchaseReturnProducts { get; set; }
 }

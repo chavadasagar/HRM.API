@@ -35,8 +35,6 @@ internal class ApplicationDbSeeder
     {
         await SeedRolesAsync(dbContext);
         await SeedCountryAsync(dbContext);
-        await SeedDefaultCustomerAsync(dbContext);
-        await SeedDefaultStoreAsync(dbContext);
         await SeedConfigurationAsync(dbContext);
         await SeedCompanyAsync(dbContext);
         await SeedAdminUserAsync();
@@ -133,41 +131,6 @@ internal class ApplicationDbSeeder
     //    }
     //}
 
-    private async Task SeedDefaultCustomerAsync(ApplicationDbContext dbContext)
-    {
-        if (string.IsNullOrWhiteSpace(_currentTenant.Id) || string.IsNullOrWhiteSpace(_currentTenant.AdminEmail))
-        {
-            return;
-        }
-
-        if (await dbContext.Customers.FirstOrDefaultAsync(u => u.IsPrimaryCustomer == true)
-            is not Customer customer && dbContext.Customers.Count() == 0)
-        {
-            customer = new Customer(name: MultitenancyConstants.DefaultCustomer, null, null, null, null, null, null, null, null, null, true);
-            customer.IsPrimaryCustomer = true;
-            await dbContext.Customers.AddAsync(customer);
-            await dbContext.SaveChangesAsync();
-            _logger.LogInformation("Seeding Default Customer for '{tenantId}' Tenant.", _currentTenant.Id);
-        }
-    }
-
-    private async Task SeedDefaultStoreAsync(ApplicationDbContext dbContext)
-    {
-        if (string.IsNullOrWhiteSpace(_currentTenant.Id) || string.IsNullOrWhiteSpace(_currentTenant.AdminEmail))
-        {
-            return;
-        }
-
-        if (await dbContext.Stores.FirstOrDefaultAsync(u => u.IsPrimaryStore == true)
-            is not Store store && dbContext.Stores.Count() == 0)
-        {
-            store = new Store(code: MultitenancyConstants.DefaultStoreCode, name: _currentTenant.Name, null, null, null, null, null, null, null, null, null, null, null, null, true, true);
-            store.IsPrimaryStore = true;
-            await dbContext.Stores.AddAsync(store);
-            await dbContext.SaveChangesAsync();
-            _logger.LogInformation("Seeding Default Store for '{tenantId}' Tenant.", _currentTenant.Id);
-        }
-    }
     private async Task SeedConfigurationAsync(ApplicationDbContext dbContext)
     {
         foreach (var key in HRMConfigurations.All)

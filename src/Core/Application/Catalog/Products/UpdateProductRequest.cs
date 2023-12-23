@@ -1,5 +1,4 @@
 using HRM.API.Domain.Common.Events;
-using HRM.API.Domain.Inventory;
 
 namespace HRM.API.Application.Catalog.Products;
 
@@ -31,20 +30,14 @@ public class UpdateProductRequest : IRequest<Guid>
 public class UpdateProductRequestHandler : IRequestHandler<UpdateProductRequest, Guid>
 {
     private readonly IRepository<Product> _repository;
-    private readonly IReadRepository<PurchaseProduct> _purchaseProductRepo;
     private readonly IStringLocalizer<UpdateProductRequestHandler> _localizer;
     private readonly IFileStorageService _file;
 
-    public UpdateProductRequestHandler(IRepository<Product> repository, IReadRepository<PurchaseProduct> purchaseProductRepo, IStringLocalizer<UpdateProductRequestHandler> localizer, IFileStorageService file) =>
-        (_repository, _purchaseProductRepo, _localizer, _file) = (repository, purchaseProductRepo, localizer, file);
+    public UpdateProductRequestHandler(IRepository<Product> repository,  IStringLocalizer<UpdateProductRequestHandler> localizer, IFileStorageService file) =>
+        (_repository,  _localizer, _file) = (repository, localizer, file);
 
     public async Task<Guid> Handle(UpdateProductRequest request, CancellationToken cancellationToken)
     {
-        if (request.IsActive == false && (await _purchaseProductRepo.AnyAsync(new PurchaseProductByProductSpec(request.Id), cancellationToken)))
-        {
-            throw new ConflictException(_localizer["product.cannotbeinactive"]);
-        }
-
         var product = await _repository.GetByIdAsync(request.Id, cancellationToken);
 
         _ = product ?? throw new NotFoundException(string.Format(_localizer["product.notfound"], request.Id));
