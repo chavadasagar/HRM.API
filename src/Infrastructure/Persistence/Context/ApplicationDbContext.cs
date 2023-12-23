@@ -26,7 +26,7 @@ public class ApplicationDbContext : BaseDbContext
     public DbSet<Counter> Counters => Set<Counter>();
     public DbSet<PaymentType> PaymentTypes => Set<PaymentType>();
     public DbSet<Country> Countries => Set<Country>();
-    public DbSet<State> States => Set<State>();
+    public DbSet<States> States => Set<States>();
     public DbSet<Customer> Customers => Set<Customer>();
     public DbSet<Company> Companies => Set<Company>();
     public DbSet<GeneralConfiguration> GeneralConfigurations => Set<GeneralConfiguration>();
@@ -43,6 +43,6 @@ public class ApplicationDbContext : BaseDbContext
     {
         base.OnModelCreating(modelBuilder);
 
-        modelBuilder.HasDefaultSchema(SchemaNames.MPOS);
+        modelBuilder.HasDefaultSchema(SchemaNames.HRM);
     }
 }

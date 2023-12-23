@@ -17,7 +17,7 @@ namespace Migrators.MSSQL.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasDefaultSchema("MPOS")
+                .HasDefaultSchema("HRM")
                 .HasAnnotation("ProductVersion", "6.0.2")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
@@ -69,7 +69,7 @@ namespace Migrators.MSSQL.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Brands", "MPOS");
+                    b.ToTable("Brands", "HRM");
 
                     b.HasAnnotation("Finbuckle:MultiTenant", true);
                 });
@@ -120,9 +120,53 @@ namespace Migrators.MSSQL.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Categories", "MPOS");
+                    b.ToTable("Categories", "HRM");
 
                     b.HasAnnotation("Finbuckle:MultiTenant", true);
+                });
+
+            modelBuilder.Entity("HRM.API.Domain.Catalog.Cities", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("CreatedBy")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid?>("DeletedBy")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime?>("DeletedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid>("LastModifiedBy")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime?>("LastModifiedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Latitude")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Longitude")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid?>("StatesId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("StatesId");
+
+                    b.ToTable("Cities", "HRM");
                 });
 
             modelBuilder.Entity("HRM.API.Domain.Catalog.Counter", b =>
@@ -175,7 +219,7 @@ namespace Migrators.MSSQL.Migrations
 
                     b.HasIndex("StoreId");
 
-                    b.ToTable("Counters", "MPOS");
+                    b.ToTable("Counters", "HRM");
 
                     b.HasAnnotation("Finbuckle:MultiTenant", true);
                 });
@@ -186,19 +230,38 @@ namespace Migrators.MSSQL.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
+                    b.Property<Guid>("CreatedBy")
+                        .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("NormalizedName")
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid?>("DeletedBy")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime?>("DeletedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid>("LastModifiedBy")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime?>("LastModifiedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Latitude")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Longitude")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Countries", "MPOS");
+                    b.ToTable("Countries", "HRM");
                 });
 
             modelBuilder.Entity("HRM.API.Domain.Catalog.PaymentType", b =>
@@ -246,7 +309,7 @@ namespace Migrators.MSSQL.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("PaymentTypes", "MPOS");
+                    b.ToTable("PaymentTypes", "HRM");
 
                     b.HasAnnotation("Finbuckle:MultiTenant", true);
                 });
@@ -358,26 +421,45 @@ namespace Migrators.MSSQL.Migrations
 
                     b.HasIndex("UnitId");
 
-                    b.ToTable("Products", "MPOS");
+                    b.ToTable("Products", "HRM");
 
                     b.HasAnnotation("Finbuckle:MultiTenant", true);
                 });
 
-            modelBuilder.Entity("HRM.API.Domain.Catalog.State", b =>
+            modelBuilder.Entity("HRM.API.Domain.Catalog.States", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("CountryId")
+                    b.Property<Guid?>("CountryId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
+                    b.Property<Guid>("CreatedBy")
+                        .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("NormalizedName")
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid?>("DeletedBy")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime?>("DeletedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid>("LastModifiedBy")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime?>("LastModifiedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Latitude")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Longitude")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
@@ -386,7 +468,7 @@ namespace Migrators.MSSQL.Migrations
 
                     b.HasIndex("CountryId");
 
-                    b.ToTable("States", "MPOS");
+                    b.ToTable("States", "HRM");
                 });
 
             modelBuilder.Entity("HRM.API.Domain.Catalog.Store", b =>
@@ -486,7 +568,7 @@ namespace Migrators.MSSQL.Migrations
 
                     b.HasIndex("StateId");
 
-                    b.ToTable("Stores", "MPOS");
+                    b.ToTable("Stores", "HRM");
 
                     b.HasAnnotation("Finbuckle:MultiTenant", true);
                 });
@@ -574,7 +656,7 @@ namespace Migrators.MSSQL.Migrations
 
                     b.HasIndex("StateId");
 
-                    b.ToTable("Suppliers", "MPOS");
+                    b.ToTable("Suppliers", "HRM");
 
                     b.HasAnnotation("Finbuckle:MultiTenant", true);
                 });
@@ -621,7 +703,7 @@ namespace Migrators.MSSQL.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Units", "MPOS");
+                    b.ToTable("Units", "HRM");
 
                     b.HasAnnotation("Finbuckle:MultiTenant", true);
                 });
@@ -728,7 +810,7 @@ namespace Migrators.MSSQL.Migrations
 
                     b.HasIndex("StateId");
 
-                    b.ToTable("Companies", "MPOS");
+                    b.ToTable("Companies", "HRM");
 
                     b.HasAnnotation("Finbuckle:MultiTenant", true);
                 });
@@ -782,7 +864,7 @@ namespace Migrators.MSSQL.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("GeneralConfigurations", "MPOS");
+                    b.ToTable("GeneralConfigurations", "HRM");
 
                     b.HasAnnotation("Finbuckle:MultiTenant", true);
                 });
@@ -866,7 +948,7 @@ namespace Migrators.MSSQL.Migrations
 
                     b.HasIndex("StateId");
 
-                    b.ToTable("Customers", "MPOS");
+                    b.ToTable("Customers", "HRM");
 
                     b.HasAnnotation("Finbuckle:MultiTenant", true);
                 });
@@ -917,7 +999,7 @@ namespace Migrators.MSSQL.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("ProductQuantities", "MPOS");
+                    b.ToTable("ProductQuantities", "HRM");
 
                     b.HasAnnotation("Finbuckle:MultiTenant", true);
                 });
@@ -1014,7 +1096,7 @@ namespace Migrators.MSSQL.Migrations
 
                     b.HasIndex("SupplierId");
 
-                    b.ToTable("Purchases", "MPOS");
+                    b.ToTable("Purchases", "HRM");
 
                     b.HasAnnotation("Finbuckle:MultiTenant", true);
                 });
@@ -1073,7 +1155,7 @@ namespace Migrators.MSSQL.Migrations
 
                     b.HasIndex("PurchaseId");
 
-                    b.ToTable("PurchasePayments", "MPOS");
+                    b.ToTable("PurchasePayments", "HRM");
 
                     b.HasAnnotation("Finbuckle:MultiTenant", true);
                 });
@@ -1156,7 +1238,7 @@ namespace Migrators.MSSQL.Migrations
 
                     b.HasIndex("PurchaseId");
 
-                    b.ToTable("PurchaseProducts", "MPOS");
+                    b.ToTable("PurchaseProducts", "HRM");
 
                     b.HasAnnotation("Finbuckle:MultiTenant", true);
                 });
@@ -1257,7 +1339,7 @@ namespace Migrators.MSSQL.Migrations
 
                     b.HasIndex("SupplierId");
 
-                    b.ToTable("PurchaseReturns", "MPOS");
+                    b.ToTable("PurchaseReturns", "HRM");
 
                     b.HasAnnotation("Finbuckle:MultiTenant", true);
                 });
@@ -1316,7 +1398,7 @@ namespace Migrators.MSSQL.Migrations
 
                     b.HasIndex("PurchaseReturnId");
 
-                    b.ToTable("PurchaseReturnPayments", "MPOS");
+                    b.ToTable("PurchaseReturnPayments", "HRM");
 
                     b.HasAnnotation("Finbuckle:MultiTenant", true);
                 });
@@ -1399,7 +1481,7 @@ namespace Migrators.MSSQL.Migrations
 
                     b.HasIndex("PurchaseReturnId");
 
-                    b.ToTable("PurchaseReturnProducts", "MPOS");
+                    b.ToTable("PurchaseReturnProducts", "HRM");
 
                     b.HasAnnotation("Finbuckle:MultiTenant", true);
                 });
@@ -1748,6 +1830,13 @@ namespace Migrators.MSSQL.Migrations
                     b.HasAnnotation("Finbuckle:MultiTenant", true);
                 });
 
+            modelBuilder.Entity("HRM.API.Domain.Catalog.Cities", b =>
+                {
+                    b.HasOne("HRM.API.Domain.Catalog.States", null)
+                        .WithMany("Cities")
+                        .HasForeignKey("StatesId");
+                });
+
             modelBuilder.Entity("HRM.API.Domain.Catalog.Counter", b =>
                 {
                     b.HasOne("HRM.API.Domain.Catalog.Store", "Store")
@@ -1786,15 +1875,11 @@ namespace Migrators.MSSQL.Migrations
                     b.Navigation("Unit");
                 });
 
-            modelBuilder.Entity("HRM.API.Domain.Catalog.State", b =>
+            modelBuilder.Entity("HRM.API.Domain.Catalog.States", b =>
                 {
-                    b.HasOne("HRM.API.Domain.Catalog.Country", "Country")
-                        .WithMany()
-                        .HasForeignKey("CountryId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Country");
+                    b.HasOne("HRM.API.Domain.Catalog.Country", null)
+                        .WithMany("States")
+                        .HasForeignKey("CountryId");
                 });
 
             modelBuilder.Entity("HRM.API.Domain.Catalog.Store", b =>
@@ -1803,7 +1888,7 @@ namespace Migrators.MSSQL.Migrations
                         .WithMany()
                         .HasForeignKey("CountryId");
 
-                    b.HasOne("HRM.API.Domain.Catalog.State", "State")
+                    b.HasOne("HRM.API.Domain.Catalog.States", "State")
                         .WithMany()
                         .HasForeignKey("StateId");
 
@@ -1818,7 +1903,7 @@ namespace Migrators.MSSQL.Migrations
                         .WithMany()
                         .HasForeignKey("CountryId");
 
-                    b.HasOne("HRM.API.Domain.Catalog.State", "State")
+                    b.HasOne("HRM.API.Domain.Catalog.States", "State")
                         .WithMany()
                         .HasForeignKey("StateId");
 
@@ -1833,7 +1918,7 @@ namespace Migrators.MSSQL.Migrations
                         .WithMany()
                         .HasForeignKey("CountryId");
 
-                    b.HasOne("HRM.API.Domain.Catalog.State", "State")
+                    b.HasOne("HRM.API.Domain.Catalog.States", "State")
                         .WithMany()
                         .HasForeignKey("StateId");
 
@@ -1848,7 +1933,7 @@ namespace Migrators.MSSQL.Migrations
                         .WithMany()
                         .HasForeignKey("CountryId");
 
-                    b.HasOne("HRM.API.Domain.Catalog.State", "State")
+                    b.HasOne("HRM.API.Domain.Catalog.States", "State")
                         .WithMany()
                         .HasForeignKey("StateId");
 
@@ -2022,11 +2107,21 @@ namespace Migrators.MSSQL.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("HRM.API.Domain.Catalog.Country", b =>
+                {
+                    b.Navigation("States");
+                });
+
             modelBuilder.Entity("HRM.API.Domain.Catalog.Product", b =>
                 {
                     b.Navigation("PurchaseProducts");
 
                     b.Navigation("PurchaseReturnProducts");
+                });
+
+            modelBuilder.Entity("HRM.API.Domain.Catalog.States", b =>
+                {
+                    b.Navigation("Cities");
                 });
 
             modelBuilder.Entity("HRM.API.Domain.Catalog.Supplier", b =>

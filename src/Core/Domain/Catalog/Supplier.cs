@@ -17,7 +17,7 @@ public class Supplier : AuditableEntity, IAggregateRoot
     public string? Address { get; private set; }
     public bool IsActive { get; private set; }
     public virtual Country Country { get; private set; } = default!;
-    public virtual State State { get; private set; } = default!;
+    public virtual States State { get; private set; } = default!;
     public List<Purchase>? PurchaseList { get; set; }
     public List<PurchaseReturn>? PurchaseReturnList { get; set; }
 

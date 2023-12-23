@@ -16,7 +16,7 @@ public class Customer : AuditableEntity, IAggregateRoot
     public bool IsPrimaryCustomer { get; set; }
     public bool IsActive { get; private set; }
     public virtual Country Country { get; private set; } = default!;
-    public virtual State State { get; private set; } = default!;
+    public virtual States State { get; private set; } = default!;
 
     public Customer(string name, string? mobile, string? email, string? phone, string? gSTNumber, Guid? countryId, Guid? stateId, string? city, string? postcode, string? address, bool isActive)
     {

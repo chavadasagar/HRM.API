@@ -21,7 +21,7 @@
     },
     "Storage": {
       "StorageProvider": "mssql",
-      "ConnectionString": "Data Source=ARVIND-PC2\\SQLEXPRESS;Initial Catalog=MasterPOS;User ID=sa;Password=sa;Integrated Security=True;MultipleActiveResultSets=True;Connection Timeout=30;",
+      "ConnectionString": "Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=HRM;Data Source=SAGAR\\sagar;Connect Timeout=6000",
       "Options": {
         "CommandBatchMaxTimeout": "00:05:00",
         "QueuePollInterval": "00:00:01",

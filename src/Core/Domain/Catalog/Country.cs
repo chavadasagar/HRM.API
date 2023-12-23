@@ -1,11 +1,35 @@
 ﻿namespace HRM.API.Domain.Catalog;
-public class Country : BaseEntity, IAggregateRoot
+public class Country : AuditableEntity, IAggregateRoot
 {
-    public string Name { get; set; }
-    public string NormalizedName { get; set; }
-    public Country(string name)
+    public Country(string name, string? latitude, string? longitude)
     {
         Name = name;
-        NormalizedName = name.ToUpperInvariant();
+        this.Latitude = latitude;
+        this.Longitude = longitude;
     }
+
+    public Country(Country country)
+    {
+        this.Name = country.Name;
+        this.Latitude = country.Latitude;
+        this.Longitude = country.Longitude;
+        this.States = country.States;
+    }
+
+    public Country(string name, string? latitude, string? longitude, List<States>? state)
+    {
+        Name = name;
+        this.Latitude = latitude;
+        this.Longitude = longitude;
+        States = state;
+    }
+
+    public Country()
+    {
+    }
+
+    public string Name { get; set; }
+    public string? Latitude { get; set; }
+    public string? Longitude { get; set; }
+    public List<States>? States { get; set; }
 }

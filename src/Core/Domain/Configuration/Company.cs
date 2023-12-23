@@ -22,7 +22,7 @@ public class Company : AuditableEntity, IAggregateRoot
     public string? CompanyLogoPath { get; private set; }
     public bool IsActive { get; private set; }
     public virtual Country Country { get; private set; } = default!;
-    public virtual State State { get; private set; } = default!;
+    public virtual States State { get; private set; } = default!;
 
     public Company(string name, string email, string? directorName, string? mobile, string? phone, string? gSTNumber, string? vATNumber, string? pANNumber, string? website, string? uPIId, string? bankDetails, Guid? countryId, Guid? stateId, string? city, string? postcode, string? address, string? companyLogoPath, bool isActive)
     {

@@ -20,7 +20,7 @@ public class Store : AuditableEntity, IAggregateRoot
     public bool IsPrimaryStore { get; set; }
     public bool IsActive { get; private set; }
     public virtual Country Country { get; private set; } = default!;
-    public virtual State State { get; private set; } = default!;
+    public virtual States State { get; private set; } = default!;
 
     public Store(string code, string name, string? mobile, string? email, string? phone, string? gSTNumber, string? pANNumber, string? bankDetails, Guid? countryId, Guid? stateId, string? city, string? postcode, string? address, string? storeLogoPath, bool isDefault, bool isActive)
     {

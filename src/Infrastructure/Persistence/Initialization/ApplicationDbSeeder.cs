@@ -6,11 +6,11 @@ using HRM.API.Infrastructure.Multitenancy;
 using HRM.API.Infrastructure.Persistence.Context;
 using HRM.API.Shared;
 using HRM.API.Shared.Authorization;
-using HRM.API.Shared.Catalog;
 using HRM.API.Shared.Multitenancy;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
 
 namespace HRM.API.Infrastructure.Persistence.Initialization;
 
@@ -35,7 +35,6 @@ internal class ApplicationDbSeeder
     {
         await SeedRolesAsync(dbContext);
         await SeedCountryAsync(dbContext);
-        await SeedStateAsync(dbContext);
         await SeedDefaultCustomerAsync(dbContext);
         await SeedDefaultStoreAsync(dbContext);
         await SeedConfigurationAsync(dbContext);
@@ -76,37 +75,63 @@ internal class ApplicationDbSeeder
 
     private async Task SeedCountryAsync(ApplicationDbContext dbContext)
     {
-        foreach (string countryName in MPOSCountry.Countries)
+        string path = Path.Combine(Directory.GetCurrentDirectory(), "Configurations", "CountryStateCity.json");
+
+        string json = File.ReadAllText(path);
+        var allcountry = JsonConvert.DeserializeObject<List<Country>>(json);
+
+        foreach (Country country in allcountry)
         {
-            if (await dbContext.Countries.SingleOrDefaultAsync(r => r.Name == countryName) == null)
+            if (await dbContext.Countries.SingleOrDefaultAsync(r => r.Name == country.Name) == null)
             {
-                _logger.LogInformation("Seeding {countryName} Country for '{tenantId}' Tenant.", countryName, _currentTenant.Id);
-                dbContext.Countries.Add(new Country(countryName));
+                _logger.LogInformation("Seeding '{countryname}' Country for '{tenantId}' Tenant.", country.Name, _currentTenant.Id);
+                foreach (var state in country.States)
+                {
+                    _logger.LogInformation("Seeding '{statename}' State for '{tenantId}' Tenant.", state.Name, _currentTenant.Id);
+                    foreach (var city in state.Cities)
+                    {
+                        _logger.LogInformation("Seeding '{statename}' City for '{tenantId}' Tenant.", city.Name, _currentTenant.Id);
+                    }
+                }
+                await dbContext.Countries.AddAsync(new Country(country));
                 await dbContext.SaveChangesAsync();
             }
         }
     }
 
-    private async Task SeedStateAsync(ApplicationDbContext dbContext)
-    {
-        foreach (var state in MPOSState.All)
-        {
-            if (await dbContext.States.SingleOrDefaultAsync(r => r.Name == state.stateName && r.Country.Name == state.countryName) == null)
-            {
-                var country = await dbContext.Countries.SingleOrDefaultAsync(r => r.Name == state.countryName);
-                if (country != null)
-                {
-                    dbContext.States.Add(new State(state.stateName, country.Id));
-                    await dbContext.SaveChangesAsync();
-                    _logger.LogInformation("Seeding {stateName} State for '{tenantId}' Tenant.", state.stateName, _currentTenant.Id);
-                }
-                else
-                {
-                    _logger.LogInformation("Seeding {countryName} Country not found for '{tenantId}' Tenant.", state.countryName, _currentTenant.Id);
-                }
-            }
-        }
-    }
+    //private async Task SeedCountryAsync(ApplicationDbContext dbContext)
+    //{
+    //    foreach (string countryName in HRMCountry.Countries)
+    //    {
+    //        if (await dbContext.Countries.SingleOrDefaultAsync(r => r.Name == countryName) == null)
+    //        {
+    //            _logger.LogInformation("Seeding {countryName} Country for '{tenantId}' Tenant.", countryName, _currentTenant.Id);
+    //            dbContext.Countries.Add(new Country(countryName));
+    //            await dbContext.SaveChangesAsync();
+    //        }
+    //    }
+    //}
+
+    //private async Task SeedStateAsync(ApplicationDbContext dbContext)
+    //{
+    //    foreach (var state in HRMState.All)
+    //    {
+    //        if (await dbContext.States.SingleOrDefaultAsync(r => r.Name == state.stateName && r.Country.Name == state.countryName) == null)
+    //        {
+    //            var country = await dbContext.Countries.SingleOrDefaultAsync(r => r.Name == state.countryName);
+    //            if (country != null)
+    //            {
+    //                dbContext.States.Add(new State(state.stateName, country.Id));
+    //                await dbContext.SaveChangesAsync();
+    //                _logger.LogInformation("Seeding {stateName} State for '{tenantId}' Tenant.", state.stateName, _currentTenant.Id);
+    //            }
+    //            else
+    //            {
+    //                _logger.LogInformation("Seeding {countryName} Country not found for '{tenantId}' Tenant.", state.countryName, _currentTenant.Id);
+    //            }
+    //        }
+    //    }
+    //}
 
     private async Task SeedDefaultCustomerAsync(ApplicationDbContext dbContext)
     {
@@ -145,7 +170,7 @@ internal class ApplicationDbSeeder
     }
     private async Task SeedConfigurationAsync(ApplicationDbContext dbContext)
     {
-        foreach (var key in MPOSConfigurations.All)
+        foreach (var key in HRMConfigurations.All)
         {
             var config = await dbContext.GeneralConfigurations.Where(r => r.ConfigKey == key.ConfigKey).SingleOrDefaultAsync();
             if (config != null)

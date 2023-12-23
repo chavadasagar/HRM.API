@@ -7,7 +7,7 @@ public static class FSHResource
     public const string General = nameof(General);
 }
 
-public static class MPOSConfigurations
+public static class HRMConfigurations
 {
     private static readonly ConfigurationModel[] _all = new ConfigurationModel[]
     {
