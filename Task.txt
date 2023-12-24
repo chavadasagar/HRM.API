@@ -7,3 +7,10 @@
 - Add git to manage code
 
 Next : Design employee table design
+
+14:55 24-12-2023
+-------------------------
+- Create Employee Database Design 
+- Add department , designation and company modal and also create migration
+
+Next : Design leave module db design

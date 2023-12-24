@@ -25,6 +25,7 @@ public class ApplicationDbContext : BaseDbContext
     public DbSet<State> States => Set<State>();
     public DbSet<Company> Companies => Set<Company>();
     public DbSet<Employee> Employee => Set<Employee>();
+    public DbSet<Holidays> Holidays => Set<Holidays>();
     public DbSet<GeneralConfiguration> GeneralConfigurations => Set<GeneralConfiguration>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
