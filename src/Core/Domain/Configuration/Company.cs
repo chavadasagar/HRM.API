@@ -16,15 +16,16 @@ public class Company : AuditableEntity, IAggregateRoot
     public string? BankDetails { get; private set; }
     public Guid? CountryId { get; private set; }
     public Guid? StateId { get; private set; }
-    public string? City { get; private set; }
+    public Guid? CityId { get; private set; }
     public string? Postcode { get; private set; }
     public string? Address { get; private set; }
     public string? CompanyLogoPath { get; private set; }
     public bool IsActive { get; private set; }
     public virtual Country Country { get; private set; } = default!;
-    public virtual States State { get; private set; } = default!;
+    public virtual State State { get; private set; } = default!;
+    public virtual City City { get; private set; } = default!;
 
-    public Company(string name, string email, string? directorName, string? mobile, string? phone, string? gSTNumber, string? vATNumber, string? pANNumber, string? website, string? uPIId, string? bankDetails, Guid? countryId, Guid? stateId, string? city, string? postcode, string? address, string? companyLogoPath, bool isActive)
+    public Company(string name, string email, string? directorName, string? mobile, string? phone, string? gSTNumber, string? vATNumber, string? pANNumber, string? website, string? uPIId, string? bankDetails, Guid? countryId, Guid? stateId, Guid? cityId, string? postcode, string? address, string? companyLogoPath, bool isActive)
     {
         Name = name;
         Email = email;
@@ -41,14 +42,14 @@ public class Company : AuditableEntity, IAggregateRoot
         if (countryId.HasValue && countryId.Value != Guid.Empty && !CountryId.Equals(countryId.Value)) CountryId = countryId.Value;
         StateId = null;
         if (stateId.HasValue && stateId.Value != Guid.Empty && !StateId.Equals(stateId.Value)) StateId = stateId.Value;
-        City = city;
+        CityId = cityId;
         Postcode = postcode;
         Address = address;
         CompanyLogoPath = companyLogoPath;
         IsActive = isActive;
     }
 
-    public Company Update(string? name, string? email, string? directorName, string? mobile, string? phone, string? gSTNumber, string? vATNumber, string? pANNumber, string? website, string? uPIId, string? bankDetails, Guid? countryId, Guid? stateId, string? city, string? postcode, string? address, string? companyLogoPath)
+    public Company Update(string? name, string? email, string? directorName, string? mobile, string? phone, string? gSTNumber, string? vATNumber, string? pANNumber, string? website, string? uPIId, string? bankDetails, Guid? countryId, Guid? stateId, Guid? cityId, string? postcode, string? address, string? companyLogoPath)
     {
         if (name is not null && Name?.Equals(name) is not true) Name = name;
         if (email is not null && DirectorName?.Equals(email) is not true) Email = email;
@@ -65,7 +66,7 @@ public class Company : AuditableEntity, IAggregateRoot
         if (countryId.HasValue && countryId.Value != Guid.Empty && !CountryId.Equals(countryId.Value)) CountryId = countryId.Value;
         StateId = null;
         if (stateId.HasValue && stateId.Value != Guid.Empty && !StateId.Equals(stateId.Value)) StateId = stateId.Value;
-        if (city is not null && City?.Equals(city) is not true) City = city;
+        if (cityId is not null && CityId?.Equals(cityId) is not true) CityId = cityId;
         Postcode = postcode;
         if (address is not null && Address?.Equals(address) is not true) Address = address;
         if (companyLogoPath is not null && CompanyLogoPath?.Equals(companyLogoPath) is not true) CompanyLogoPath = companyLogoPath;

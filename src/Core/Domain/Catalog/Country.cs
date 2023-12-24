@@ -16,12 +16,12 @@ public class Country : AuditableEntity, IAggregateRoot
         this.States = country.States;
     }
 
-    public Country(string name, string? latitude, string? longitude, List<States>? state)
+    public Country(string name, string? latitude, string? longitude, List<State>? states)
     {
         Name = name;
         this.Latitude = latitude;
         this.Longitude = longitude;
-        States = state;
+        States = states;
     }
 
     public Country()
@@ -31,5 +31,5 @@ public class Country : AuditableEntity, IAggregateRoot
     public string Name { get; set; }
     public string? Latitude { get; set; }
     public string? Longitude { get; set; }
-    public List<States>? States { get; set; }
+    public List<State>? States { get; set; }
 }

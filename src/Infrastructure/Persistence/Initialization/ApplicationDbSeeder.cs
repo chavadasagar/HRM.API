@@ -183,7 +183,7 @@ internal class ApplicationDbSeeder
         if (await dbContext.Companies.FirstOrDefaultAsync(u => u.Email == _currentTenant.AdminEmail)
             is not Company company)
         {
-            company = new Company(name: _currentTenant.Name.Trim().ToLowerInvariant(), directorName: null, email: _currentTenant.AdminEmail, mobile: null, phone: null, gSTNumber: null, vATNumber: null, pANNumber: null, website: null, uPIId: null, bankDetails: null, countryId: Guid.Empty, stateId: Guid.Empty, city: null, postcode: null, address: null, companyLogoPath: null, isActive: true);
+            company = new Company(name: _currentTenant.Name.Trim().ToLowerInvariant(), directorName: null, email: _currentTenant.AdminEmail, mobile: null, phone: null, gSTNumber: null, vATNumber: null, pANNumber: null, website: null, uPIId: null, bankDetails: null, countryId: Guid.Empty, stateId: Guid.Empty, cityId: null, postcode: null, address: null, companyLogoPath: null, isActive: true);
             await dbContext.Companies.AddAsync(company);
             await dbContext.SaveChangesAsync();
             _logger.LogInformation("Seeding Comapny Profile for '{tenantId}' Tenant.", _currentTenant.Id);

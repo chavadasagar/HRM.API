@@ -89,9 +89,9 @@ public class CountryConfig : IEntityTypeConfiguration<Country>
     }
 }
 
-public class StateConfig : IEntityTypeConfiguration<States>
+public class StateConfig : IEntityTypeConfiguration<State>
 {
-    public void Configure(EntityTypeBuilder<States> builder)
+    public void Configure(EntityTypeBuilder<State> builder)
     {
         builder
            .Property(b => b.Name)
@@ -160,10 +160,6 @@ public class CompanyConfig : IEntityTypeConfiguration<Company>
         builder
            .Property(b => b.UPIId)
                .HasMaxLength(256);
-
-        builder
-           .Property(b => b.City)
-               .HasMaxLength(32);
 
         builder
            .Property(b => b.Postcode)

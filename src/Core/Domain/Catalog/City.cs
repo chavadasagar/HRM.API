@@ -1,11 +1,11 @@
 ﻿namespace HRM.API.Domain.Catalog;
-public class Cities : AuditableEntity, IAggregateRoot
+public class City : AuditableEntity, IAggregateRoot
 {
-    public Cities()
+    public City()
     {
 
     }
-    public Cities(string name, string? latitude, string? longitude)
+    public City(string name, string? latitude, string? longitude)
     {
         Name = name;
         this.Latitude = latitude;
@@ -15,6 +15,6 @@ public class Cities : AuditableEntity, IAggregateRoot
     public string Name { get; set; }
     public string? Latitude { get; set; }
     public string? Longitude { get; set; }
-    public Guid? StatesId { get; set; }
+    public Guid? StateId { get; set; }
 }
 

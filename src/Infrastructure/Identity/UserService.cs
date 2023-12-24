@@ -217,7 +217,6 @@ internal partial class UserService : IUserService
                                  BankDetails = c.BankDetails,
                                  CountryName = country.Name,
                                  StateName = s.Name,
-                                 City = c.City,
                                  Postcode = c.Postcode,
                                  Address = c.Address,
                                  CompanyLogoPath = c.CompanyLogoPath

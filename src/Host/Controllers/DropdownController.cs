@@ -56,6 +56,14 @@ public class DropdownController : VersionedApiController
         return await Mediator.Send(new GetStatesRequest(id));
     }
 
+
+    [HttpGet("citys/{id:guid}")]
+    [OpenApiOperation("get citys list by states.", "")]
+    public async Task<List<CityDto>> GetCityByStateAsync(Guid? id)
+    {
+        return await Mediator.Send(new GetCityRequest(id));
+    }
+
     [HttpGet("roles")]
     [OpenApiOperation("Get a list of all roles.", "")]
     public Task<List<RoleDto>> GetRoleListAsync(CancellationToken cancellationToken)

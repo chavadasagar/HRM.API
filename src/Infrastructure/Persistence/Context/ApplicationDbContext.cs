@@ -22,8 +22,9 @@ public class ApplicationDbContext : BaseDbContext
     public DbSet<Category> Categories => Set<Category>();
     public DbSet<PaymentType> PaymentTypes => Set<PaymentType>();
     public DbSet<Country> Countries => Set<Country>();
-    public DbSet<States> States => Set<States>();
+    public DbSet<State> States => Set<State>();
     public DbSet<Company> Companies => Set<Company>();
+    public DbSet<Employee> Employee => Set<Employee>();
     public DbSet<GeneralConfiguration> GeneralConfigurations => Set<GeneralConfiguration>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
