@@ -1,0 +1,24 @@
+23:11 23-12-2023
+----------------------------
+- Rename project (HRM.API)
+- Remobe some unnecessary module
+- Add Country State City json file and create seeder and configure with json file
+- Create migration 
+- Add git to manage code
+
+Next : Design employee table design
+
+14:55 24-12-2023
+-------------------------
+- Create Employee Database Design 
+- Add department , designation and company modal and also create migration
+- Add holiday table design
+Next : Design leave module db design
+
+13:12 30-12-2023
+-------------------------
+- Create TImesheet table db design
+- Create Project table db design
+- Create Client table db	
+- Create Priority table , ratetype table , Project team
+- Crerate overtime db design 
