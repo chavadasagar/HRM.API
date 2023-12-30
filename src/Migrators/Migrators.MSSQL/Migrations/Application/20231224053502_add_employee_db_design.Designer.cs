@@ -289,7 +289,7 @@ namespace Migrators.MSSQL.Migrations
                     b.ToTable("Designation", "HRM");
                 });
 
-            modelBuilder.Entity("HRM.API.Domain.Catalog.Employee", b =>
+            modelBuilder.Entity("HRM.API.Domain.Catalog", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -1087,7 +1087,7 @@ namespace Migrators.MSSQL.Migrations
                     b.Navigation("Department");
                 });
 
-            modelBuilder.Entity("HRM.API.Domain.Catalog.Employee", b =>
+            modelBuilder.Entity("HRM.API.Domain.Catalog", b =>
                 {
                     b.HasOne("HRM.API.Domain.Configuration.Company", "Company")
                         .WithMany()

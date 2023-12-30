@@ -12,5 +12,15 @@ Next : Design employee table design
 -------------------------
 - Create Employee Database Design 
 - Add department , designation and company modal and also create migration
-
+- Add holiday table design
 Next : Design leave module db design
+
+13:12 30-12-2023
+-------------------------
+- Create TImesheet table db design
+- Create Project table db design
+- Create Client table db	
+- Create Priority table , ratetype table , Project team
+- Crerate overtime db design 
+
+

@@ -4,6 +4,7 @@ using HRM.API.Infrastructure.Persistence.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Migrators.MSSQL.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231230085539_add_project_clinet_timesheet_attemdance_db_design")]
+    partial class add_project_clinet_timesheet_attemdance_db_design
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -495,89 +497,6 @@ namespace Migrators.MSSQL.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Holidays", "HRM");
-                });
-
-            modelBuilder.Entity("HRM.API.Domain.Catalog.Overtime", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("CreatedBy")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime>("CreatedOn")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime?>("Date")
-                        .HasColumnType("datetime2");
-
-                    b.Property<Guid?>("DeletedBy")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime?>("DeletedOn")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Description")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<Guid?>("EmployeeId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<decimal?>("Hours")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<Guid>("LastModifiedBy")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime?>("LastModifiedOn")
-                        .HasColumnType("datetime2");
-
-                    b.Property<Guid?>("OvertimeStatusId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("EmployeeId");
-
-                    b.HasIndex("OvertimeStatusId");
-
-                    b.ToTable("Overtime", "HRM");
-                });
-
-            modelBuilder.Entity("HRM.API.Domain.Catalog.OvertimeStatus", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("CreatedBy")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime>("CreatedOn")
-                        .HasColumnType("datetime2");
-
-                    b.Property<Guid?>("DeletedBy")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime?>("DeletedOn")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Description")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<Guid>("LastModifiedBy")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime?>("LastModifiedOn")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("OvertimeStatus", "HRM");
                 });
 
             modelBuilder.Entity("HRM.API.Domain.Catalog.PaymentType", b =>
@@ -1605,21 +1524,6 @@ namespace Migrators.MSSQL.Migrations
                     b.Navigation("Designation");
                 });
 
-            modelBuilder.Entity("HRM.API.Domain.Catalog.Overtime", b =>
-                {
-                    b.HasOne("HRM.API.Domain.Catalog", "Employee")
-                        .WithMany("Overtime")
-                        .HasForeignKey("EmployeeId");
-
-                    b.HasOne("HRM.API.Domain.Catalog.OvertimeStatus", "OvertimeStatus")
-                        .WithMany()
-                        .HasForeignKey("OvertimeStatusId");
-
-                    b.Navigation("Employee");
-
-                    b.Navigation("OvertimeStatus");
-                });
-
             modelBuilder.Entity("HRM.API.Domain.Catalog.Product", b =>
                 {
                     b.HasOne("HRM.API.Domain.Catalog.Brand", "Brand")
@@ -1786,8 +1690,6 @@ namespace Migrators.MSSQL.Migrations
             modelBuilder.Entity("HRM.API.Domain.Catalog", b =>
                 {
                     b.Navigation("Attendance");
-
-                    b.Navigation("Overtime");
                 });
 
             modelBuilder.Entity("HRM.API.Domain.Catalog.Project", b =>

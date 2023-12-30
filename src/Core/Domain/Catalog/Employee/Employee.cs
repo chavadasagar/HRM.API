@@ -26,10 +26,12 @@ public class Employee : AuditableEntity, IAggregateRoot
     public string? EmployeeId { get; set; }
     public DateTime? JoiningDate { get; set; }
     public string? Phone { get; set; }
-    public Guid? CompanyId { get; set; }
-    public Guid? DepartmentId { get; set; }
-    public Guid? DesignationId { get; set; }
-    public bool IsActive { get; private set; }
+    public DefaultIdType? CompanyId { get; set; }
+    public DefaultIdType? DepartmentId { get; set; }
+    public DefaultIdType? DesignationId { get; set; }
+    public bool IsActive { get; set; }
+    public List<Attendance>? Attendance { get; set; }
+    public List<Overtime>? Overtime { get; set; }
     public virtual Company? Company { get; set; }
     public virtual Department? Department { get; set; }
     public virtual Designation? Designation { get; set; }

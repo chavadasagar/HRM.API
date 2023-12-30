@@ -2,6 +2,7 @@ using Finbuckle.MultiTenant;
 using HRM.API.Application.Common.Events;
 using HRM.API.Application.Common.Interfaces;
 using HRM.API.Domain.Catalog;
+using HRM.API.Domain.Catalog;
 using HRM.API.Domain.Configuration;
 using HRM.API.Domain.Identity;
 using HRM.API.Infrastructure.Persistence.Configuration;
@@ -26,6 +27,12 @@ public class ApplicationDbContext : BaseDbContext
     public DbSet<Company> Companies => Set<Company>();
     public DbSet<Employee> Employee => Set<Employee>();
     public DbSet<Holidays> Holidays => Set<Holidays>();
+    public DbSet<Project> Project => Set<Project>();
+    public DbSet<Attendance> Attendance => Set<Attendance>();
+    public DbSet<Priority> Priority => Set<Priority>();
+    public DbSet<RateType> RateType => Set<RateType>();
+    public DbSet<TimeSheet> TimeSheet => Set<TimeSheet>();
+    public DbSet<Overtime> Overtime => Set<Overtime>();
     public DbSet<GeneralConfiguration> GeneralConfigurations => Set<GeneralConfiguration>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
