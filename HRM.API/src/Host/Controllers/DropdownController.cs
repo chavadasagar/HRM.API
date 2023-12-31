@@ -1,5 +1,4 @@
 ﻿using HRM.API.Application.Catalog;
-using HRM.API.Application.Catalog.PaymentTypes;
 using HRM.API.Application.Catalog.Products;
 using HRM.API.Application.Common;
 using HRM.API.Application.Identity.Roles;
@@ -32,14 +31,6 @@ public class DropdownController : VersionedApiController
     public async Task<List<ProductDropdownDto>> GetProductsAsync()
     {
         return await Mediator.Send(new GetActiveProductsRequest());
-    }
-
-
-    [HttpGet("paymenttypes")]
-    [OpenApiOperation("get Payment Type list.", "")]
-    public async Task<List<PaymentTypeDropdownDto>> GetPaymentTypesAsync()
-    {
-        return await Mediator.Send(new GetActivePaymentTypesRequest());
     }
 
     [HttpGet("countries")]

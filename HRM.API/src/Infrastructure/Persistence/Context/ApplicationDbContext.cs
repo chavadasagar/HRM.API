@@ -19,7 +19,6 @@ public class ApplicationDbContext : BaseDbContext
     public DbSet<Product> Products => Set<Product>();
     public DbSet<Brand> Brands => Set<Brand>();
     public DbSet<Category> Categories => Set<Category>();
-    public DbSet<PaymentType> PaymentTypes => Set<PaymentType>();
     public DbSet<Country> Countries => Set<Country>();
     public DbSet<State> States => Set<State>();
     public DbSet<Company> Companies => Set<Company>();

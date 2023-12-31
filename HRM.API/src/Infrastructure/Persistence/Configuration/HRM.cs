@@ -67,18 +67,6 @@ public class ProductConfig : IEntityTypeConfiguration<Product>
     }
 }
 
-public class PaymentTypeConfig : IEntityTypeConfiguration<PaymentType>
-{
-    public void Configure(EntityTypeBuilder<PaymentType> builder)
-    {
-        builder.IsMultiTenant();
-
-        builder
-            .Property(b => b.Name)
-                .HasMaxLength(256);
-    }
-}
-
 public class CountryConfig : IEntityTypeConfiguration<Country>
 {
     public void Configure(EntityTypeBuilder<Country> builder)

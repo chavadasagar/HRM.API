@@ -1,6 +1,5 @@
 ﻿using HRM.API.Domain.Catalog;
 using HRM.API.Domain.Configuration;
-using HRM.API.Domain.Identity;
 using HRM.API.Infrastructure.Identity;
 using HRM.API.Infrastructure.Multitenancy;
 using HRM.API.Infrastructure.Persistence.Context;
