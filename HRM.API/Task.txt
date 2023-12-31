@@ -21,4 +21,7 @@ Next : Design leave module db design
 - Create Project table db design
 - Create Client table db	
 - Create Priority table , ratetype table , Project team
-- Crerate overtime db design 
+- Crerate overtime db design
+- Create Leave Table Db Design 
+- Create ProjectStatus and Project Task Table 
+- Creare ProjectTaskBoard Db design

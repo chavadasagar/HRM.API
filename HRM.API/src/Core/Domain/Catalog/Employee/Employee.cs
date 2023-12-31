@@ -3,13 +3,12 @@
 namespace HRM.API.Domain.Catalog;
 public class Employee : AuditableEntity, IAggregateRoot
 {
-    public Employee(string? firstname, string? lastname, string? username, string? email, string? password, string? employeeId, DateTime? joiningDate, string? phone, DefaultIdType? companyId, DefaultIdType? departmentId, DefaultIdType? designationId)
+    public Employee(string? firstname, string? lastname, string? username, string? email, string? employeeId, DateTime? joiningDate, string? phone, DefaultIdType? companyId, DefaultIdType? departmentId, DefaultIdType? designationId)
     {
         Firstname = firstname;
         Lastname = lastname;
         Username = username;
         Email = email;
-        Password = password;
         EmployeeId = employeeId;
         JoiningDate = joiningDate;
         Phone = phone;
@@ -22,7 +21,6 @@ public class Employee : AuditableEntity, IAggregateRoot
     public string? Lastname { get; set; }
     public string? Username { get; set; }
     public string? Email { get; set; }
-    public string? Password { get; set; }
     public string? EmployeeId { get; set; }
     public DateTime? JoiningDate { get; set; }
     public string? Phone { get; set; }
@@ -32,6 +30,7 @@ public class Employee : AuditableEntity, IAggregateRoot
     public bool IsActive { get; set; }
     public List<Attendance>? Attendance { get; set; }
     public List<Overtime>? Overtime { get; set; }
+    public List<Leave>? Leave { get; set; }
     public virtual Company? Company { get; set; }
     public virtual Department? Department { get; set; }
     public virtual Designation? Designation { get; set; }
