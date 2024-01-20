@@ -2,6 +2,8 @@ using Finbuckle.MultiTenant;
 using HRM.API.Application.Common.Events;
 using HRM.API.Application.Common.Interfaces;
 using HRM.API.Domain.Catalog;
+using HRM.API.Domain.Catalog.Estimates;
+using HRM.API.Domain.Catalog.Tickets;
 using HRM.API.Domain.Configuration;
 using HRM.API.Infrastructure.Persistence.Configuration;
 using Microsoft.EntityFrameworkCore;
@@ -30,6 +32,8 @@ public class ApplicationDbContext : BaseDbContext
     public DbSet<RateType> RateType => Set<RateType>();
     public DbSet<TimeSheet> TimeSheet => Set<TimeSheet>();
     public DbSet<Overtime> Overtime => Set<Overtime>();
+    public DbSet<Ticket> Ticket => Set<Ticket>();
+    public DbSet<Estimate> Estimate => Set<Estimate>();
     public DbSet<ProjectTaskBoard> ProjectTaskBoard => Set<ProjectTaskBoard>();
     public DbSet<GeneralConfiguration> GeneralConfigurations => Set<GeneralConfiguration>();
 
