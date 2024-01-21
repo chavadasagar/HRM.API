@@ -2,7 +2,11 @@ using Finbuckle.MultiTenant;
 using HRM.API.Application.Common.Events;
 using HRM.API.Application.Common.Interfaces;
 using HRM.API.Domain.Catalog;
-using HRM.API.Domain.Catalog.Estimates;
+using HRM.API.Domain.Catalog.Accounting.Budgets;
+using HRM.API.Domain.Catalog.Sales.Estimates;
+using HRM.API.Domain.Catalog.Sales.Expenses;
+using HRM.API.Domain.Catalog.Sales.Invoices;
+using HRM.API.Domain.Catalog.Sales.ProvidentFunds;
 using HRM.API.Domain.Catalog.Tickets;
 using HRM.API.Domain.Configuration;
 using HRM.API.Infrastructure.Persistence.Configuration;
@@ -34,7 +38,13 @@ public class ApplicationDbContext : BaseDbContext
     public DbSet<Overtime> Overtime => Set<Overtime>();
     public DbSet<Ticket> Ticket => Set<Ticket>();
     public DbSet<Estimate> Estimate => Set<Estimate>();
+    public DbSet<Invoice> Invoice => Set<Invoice>();
+    public DbSet<Expense> Expense => Set<Expense>();
     public DbSet<ProjectTaskBoard> ProjectTaskBoard => Set<ProjectTaskBoard>();
+    public DbSet<ProvidentFund> ProvidentFund => Set<ProvidentFund>();
+    public DbSet<Budget> Budget => Set<Budget>();
+    public DbSet<BudgetExpenses> BudgetExpenses => Set<BudgetExpenses>();
+    public DbSet<BudgetRevenues> BudgetRevenues => Set<BudgetRevenues>();
     public DbSet<GeneralConfiguration> GeneralConfigurations => Set<GeneralConfiguration>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)

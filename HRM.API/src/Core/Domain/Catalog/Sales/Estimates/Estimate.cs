@@ -1,4 +1,6 @@
-﻿namespace HRM.API.Domain.Catalog.Estimates;
+﻿using HRM.API.Domain.Catalog.Sales.Taxs;
+
+namespace HRM.API.Domain.Catalog.Sales.Estimates;
 public class Estimate : AuditableEntity, IAggregateRoot
 {
     public Guid? ClientId { get; set; }

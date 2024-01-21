@@ -1,13 +1,14 @@
 ﻿namespace HRM.API.Domain.Catalog;
-public class Category : AuditableEntity, IAggregateRoot
+public class SubCategory : AuditableEntity, IAggregateRoot
 {
     public string Name { get; private set; }
     public string? Description { get; private set; }
     public string? ImagePath { get; private set; }
-    public List<SubCategory>? SubCategories { get; set; }
     public bool IsActive { get; set; }
+    public Guid? CategoryId { get; set; }
+    public virtual Category Category { get; set; }
 
-    public Category(string name, string? description, bool isActive, string? imagePath)
+    public SubCategory(string name, string? description, bool isActive, string? imagePath)
     {
         Name = name;
         Description = description;
@@ -15,7 +16,7 @@ public class Category : AuditableEntity, IAggregateRoot
         ImagePath = imagePath;
     }
 
-    public Category Update(string? name, string? description, bool isActive, string? imagePath)
+    public SubCategory Update(string? name, string? description, bool isActive, string? imagePath)
     {
         if (name is not null && Name?.Equals(name) is not true) Name = name;
         if (description is not null && Description?.Equals(description) is not true) Description = description;
@@ -24,7 +25,7 @@ public class Category : AuditableEntity, IAggregateRoot
         return this;
     }
 
-    public Category ClearImagePath()
+    public SubCategory ClearImagePath()
     {
         ImagePath = string.Empty;
         return this;

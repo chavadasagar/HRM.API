@@ -5,8 +5,8 @@
 - Add Country State City json file and create seeder and configure with json file
 - Create migration 
 - Add git to manage code
-
 Next : Design employee table design
+
 
 14:55 24-12-2023
 -------------------------
@@ -14,6 +14,7 @@ Next : Design employee table design
 - Add department , designation and company modal and also create migration
 - Add holiday table design
 Next : Design leave module db design
+
 
 13:12 30-12-2023
 -------------------------
@@ -32,3 +33,13 @@ Next : Design leave module db design
 - Create Tiket module db design
 - Create another table like staff,assignee etc
 - Create Estimate module table db design
+
+
+
+12:05 21-01-2024
+------------------------
+- Create estimate db design
+- Create expence db design
+- Create invoice db design
+- Create ProvidentFund db design
+- Design Category and subcategory table

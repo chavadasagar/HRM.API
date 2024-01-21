@@ -4,6 +4,7 @@ using HRM.API.Infrastructure.Persistence.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Migrators.MSSQL.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240121065157_add_estimate_expence_invoice_ProvidentFund")]
+    partial class add_estimate_expence_invoice_ProvidentFund
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -22,284 +24,6 @@ namespace Migrators.MSSQL.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
-
-            modelBuilder.Entity("HRM.API.Domain.Catalog.Accounting.Budgets.Budget", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<decimal?>("BudgetAmount")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<string>("BudgetTitle")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<Guid?>("BudgetTypeId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("CreatedBy")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime>("CreatedOn")
-                        .HasColumnType("datetime2");
-
-                    b.Property<Guid?>("DeletedBy")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime?>("DeletedOn")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime?>("EndDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<decimal?>("ExpectedProfit")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<Guid>("LastModifiedBy")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime?>("LastModifiedOn")
-                        .HasColumnType("datetime2");
-
-                    b.Property<decimal?>("OverallExpenses")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<decimal?>("OverallRevenues")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<DateTime?>("StartDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<decimal?>("TaxAmount")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("BudgetTypeId");
-
-                    b.ToTable("Budget", "HRM");
-                });
-
-            modelBuilder.Entity("HRM.API.Domain.Catalog.Accounting.Budgets.BudgetExpenses", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<decimal?>("Amount")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<Guid?>("CategoryId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("CreatedBy")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime>("CreatedOn")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("CurrencySymbol")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<Guid?>("DeletedBy")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime?>("DeletedOn")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime?>("ExpenseDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("FilePath")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<Guid>("LastModifiedBy")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime?>("LastModifiedOn")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Notes")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<Guid?>("SubCategoryId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("CategoryId");
-
-                    b.HasIndex("SubCategoryId");
-
-                    b.ToTable("BudgetExpenses", "HRM");
-                });
-
-            modelBuilder.Entity("HRM.API.Domain.Catalog.Accounting.Budgets.BudgetRevenues", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<decimal?>("Amount")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<Guid?>("CategoryId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("CreatedBy")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime>("CreatedOn")
-                        .HasColumnType("datetime2");
-
-                    b.Property<Guid?>("DeletedBy")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime?>("DeletedOn")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("FilePath")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<Guid>("LastModifiedBy")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime?>("LastModifiedOn")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Notes")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime?>("RevenuesDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<Guid?>("SubCategoryId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("CategoryId");
-
-                    b.HasIndex("SubCategoryId");
-
-                    b.ToTable("BudgetRevenues", "HRM");
-                });
-
-            modelBuilder.Entity("HRM.API.Domain.Catalog.Accounting.Budgets.BudgetType", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("CreatedBy")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime>("CreatedOn")
-                        .HasColumnType("datetime2");
-
-                    b.Property<Guid?>("DeletedBy")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime?>("DeletedOn")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Description")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<Guid>("LastModifiedBy")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime?>("LastModifiedOn")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("BudgetType", "HRM");
-                });
-
-            modelBuilder.Entity("HRM.API.Domain.Catalog.Accounting.Budgets.ExpectedBudgetExpenses", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<decimal?>("Amount")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<Guid?>("BudgetId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("CreatedBy")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime>("CreatedOn")
-                        .HasColumnType("datetime2");
-
-                    b.Property<Guid?>("DeletedBy")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime?>("DeletedOn")
-                        .HasColumnType("datetime2");
-
-                    b.Property<Guid>("LastModifiedBy")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime?>("LastModifiedOn")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Title")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("BudgetId");
-
-                    b.ToTable("ExpectedBudgetExpenses", "HRM");
-                });
-
-            modelBuilder.Entity("HRM.API.Domain.Catalog.Accounting.Budgets.ExpectedBudgetRevenues", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<decimal?>("Amount")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<Guid?>("BudgetId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("CreatedBy")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime>("CreatedOn")
-                        .HasColumnType("datetime2");
-
-                    b.Property<Guid?>("DeletedBy")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime?>("DeletedOn")
-                        .HasColumnType("datetime2");
-
-                    b.Property<Guid>("LastModifiedBy")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime?>("LastModifiedOn")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Title")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("BudgetId");
-
-                    b.ToTable("ExpectedBudgetRevenues", "HRM");
-                });
 
             modelBuilder.Entity("HRM.API.Domain.Catalog.Attendance", b =>
                 {
@@ -1947,53 +1671,6 @@ namespace Migrators.MSSQL.Migrations
                     b.ToTable("States", "HRM");
                 });
 
-            modelBuilder.Entity("HRM.API.Domain.Catalog.SubCategory", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid?>("CategoryId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("CreatedBy")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime>("CreatedOn")
-                        .HasColumnType("datetime2");
-
-                    b.Property<Guid?>("DeletedBy")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime?>("DeletedOn")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Description")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ImagePath")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("IsActive")
-                        .HasColumnType("bit");
-
-                    b.Property<Guid>("LastModifiedBy")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime?>("LastModifiedOn")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("CategoryId");
-
-                    b.ToTable("SubCategory", "HRM");
-                });
-
             modelBuilder.Entity("HRM.API.Domain.Catalog.TaskBoard", b =>
                 {
                     b.Property<Guid>("Id")
@@ -2844,63 +2521,6 @@ namespace Migrators.MSSQL.Migrations
                     b.HasAnnotation("Finbuckle:MultiTenant", true);
                 });
 
-            modelBuilder.Entity("HRM.API.Domain.Catalog.Accounting.Budgets.Budget", b =>
-                {
-                    b.HasOne("HRM.API.Domain.Catalog.Accounting.Budgets.BudgetType", "BudgetType")
-                        .WithMany()
-                        .HasForeignKey("BudgetTypeId");
-
-                    b.Navigation("BudgetType");
-                });
-
-            modelBuilder.Entity("HRM.API.Domain.Catalog.Accounting.Budgets.BudgetExpenses", b =>
-                {
-                    b.HasOne("HRM.API.Domain.Catalog.Category", "Category")
-                        .WithMany()
-                        .HasForeignKey("CategoryId");
-
-                    b.HasOne("HRM.API.Domain.Catalog.SubCategory", "SubCategory")
-                        .WithMany()
-                        .HasForeignKey("SubCategoryId");
-
-                    b.Navigation("Category");
-
-                    b.Navigation("SubCategory");
-                });
-
-            modelBuilder.Entity("HRM.API.Domain.Catalog.Accounting.Budgets.BudgetRevenues", b =>
-                {
-                    b.HasOne("HRM.API.Domain.Catalog.Category", "Category")
-                        .WithMany()
-                        .HasForeignKey("CategoryId");
-
-                    b.HasOne("HRM.API.Domain.Catalog.SubCategory", "SubCategory")
-                        .WithMany()
-                        .HasForeignKey("SubCategoryId");
-
-                    b.Navigation("Category");
-
-                    b.Navigation("SubCategory");
-                });
-
-            modelBuilder.Entity("HRM.API.Domain.Catalog.Accounting.Budgets.ExpectedBudgetExpenses", b =>
-                {
-                    b.HasOne("HRM.API.Domain.Catalog.Accounting.Budgets.Budget", "Budget")
-                        .WithMany("Expenses")
-                        .HasForeignKey("BudgetId");
-
-                    b.Navigation("Budget");
-                });
-
-            modelBuilder.Entity("HRM.API.Domain.Catalog.Accounting.Budgets.ExpectedBudgetRevenues", b =>
-                {
-                    b.HasOne("HRM.API.Domain.Catalog.Accounting.Budgets.Budget", "Budget")
-                        .WithMany("Revenues")
-                        .HasForeignKey("BudgetId");
-
-                    b.Navigation("Budget");
-                });
-
             modelBuilder.Entity("HRM.API.Domain.Catalog.Attendance", b =>
                 {
                     b.HasOne("HRM.API.Domain.Catalog.Employee", "Employee")
@@ -3210,15 +2830,6 @@ namespace Migrators.MSSQL.Migrations
                         .HasForeignKey("CountryId");
                 });
 
-            modelBuilder.Entity("HRM.API.Domain.Catalog.SubCategory", b =>
-                {
-                    b.HasOne("HRM.API.Domain.Catalog.Category", "Category")
-                        .WithMany("SubCategories")
-                        .HasForeignKey("CategoryId");
-
-                    b.Navigation("Category");
-                });
-
             modelBuilder.Entity("HRM.API.Domain.Catalog.TaskBoard", b =>
                 {
                     b.HasOne("HRM.API.Domain.Catalog.ProjectTaskBoard", null)
@@ -3392,18 +3003,6 @@ namespace Migrators.MSSQL.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-                });
-
-            modelBuilder.Entity("HRM.API.Domain.Catalog.Accounting.Budgets.Budget", b =>
-                {
-                    b.Navigation("Expenses");
-
-                    b.Navigation("Revenues");
-                });
-
-            modelBuilder.Entity("HRM.API.Domain.Catalog.Category", b =>
-                {
-                    b.Navigation("SubCategories");
                 });
 
             modelBuilder.Entity("HRM.API.Domain.Catalog.Country", b =>
