@@ -20,9 +20,11 @@ public class State : AuditableEntity, IAggregateRoot
         Cities = cities;
     }
 
-    public string Name { get; private set; }
-    public string? Latitude { get; private set; }
-    public string? Longitude { get; private set; }
-    public Guid? CountryId { get; private set; }
-    public List<City>? Cities { get; private set; }
+    
+
+    public string Name { get; set; }
+    public string? Latitude { get; set; }
+    public string? Longitude { get; set; }
+    public Guid? CountryId { get; set; }
+    public List<City>? Cities { get; set; }
 }
