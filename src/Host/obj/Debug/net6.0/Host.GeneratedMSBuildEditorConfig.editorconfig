@@ -1,0 +1,51 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = HRM.API.Host
+build_property.RootNamespace = HRM.API.Host
+build_property.ProjectDir = D:\.Net\HRM.API\src\Host\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\.Net\HRM.API\src\Host
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/.Net/HRM.API/stylecop.json]
+build_metadata.AdditionalFiles.TargetPath = 
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/.Net/HRM.API/.editorconfig]
+build_metadata.AdditionalFiles.TargetPath = 
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/.Net/HRM.API/src/Host/Email Templates/email-confirmation-newemail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = RW1haWwgVGVtcGxhdGVzXGVtYWlsLWNvbmZpcm1hdGlvbi1uZXdlbWFpbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/.Net/HRM.API/src/Host/Email Templates/email-confirmation-oldemail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = RW1haWwgVGVtcGxhdGVzXGVtYWlsLWNvbmZpcm1hdGlvbi1vbGRlbWFpbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/.Net/HRM.API/src/Host/Email Templates/email-confirmation-verification.cshtml]
+build_metadata.AdditionalFiles.TargetPath = RW1haWwgVGVtcGxhdGVzXGVtYWlsLWNvbmZpcm1hdGlvbi12ZXJpZmljYXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/.Net/HRM.API/src/Host/Email Templates/email-confirmation-welcome.cshtml]
+build_metadata.AdditionalFiles.TargetPath = RW1haWwgVGVtcGxhdGVzXGVtYWlsLWNvbmZpcm1hdGlvbi13ZWxjb21lLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/.Net/HRM.API/src/Host/Email Templates/forgot-password.cshtml]
+build_metadata.AdditionalFiles.TargetPath = RW1haWwgVGVtcGxhdGVzXGZvcmdvdC1wYXNzd29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/.Net/HRM.API/src/Host/Email Templates/password-change-notification.cshtml]
+build_metadata.AdditionalFiles.TargetPath = RW1haWwgVGVtcGxhdGVzXHBhc3N3b3JkLWNoYW5nZS1ub3RpZmljYXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 

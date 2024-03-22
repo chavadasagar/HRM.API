@@ -1,0 +1,154 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\.Net\\HRM.API\\src\\Core\\Domain\\Domain.csproj": {}
+  },
+  "projects": {
+    "D:\\.Net\\HRM.API\\src\\Core\\Domain\\Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\.Net\\HRM.API\\src\\Core\\Domain\\Domain.csproj",
+        "projectName": "HRM.API.Domain",
+        "projectPath": "D:\\.Net\\HRM.API\\src\\Core\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\sagar\\.nuget\\packages\\",
+        "outputPath": "D:\\.Net\\HRM.API\\src\\Core\\Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\sagar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\.Net\\HRM.API\\src\\Core\\Shared\\Shared.csproj": {
+                "projectPath": "D:\\.Net\\HRM.API\\src\\Core\\Shared\\Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "NewId": {
+              "target": "Package",
+              "version": "[4.0.0-develop.44, )"
+            },
+            "Roslynator.Analyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[4.0.2, )"
+            },
+            "StyleCop.Analyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.2.0-beta.376, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\.Net\\HRM.API\\src\\Core\\Shared\\Shared.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\.Net\\HRM.API\\src\\Core\\Shared\\Shared.csproj",
+        "projectName": "HRM.API.Shared",
+        "projectPath": "D:\\.Net\\HRM.API\\src\\Core\\Shared\\Shared.csproj",
+        "packagesPath": "C:\\Users\\sagar\\.nuget\\packages\\",
+        "outputPath": "D:\\.Net\\HRM.API\\src\\Core\\Shared\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\sagar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Roslynator.Analyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[4.0.2, )"
+            },
+            "StyleCop.Analyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.2.0-beta.376, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
