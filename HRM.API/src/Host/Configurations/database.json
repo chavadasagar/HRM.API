@@ -1,6 +1,8 @@
 {
   "DatabaseSettings": {
-    "DBProvider": "mssql",
-    "ConnectionString": "Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=HRM;Data Source=SAGAR\\sagar;Connect Timeout=6000"
+    //"DBProvider": "mssql",
+    "DBProvider": "postgresql",
+    //"ConnectionString": "Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=HRM;Data Source=SAGAR\\sagar;Connect Timeout=6000",
+    "ConnectionString": "Host=localhost;Port=5432;Database=HRM;Username=postgres;Password=sagar"
   }
 }

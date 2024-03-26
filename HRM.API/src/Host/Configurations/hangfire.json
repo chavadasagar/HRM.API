@@ -20,8 +20,10 @@
       "WorkerCount": 5
     },
     "Storage": {
-      "StorageProvider": "mssql",
-      "ConnectionString": "Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=HRM;Data Source=SAGAR\\sagar;Connect Timeout=6000",
+      //"StorageProvider": "mssql",
+      "StorageProvider": "postgresql",
+      //"ConnectionString": "Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=HRM;Data Source=SAGAR\\sagar;Connect Timeout=6000",
+      "ConnectionString": "Host=localhost;Port=5432;Database=HRM;Username=postgres;Password=sagar",
       "Options": {
         "CommandBatchMaxTimeout": "00:05:00",
         "QueuePollInterval": "00:00:01",
