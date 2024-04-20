@@ -1,6 +1,10 @@
 ﻿namespace HRM.API.Domain.Catalog;
 public class Attendance : AuditableEntity, IAggregateRoot
 {
+    public Attendance()
+    {
+            
+    }
     public Attendance(DefaultIdType? employeeId, DateTime? date, DateTime? punchIn, DateTime? punchOut, string? production, string? @break, string? overTime)
     {
         EmployeeId = employeeId;

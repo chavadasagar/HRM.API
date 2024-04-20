@@ -1,8 +1,13 @@
 ﻿using HRM.API.Domain.Configuration;
+using HRM.API.Domain.Enum;
 
 namespace HRM.API.Domain.Catalog;
 public class Employee : AuditableEntity, IAggregateRoot
 {
+    public Employee()
+    {
+            
+    }
     public Employee(string? firstname, string? lastname, string? username, string? email, string? employeeId, DateTime? joiningDate, string? phone, DefaultIdType? companyId, DefaultIdType? departmentId, DefaultIdType? designationId)
     {
         Firstname = firstname;
@@ -28,10 +33,15 @@ public class Employee : AuditableEntity, IAggregateRoot
     public DefaultIdType? DepartmentId { get; set; }
     public DefaultIdType? DesignationId { get; set; }
     public bool IsActive { get; set; }
+    public string? AboutMe { get; set; }
+    public Personality Personality { get; set; }
     public List<Attendance>? Attendance { get; set; }
     public List<Overtime>? Overtime { get; set; }
     public List<Leave>? Leave { get; set; }
     public virtual Company? Company { get; set; }
     public virtual Department? Department { get; set; }
     public virtual Designation? Designation { get; set; }
+
 }
+
+
