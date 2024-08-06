@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Serilog;
+using Hangfire.SQLite;
 
 namespace HRM.API.Infrastructure.BackgroundJobs;
 
@@ -50,7 +51,8 @@ internal static class Startup
                 hangfireConfig.UseSqlServerStorage(connectionString, config.GetSection("HangfireSettings:Storage:Options").Get<SqlServerStorageOptions>()),
             DbProviderKeys.MySql =>
                 hangfireConfig.UseStorage(new MySqlStorage(connectionString, config.GetSection("HangfireSettings:Storage:Options").Get<MySqlStorageOptions>())),
-            _ => throw new Exception($"Hangfire Storage Provider {dbProvider} is not supported.")
+            DbProviderKeys.Sqlite =>
+                hangfireConfig.UseSQLiteStorage(connectionString, config.GetSection("HangfireSettings:Storage:Options").Get<SQLiteStorageOptions>()),
         };
 
     internal static IApplicationBuilder UseHangfireDashboard(this IApplicationBuilder app, IConfiguration config)
