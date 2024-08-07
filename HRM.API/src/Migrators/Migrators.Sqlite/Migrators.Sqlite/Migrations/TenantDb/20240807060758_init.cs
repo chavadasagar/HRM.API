@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace HRM.API.Infrastructure.Migrations.TenantDb
+namespace Migrators.Sqlite.Migrations.TenantDb
 {
     public partial class init : Migration
     {

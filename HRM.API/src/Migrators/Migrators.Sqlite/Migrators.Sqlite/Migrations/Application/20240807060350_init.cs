@@ -1,9 +1,8 @@
-﻿using System;
+﻿#nullable disable
+
 using Microsoft.EntityFrameworkCore.Migrations;
 
-#nullable disable
-
-namespace HRM.API.Infrastructure.Migrations
+namespace Migrators.Sqlite.Migrations
 {
     public partial class init : Migration
     {
