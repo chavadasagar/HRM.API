@@ -26,7 +26,7 @@
       }
     },
     "Properties": {
-      "Application": "MasterPOS.API"
+      "Application": "HRM.API"
     },
     "WriteTo": [
       {
