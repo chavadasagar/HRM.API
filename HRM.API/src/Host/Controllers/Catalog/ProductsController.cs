@@ -1,8 +1,8 @@
-﻿using HRM.API.Application.Catalog.Products;
-using HRM.API.Application.Common.Wrapper;
+﻿using MasterPOS.API.Application.Catalog.Products;
+using MasterPOS.API.Application.Common.Wrapper;
 using Microsoft.Extensions.Localization;
 
-namespace HRM.API.Host.Controllers.Catalog;
+namespace MasterPOS.API.Host.Controllers.Catalog;
 
 
 public class ProductsController : VersionedApiController

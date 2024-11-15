@@ -1,18 +1,18 @@
-using HRM.API.Infrastructure.Common;
 using Hangfire;
 using Hangfire.Console;
 using Hangfire.Console.Extensions;
 using Hangfire.MySql;
 using Hangfire.PostgreSql;
+using Hangfire.SQLite;
 using Hangfire.SqlServer;
 using HangfireBasicAuthenticationFilter;
+using MasterPOS.API.Infrastructure.Common;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Serilog;
-using Hangfire.SQLite;
 
-namespace HRM.API.Infrastructure.BackgroundJobs;
+namespace MasterPOS.API.Infrastructure.BackgroundJobs;
 
 internal static class Startup
 {
@@ -52,7 +52,8 @@ internal static class Startup
             DbProviderKeys.MySql =>
                 hangfireConfig.UseStorage(new MySqlStorage(connectionString, config.GetSection("HangfireSettings:Storage:Options").Get<MySqlStorageOptions>())),
             DbProviderKeys.Sqlite =>
-                hangfireConfig.UseSQLiteStorage(connectionString, config.GetSection("HangfireSettings:Storage:Options").Get<SQLiteStorageOptions>()),
+               hangfireConfig.UseSQLiteStorage(connectionString, config.GetSection("HangfireSettings:Storage:Options").Get<SQLiteStorageOptions>()),
+            _ => throw new Exception($"Hangfire Storage Provider {dbProvider} is not supported.")
         };
 
     internal static IApplicationBuilder UseHangfireDashboard(this IApplicationBuilder app, IConfiguration config)

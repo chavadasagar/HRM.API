@@ -1,6 +1,6 @@
-﻿using HRM.API.Application.Catalog;
+﻿using MasterPOS.API.Application.Catalog;
 
-namespace HRM.API.Domain.Catalog;
+namespace MasterPOS.API.Domain.Catalog;
 
 public class UpdateCategoryRequest : IRequest<Guid>
 {

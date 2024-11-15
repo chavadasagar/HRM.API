@@ -1,4 +1,4 @@
-﻿namespace HRM.API.Infrastructure.Common;
+﻿namespace MasterPOS.API.Infrastructure.Common;
 
 public static class QueryStringKeys
 {

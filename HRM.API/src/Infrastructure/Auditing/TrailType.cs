@@ -1,4 +1,4 @@
-namespace HRM.API.Infrastructure.Auditing;
+namespace MasterPOS.API.Infrastructure.Auditing;
 
 public enum TrailType : byte
 {

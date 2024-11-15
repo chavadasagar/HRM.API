@@ -1,6 +1,6 @@
-﻿using HRM.API.Domain.Configuration;
+﻿using MasterPOS.API.Domain.Configuration;
 
-namespace HRM.API.Application.Configuration;
+namespace MasterPOS.API.Application.Configuration;
 public class UpdateConfigurationRequest : IRequest<string>
 {
     public Guid Id { get; set; }

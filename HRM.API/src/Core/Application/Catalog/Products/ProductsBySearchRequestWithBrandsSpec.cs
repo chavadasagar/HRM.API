@@ -1,4 +1,4 @@
-﻿namespace HRM.API.Application.Catalog.Products;
+﻿namespace MasterPOS.API.Application.Catalog.Products;
 
 public class ProductsBySearchRequestWithBrandsSpec : EntitiesByPaginationFilterSpec<Product, ProductDto>
 {
@@ -7,6 +7,7 @@ public class ProductsBySearchRequestWithBrandsSpec : EntitiesByPaginationFilterS
         Query
             .Include(p => p.Brand)
             .Include(p => p.Category)
+            .Include(p => p.Unit)
             .OrderBy(c => c.Name, !request.HasOrderBy())
             .Where(p => p.BrandId.Equals(request.BrandId!.Value), request.BrandId.HasValue)
             .Where(p => p.CategoryId.Equals(request.CategoryId!.Value), request.CategoryId.HasValue)

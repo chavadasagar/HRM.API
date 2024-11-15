@@ -1,4 +1,4 @@
-namespace HRM.API.Application.Common.Caching;
+namespace MasterPOS.API.Application.Common.Caching;
 
 public static class CacheServiceExtensions
 {

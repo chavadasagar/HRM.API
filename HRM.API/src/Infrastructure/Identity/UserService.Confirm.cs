@@ -1,11 +1,11 @@
 using System.Text;
-using HRM.API.Application.Identity;
-using HRM.API.Infrastructure.Common;
-using HRM.API.Shared.Multitenancy;
+using MasterPOS.API.Application.Identity;
+using MasterPOS.API.Infrastructure.Common;
+using MasterPOS.API.Shared.Multitenancy;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.EntityFrameworkCore;
 
-namespace HRM.API.Infrastructure.Identity;
+namespace MasterPOS.API.Infrastructure.Identity;
 
 internal partial class UserService
 {

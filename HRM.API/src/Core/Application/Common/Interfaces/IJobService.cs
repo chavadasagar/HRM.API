@@ -1,6 +1,6 @@
 using System.Linq.Expressions;
 
-namespace HRM.API.Application.Common.Interfaces;
+namespace MasterPOS.API.Application.Common.Interfaces;
 
 public interface IJobService : ITransientService
 {

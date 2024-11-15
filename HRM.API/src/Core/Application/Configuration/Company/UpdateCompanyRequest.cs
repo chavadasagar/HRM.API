@@ -1,7 +1,7 @@
-﻿using HRM.API.Application.Multitenancy;
-using HRM.API.Domain.Configuration;
+﻿using MasterPOS.API.Application.Multitenancy;
+using MasterPOS.API.Domain.Configuration;
 
-namespace HRM.API.Application.Configuration;
+namespace MasterPOS.API.Application.Configuration;
 public class UpdateCompanyRequest : IRequest<string>
 {
     public Guid Id { get; set; }
@@ -18,7 +18,7 @@ public class UpdateCompanyRequest : IRequest<string>
     public string? UPIId { get; set; }
     public Guid? CountryId { get; set; }
     public Guid? StateId { get; set; }
-    public Guid? CityId { get; set; }
+    public string? City { get; set; }
     public string? Postcode { get; set; }
     public string? Address { get; set; }
     public FileUploadRequest? CompanyLogoImage { get; set; }
@@ -58,7 +58,7 @@ public class UpdateCompanyRequestHandler : IRequestHandler<UpdateCompanyRequest,
             ? await _file.UploadAsync<Company>(request.CompanyLogoImage, GlobalConstant.CompanyImageUploadDirectory, FileType.Image, cancellationToken)
             : null;
 
-        company = company.Update(name: request.Name, directorName: request.DirectorName, email: request.Email, mobile: request.Mobile, phone: request.Phone, gSTNumber: request.GSTNumber, vATNumber: request.VATNumber, pANNumber: request.PANNumber, website: request.Website, uPIId: request.UPIId, bankDetails: request.BankDetails, countryId: request.CountryId, stateId: request.StateId, cityId: request.CityId, postcode: request.Postcode, address: request.Address, companyLogoPath: companyImagePath ?? currentcompanyLogoPath);
+        company = company.Update(name: request.Name, directorName: request.DirectorName, email: request.Email, mobile: request.Mobile, phone: request.Phone, gSTNumber: request.GSTNumber, vATNumber: request.VATNumber, pANNumber: request.PANNumber, website: request.Website, uPIId: request.UPIId, bankDetails: request.BankDetails, countryId: request.CountryId, stateId: request.StateId, city: request.City, postcode: request.Postcode, address: request.Address, companyLogoPath: companyImagePath ?? currentcompanyLogoPath);
         await _repository.UpdateAsync(company, cancellationToken);
 
         return "updated";

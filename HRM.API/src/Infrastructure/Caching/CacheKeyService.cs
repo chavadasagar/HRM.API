@@ -1,7 +1,7 @@
 ﻿using Finbuckle.MultiTenant;
-using HRM.API.Application.Common.Caching;
+using MasterPOS.API.Application.Common.Caching;
 
-namespace HRM.API.Infrastructure.Caching;
+namespace MasterPOS.API.Infrastructure.Caching;
 
 public class CacheKeyService : ICacheKeyService
 {

@@ -1,6 +1,6 @@
 using Microsoft.Extensions.Diagnostics.HealthChecks;
 
-namespace HRM.API.Infrastructure.Multitenancy;
+namespace MasterPOS.API.Infrastructure.Multitenancy;
 
 public class TenantHealthCheck : IHealthCheck
 {

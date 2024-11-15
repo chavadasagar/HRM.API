@@ -1,8 +1,8 @@
 using System.Linq.Expressions;
-using HRM.API.Application.Common.Interfaces;
+using MasterPOS.API.Application.Common.Interfaces;
 using Hangfire;
 
-namespace HRM.API.Infrastructure.BackgroundJobs;
+namespace MasterPOS.API.Infrastructure.BackgroundJobs;
 
 public class HangfireService : IJobService
 {

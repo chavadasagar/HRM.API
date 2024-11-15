@@ -1,4 +1,4 @@
-﻿namespace HRM.API.Infrastructure.OpenApi;
+﻿namespace MasterPOS.API.Infrastructure.OpenApi;
 
 [AttributeUsage(AttributeTargets.Method, AllowMultiple = false)]
 public class SwaggerHeaderAttribute : Attribute

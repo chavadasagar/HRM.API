@@ -1,15 +1,15 @@
 ﻿using Finbuckle.MultiTenant;
 using Mapster;
-using HRM.API.Application.Common.Exceptions;
-using HRM.API.Application.Common.Persistence;
-using HRM.API.Application.Identity;
-using HRM.API.Application.Multitenancy;
-using HRM.API.Infrastructure.Persistence;
-using HRM.API.Infrastructure.Persistence.Initialization;
+using MasterPOS.API.Application.Common.Exceptions;
+using MasterPOS.API.Application.Common.Persistence;
+using MasterPOS.API.Application.Identity;
+using MasterPOS.API.Application.Multitenancy;
+using MasterPOS.API.Infrastructure.Persistence;
+using MasterPOS.API.Infrastructure.Persistence.Initialization;
 using Microsoft.Extensions.Localization;
 using Microsoft.Extensions.Options;
 
-namespace HRM.API.Infrastructure.Multitenancy;
+namespace MasterPOS.API.Infrastructure.Multitenancy;
 
 internal class TenantService : ITenantService
 {

@@ -1,4 +1,4 @@
-﻿namespace HRM.API.Application.Catalog.Brands;
+﻿namespace MasterPOS.API.Application.Catalog.Brands;
 
 public class GetBrandRequest : IRequest<BrandDto>
 {

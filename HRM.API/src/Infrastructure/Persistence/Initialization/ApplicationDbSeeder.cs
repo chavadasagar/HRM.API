@@ -1,17 +1,18 @@
-﻿using HRM.API.Domain.Catalog;
-using HRM.API.Domain.Configuration;
-using HRM.API.Infrastructure.Identity;
-using HRM.API.Infrastructure.Multitenancy;
-using HRM.API.Infrastructure.Persistence.Context;
-using HRM.API.Shared;
-using HRM.API.Shared.Authorization;
-using HRM.API.Shared.Multitenancy;
+﻿using MasterPOS.API.Domain.Catalog;
+using MasterPOS.API.Domain.Configuration;
+using MasterPOS.API.Domain.Identity;
+using MasterPOS.API.Infrastructure.Identity;
+using MasterPOS.API.Infrastructure.Multitenancy;
+using MasterPOS.API.Infrastructure.Persistence.Context;
+using MasterPOS.API.Shared;
+using MasterPOS.API.Shared.Authorization;
+using MasterPOS.API.Shared.Catalog;
+using MasterPOS.API.Shared.Multitenancy;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
-using Newtonsoft.Json;
 
-namespace HRM.API.Infrastructure.Persistence.Initialization;
+namespace MasterPOS.API.Infrastructure.Persistence.Initialization;
 
 internal class ApplicationDbSeeder
 {
@@ -34,6 +35,9 @@ internal class ApplicationDbSeeder
     {
         await SeedRolesAsync(dbContext);
         await SeedCountryAsync(dbContext);
+        await SeedStateAsync(dbContext);
+        await SeedDefaultCustomerAsync(dbContext);
+        await SeedDefaultStoreAsync(dbContext);
         await SeedConfigurationAsync(dbContext);
         await SeedCompanyAsync(dbContext);
         await SeedAdminUserAsync();
@@ -72,67 +76,76 @@ internal class ApplicationDbSeeder
 
     private async Task SeedCountryAsync(ApplicationDbContext dbContext)
     {
-        string path = Path.Combine(Directory.GetCurrentDirectory(), "Configurations", "CountryStateCity.json");
-
-        string json = File.ReadAllText(path);
-        var allcountry = JsonConvert.DeserializeObject<List<Country>>(json);
-
-        foreach (Country country in allcountry)
+        foreach (string countryName in MPOSCountry.Countries)
         {
-            if (await dbContext.Countries.SingleOrDefaultAsync(r => r.Name == country.Name) == null)
+            if (await dbContext.Countries.SingleOrDefaultAsync(r => r.Name == countryName) == null)
             {
-                _logger.LogInformation("Seeding '{countryname}' Country for '{tenantId}' Tenant.", country.Name, _currentTenant.Id);
-                foreach (var state in country.States)
-                {
-                    _logger.LogInformation("Seeding '{statename}' State for '{tenantId}' Tenant.", state.Name, _currentTenant.Id);
-                    foreach (var city in state.Cities)
-                    {
-                        _logger.LogInformation("Seeding '{statename}' City for '{tenantId}' Tenant.", city.Name, _currentTenant.Id);
-                    }
-                }
-                await dbContext.Countries.AddAsync(new Country(country));
+                _logger.LogInformation("Seeding {countryName} Country for '{tenantId}' Tenant.", countryName, _currentTenant.Id);
+                dbContext.Countries.Add(new Country(countryName));
                 await dbContext.SaveChangesAsync();
             }
         }
     }
 
-    //private async Task SeedCountryAsync(ApplicationDbContext dbContext)
-    //{
-    //    foreach (string countryName in HRMCountry.Countries)
-    //    {
-    //        if (await dbContext.Countries.SingleOrDefaultAsync(r => r.Name == countryName) == null)
-    //        {
-    //            _logger.LogInformation("Seeding {countryName} Country for '{tenantId}' Tenant.", countryName, _currentTenant.Id);
-    //            dbContext.Countries.Add(new Country(countryName));
-    //            await dbContext.SaveChangesAsync();
-    //        }
-    //    }
-    //}
+    private async Task SeedStateAsync(ApplicationDbContext dbContext)
+    {
+        foreach (var state in MPOSState.All)
+        {
+            if (await dbContext.States.SingleOrDefaultAsync(r => r.Name == state.stateName && r.Country.Name == state.countryName) == null)
+            {
+                var country = await dbContext.Countries.SingleOrDefaultAsync(r => r.Name == state.countryName);
+                if (country != null)
+                {
+                    dbContext.States.Add(new State(state.stateName, country.Id));
+                    await dbContext.SaveChangesAsync();
+                    _logger.LogInformation("Seeding {stateName} State for '{tenantId}' Tenant.", state.stateName, _currentTenant.Id);
+                }
+                else
+                {
+                    _logger.LogInformation("Seeding {countryName} Country not found for '{tenantId}' Tenant.", state.countryName, _currentTenant.Id);
+                }
+            }
+        }
+    }
 
-    //private async Task SeedStateAsync(ApplicationDbContext dbContext)
-    //{
-    //    foreach (var state in HRMState.All)
-    //    {
-    //        if (await dbContext.States.SingleOrDefaultAsync(r => r.Name == state.stateName && r.Country.Name == state.countryName) == null)
-    //        {
-    //            var country = await dbContext.Countries.SingleOrDefaultAsync(r => r.Name == state.countryName);
-    //            if (country != null)
-    //            {
-    //                dbContext.States.Add(new State(state.stateName, country.Id));
-    //                await dbContext.SaveChangesAsync();
-    //                _logger.LogInformation("Seeding {stateName} State for '{tenantId}' Tenant.", state.stateName, _currentTenant.Id);
-    //            }
-    //            else
-    //            {
-    //                _logger.LogInformation("Seeding {countryName} Country not found for '{tenantId}' Tenant.", state.countryName, _currentTenant.Id);
-    //            }
-    //        }
-    //    }
-    //}
+    private async Task SeedDefaultCustomerAsync(ApplicationDbContext dbContext)
+    {
+        if (string.IsNullOrWhiteSpace(_currentTenant.Id) || string.IsNullOrWhiteSpace(_currentTenant.AdminEmail))
+        {
+            return;
+        }
 
+        if (await dbContext.Customers.FirstOrDefaultAsync(u => u.IsPrimaryCustomer == true)
+            is not Customer customer && dbContext.Customers.Count() == 0)
+        {
+            customer = new Customer(name: MultitenancyConstants.DefaultCustomer, null, null, null, null, null, null, null, null, null, true);
+            customer.IsPrimaryCustomer = true;
+            await dbContext.Customers.AddAsync(customer);
+            await dbContext.SaveChangesAsync();
+            _logger.LogInformation("Seeding Default Customer for '{tenantId}' Tenant.", _currentTenant.Id);
+        }
+    }
+
+    private async Task SeedDefaultStoreAsync(ApplicationDbContext dbContext)
+    {
+        if (string.IsNullOrWhiteSpace(_currentTenant.Id) || string.IsNullOrWhiteSpace(_currentTenant.AdminEmail))
+        {
+            return;
+        }
+
+        if (await dbContext.Stores.FirstOrDefaultAsync(u => u.IsPrimaryStore == true)
+            is not Store store && dbContext.Stores.Count() == 0)
+        {
+            store = new Store(code: MultitenancyConstants.DefaultStoreCode, name: _currentTenant.Name, null, null, null, null, null, null, null, null, null, null, null, null, true, true);
+            store.IsPrimaryStore = true;
+            await dbContext.Stores.AddAsync(store);
+            await dbContext.SaveChangesAsync();
+            _logger.LogInformation("Seeding Default Store for '{tenantId}' Tenant.", _currentTenant.Id);
+        }
+    }
     private async Task SeedConfigurationAsync(ApplicationDbContext dbContext)
     {
-        foreach (var key in HRMConfigurations.All)
+        foreach (var key in MPOSConfigurations.All)
         {
             var config = await dbContext.GeneralConfigurations.Where(r => r.ConfigKey == key.ConfigKey).SingleOrDefaultAsync();
             if (config != null)
@@ -182,7 +195,7 @@ internal class ApplicationDbSeeder
         if (await dbContext.Companies.FirstOrDefaultAsync(u => u.Email == _currentTenant.AdminEmail)
             is not Company company)
         {
-            company = new Company(name: _currentTenant.Name.Trim().ToLowerInvariant(), directorName: null, email: _currentTenant.AdminEmail, mobile: null, phone: null, gSTNumber: null, vATNumber: null, pANNumber: null, website: null, uPIId: null, bankDetails: null, countryId: Guid.Empty, stateId: Guid.Empty, cityId: null, postcode: null, address: null, companyLogoPath: null, isActive: true);
+            company = new Company(name: _currentTenant.Name.Trim().ToLowerInvariant(), directorName: null, email: _currentTenant.AdminEmail, mobile: null, phone: null, gSTNumber: null, vATNumber: null, pANNumber: null, website: null, uPIId: null, bankDetails: null, countryId: Guid.Empty, stateId: Guid.Empty, city: null, postcode: null, address: null, companyLogoPath: null, isActive: true);
             await dbContext.Companies.AddAsync(company);
             await dbContext.SaveChangesAsync();
             _logger.LogInformation("Seeding Comapny Profile for '{tenantId}' Tenant.", _currentTenant.Id);

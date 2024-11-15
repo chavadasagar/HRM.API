@@ -1,4 +1,4 @@
-﻿namespace HRM.API.Application.Catalog.Products;
+﻿namespace MasterPOS.API.Application.Catalog.Products;
 
 public class ProductsByBrandSpec : Specification<Product>
 {

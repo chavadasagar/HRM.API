@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Localization;
 
-namespace HRM.API.Infrastructure.Identity;
+namespace MasterPOS.API.Infrastructure.Identity;
 
 internal static class IdentityResultExtensions
 {

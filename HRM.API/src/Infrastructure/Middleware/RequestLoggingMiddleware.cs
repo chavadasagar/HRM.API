@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Http;
 using Serilog;
 using Serilog.Context;
 
-namespace HRM.API.Infrastructure.Middleware;
+namespace MasterPOS.API.Infrastructure.Middleware;
 
 public class RequestLoggingMiddleware : IMiddleware
 {

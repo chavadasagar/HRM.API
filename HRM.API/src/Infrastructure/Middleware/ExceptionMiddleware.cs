@@ -1,12 +1,12 @@
 using System.Net;
-using HRM.API.Application.Common.Exceptions;
-using HRM.API.Application.Common.Interfaces;
+using MasterPOS.API.Application.Common.Exceptions;
+using MasterPOS.API.Application.Common.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Localization;
 using Serilog;
 using Serilog.Context;
 
-namespace HRM.API.Infrastructure.Middleware;
+namespace MasterPOS.API.Infrastructure.Middleware;
 
 internal class ExceptionMiddleware : IMiddleware
 {

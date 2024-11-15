@@ -2,20 +2,20 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
-using HRM.API.Application.Common.Exceptions;
-using HRM.API.Application.Identity.Tokens;
-using HRM.API.Infrastructure.Auth;
-using HRM.API.Infrastructure.Auth.Jwt;
-using HRM.API.Infrastructure.Mailing;
-using HRM.API.Infrastructure.Multitenancy;
-using HRM.API.Shared.Authorization;
-using HRM.API.Shared.Multitenancy;
+using MasterPOS.API.Application.Common.Exceptions;
+using MasterPOS.API.Application.Identity.Tokens;
+using MasterPOS.API.Infrastructure.Auth;
+using MasterPOS.API.Infrastructure.Auth.Jwt;
+using MasterPOS.API.Infrastructure.Mailing;
+using MasterPOS.API.Infrastructure.Multitenancy;
+using MasterPOS.API.Shared.Authorization;
+using MasterPOS.API.Shared.Multitenancy;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Localization;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 
-namespace HRM.API.Infrastructure.Identity;
+namespace MasterPOS.API.Infrastructure.Identity;
 
 internal class TokenService : ITokenService
 {

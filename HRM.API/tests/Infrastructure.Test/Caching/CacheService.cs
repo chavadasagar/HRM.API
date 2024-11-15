@@ -1,5 +1,5 @@
 using FluentAssertions;
-using HRM.API.Application.Common.Caching;
+using MasterPOS.API.Application.Common.Caching;
 using Xunit;
 
 namespace Infrastructure.Test.Caching;

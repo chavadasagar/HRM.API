@@ -1,9 +1,9 @@
 using Finbuckle.MultiTenant;
-using HRM.API.Infrastructure.Persistence.Context;
+using MasterPOS.API.Infrastructure.Persistence.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 
-namespace HRM.API.Infrastructure.Persistence.Initialization;
+namespace MasterPOS.API.Infrastructure.Persistence.Initialization;
 
 internal class ApplicationDbInitializer
 {

@@ -1,6 +1,6 @@
-using HRM.API.Domain.Common.Contracts;
+using MasterPOS.API.Domain.Common.Contracts;
 
-namespace HRM.API.Infrastructure.Auditing;
+namespace MasterPOS.API.Infrastructure.Auditing;
 
 public class Trail : BaseEntity
 {

@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Authorization;
 
-namespace HRM.API.Infrastructure.Auth.Permissions;
+namespace MasterPOS.API.Infrastructure.Auth.Permissions;
 
 internal class PermissionRequirement : IAuthorizationRequirement
 {

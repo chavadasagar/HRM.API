@@ -1,9 +1,9 @@
 ﻿using System.ComponentModel;
 using System.Data;
 using ClosedXML.Excel;
-using HRM.API.Application.Common.Exporters;
+using MasterPOS.API.Application.Common.Exporters;
 
-namespace HRM.API.Infrastructure.Common.Export;
+namespace MasterPOS.API.Infrastructure.Common.Export;
 
 public class ExcelWriter : IExcelWriter
 {

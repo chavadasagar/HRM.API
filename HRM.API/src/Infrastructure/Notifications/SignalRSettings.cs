@@ -1,4 +1,4 @@
-﻿namespace HRM.API.Infrastructure.Notifications;
+﻿namespace MasterPOS.API.Infrastructure.Notifications;
 
 public class SignalRSettings
 {

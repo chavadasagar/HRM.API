@@ -1,9 +1,12 @@
-﻿using HRM.API.Application.Catalog;
-using HRM.API.Application.Catalog.Products;
-using HRM.API.Application.Common;
-using HRM.API.Application.Identity.Roles;
+﻿using MasterPOS.API.Application.Catalog;
+using MasterPOS.API.Application.Catalog.PaymentTypes;
+using MasterPOS.API.Application.Catalog.Products;
+using MasterPOS.API.Application.Catalog.Stores;
+using MasterPOS.API.Application.Catalog.Suppliers;
+using MasterPOS.API.Application.Common;
+using MasterPOS.API.Application.Identity.Roles;
 
-namespace HRM.API.Host.Controllers;
+namespace MasterPOS.API.Host.Controllers;
 
 public class DropdownController : VersionedApiController
 {
@@ -11,6 +14,13 @@ public class DropdownController : VersionedApiController
     private readonly IRoleService _roleService;
 
     public DropdownController(IRoleService roleService) => _roleService = roleService;
+
+    [HttpGet("stores")]
+    [OpenApiOperation("get store list.", "")]
+    public async Task<List<StoreDropdownDto>> GetStoresAsync()
+    {
+        return await Mediator.Send(new GetActiveStoresRequest());
+    }
 
     [HttpGet("brands")]
     [OpenApiOperation("get brand list.", "")]
@@ -33,6 +43,27 @@ public class DropdownController : VersionedApiController
         return await Mediator.Send(new GetActiveProductsRequest());
     }
 
+    [HttpGet("suppliers")]
+    [OpenApiOperation("get Supplier list.", "")]
+    public async Task<List<SupplierDropdownDto>> GetSuppliersAsync()
+    {
+        return await Mediator.Send(new GetActiveSuppliersRequest());
+    }
+
+    [HttpGet("paymenttypes")]
+    [OpenApiOperation("get Payment Type list.", "")]
+    public async Task<List<PaymentTypeDropdownDto>> GetPaymentTypesAsync()
+    {
+        return await Mediator.Send(new GetActivePaymentTypesRequest());
+    }
+
+    [HttpGet("units")]
+    [OpenApiOperation("get unit list.", "")]
+    public async Task<List<UnitDropdownDto>> GetUnitsAsync()
+    {
+        return await Mediator.Send(new GetActiveUnitsRequest());
+    }
+
     [HttpGet("countries")]
     [OpenApiOperation("get country list.", "")]
     public async Task<List<CountryDto>> GetCountryAsync()
@@ -45,14 +76,6 @@ public class DropdownController : VersionedApiController
     public async Task<List<StateDto>> GetStatesByCountryAsync(Guid id)
     {
         return await Mediator.Send(new GetStatesRequest(id));
-    }
-
-
-    [HttpGet("citys/{id:guid}")]
-    [OpenApiOperation("get citys list by states.", "")]
-    public async Task<List<CityDto>> GetCityByStateAsync(Guid? id)
-    {
-        return await Mediator.Send(new GetCityRequest(id));
     }
 
     [HttpGet("roles")]

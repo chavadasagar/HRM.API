@@ -1,10 +1,10 @@
 ﻿using Finbuckle.MultiTenant.EntityFrameworkCore;
-using HRM.API.Infrastructure.Identity;
+using MasterPOS.API.Infrastructure.Identity;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace HRM.API.Infrastructure.Persistence.Configuration;
+namespace MasterPOS.API.Infrastructure.Persistence.Configuration;
 
 public class ApplicationUserConfig : IEntityTypeConfiguration<ApplicationUser>
 {

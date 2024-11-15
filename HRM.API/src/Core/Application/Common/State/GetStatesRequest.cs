@@ -1,4 +1,4 @@
-﻿namespace HRM.API.Application.Common;
+﻿namespace MasterPOS.API.Application.Common;
 public class GetStatesRequest : IRequest<List<StateDto>>
 {
     public Guid Id { get; set; }

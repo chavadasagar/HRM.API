@@ -1,4 +1,4 @@
-namespace HRM.API.Application.Dashboard;
+namespace MasterPOS.API.Application.Dashboard;
 
 public class StatsDto
 {

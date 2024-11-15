@@ -1,8 +1,8 @@
-using HRM.API.Shared.Authorization;
+using MasterPOS.API.Shared.Authorization;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.Extensions.Options;
 
-namespace HRM.API.Infrastructure.Auth.Permissions;
+namespace MasterPOS.API.Infrastructure.Auth.Permissions;
 
 internal class PermissionPolicyProvider : IAuthorizationPolicyProvider
 {

@@ -1,4 +1,4 @@
-﻿namespace HRM.API.Domain.Catalog;
+﻿namespace MasterPOS.API.Domain.Catalog;
 
 public class CreateCategoryRequest : IRequest<Guid>
 {

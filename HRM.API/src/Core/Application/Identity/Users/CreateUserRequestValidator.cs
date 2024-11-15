@@ -1,4 +1,4 @@
-namespace HRM.API.Application.Identity.Users;
+namespace MasterPOS.API.Application.Identity.Users;
 
 public class CreateUserRequestValidator : CustomValidator<CreateUserRequest>
 {

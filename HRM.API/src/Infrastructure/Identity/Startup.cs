@@ -1,8 +1,8 @@
-using HRM.API.Infrastructure.Persistence.Context;
+using MasterPOS.API.Infrastructure.Persistence.Context;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace HRM.API.Infrastructure.Identity;
+namespace MasterPOS.API.Infrastructure.Identity;
 
 internal static class Startup
 {

@@ -2,21 +2,21 @@ using Ardalis.Specification;
 using Ardalis.Specification.EntityFrameworkCore;
 using Finbuckle.MultiTenant;
 using Mapster;
-using HRM.API.Application.Common.Caching;
-using HRM.API.Application.Common.Events;
-using HRM.API.Application.Common.Exceptions;
-using HRM.API.Application.Common.FileStorage;
-using HRM.API.Application.Common.Interfaces;
-using HRM.API.Application.Common.Mailing;
-using HRM.API.Application.Common.Models;
-using HRM.API.Application.Common.Specification;
-using HRM.API.Application.Configuration;
-using HRM.API.Application.Identity.Users;
-using HRM.API.Domain.Identity;
-using HRM.API.Infrastructure.Auth;
-using HRM.API.Infrastructure.Mailing;
-using HRM.API.Infrastructure.Persistence.Context;
-using HRM.API.Shared.Authorization;
+using MasterPOS.API.Application.Common.Caching;
+using MasterPOS.API.Application.Common.Events;
+using MasterPOS.API.Application.Common.Exceptions;
+using MasterPOS.API.Application.Common.FileStorage;
+using MasterPOS.API.Application.Common.Interfaces;
+using MasterPOS.API.Application.Common.Mailing;
+using MasterPOS.API.Application.Common.Models;
+using MasterPOS.API.Application.Common.Specification;
+using MasterPOS.API.Application.Configuration;
+using MasterPOS.API.Application.Identity.Users;
+using MasterPOS.API.Domain.Identity;
+using MasterPOS.API.Infrastructure.Auth;
+using MasterPOS.API.Infrastructure.Mailing;
+using MasterPOS.API.Infrastructure.Persistence.Context;
+using MasterPOS.API.Shared.Authorization;
 using Microsoft.AspNetCore.DataProtection;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -24,7 +24,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Localization;
 using Microsoft.Extensions.Options;
 
-namespace HRM.API.Infrastructure.Identity;
+namespace MasterPOS.API.Infrastructure.Identity;
 
 internal partial class UserService : IUserService
 {
@@ -217,6 +217,7 @@ internal partial class UserService : IUserService
                                  BankDetails = c.BankDetails,
                                  CountryName = country.Name,
                                  StateName = s.Name,
+                                 City = c.City,
                                  Postcode = c.Postcode,
                                  Address = c.Address,
                                  CompanyLogoPath = c.CompanyLogoPath

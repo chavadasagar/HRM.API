@@ -4,7 +4,7 @@ using Hangfire.Server;
 using Hangfire.States;
 using Hangfire.Storage;
 
-namespace HRM.API.Infrastructure.BackgroundJobs;
+namespace MasterPOS.API.Infrastructure.BackgroundJobs;
 
 public class LogJobFilter : IClientFilter, IServerFilter, IElectStateFilter, IApplyStateFilter
 {

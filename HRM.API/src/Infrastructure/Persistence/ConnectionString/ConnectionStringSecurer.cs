@@ -1,12 +1,12 @@
 using System.Data.SqlClient;
-using HRM.API.Application.Common.Persistence;
-using HRM.API.Infrastructure.Common;
+using MasterPOS.API.Application.Common.Persistence;
+using MasterPOS.API.Infrastructure.Common;
 using Microsoft.Extensions.Options;
 using MySqlConnector;
 using Npgsql;
 using Oracle.ManagedDataAccess.Client;
 
-namespace HRM.API.Infrastructure.Persistence.ConnectionString;
+namespace MasterPOS.API.Infrastructure.Persistence.ConnectionString;
 
 public class ConnectionStringSecurer : IConnectionStringSecurer
 {

@@ -1,6 +1,6 @@
 using System.Net;
 
-namespace HRM.API.Application.Common.Exceptions;
+namespace MasterPOS.API.Application.Common.Exceptions;
 
 public class NotFoundException : CustomException
 {

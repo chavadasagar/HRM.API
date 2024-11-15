@@ -1,7 +1,7 @@
 using System.Security.Claims;
-using HRM.API.Application.Common.Interfaces;
+using MasterPOS.API.Application.Common.Interfaces;
 
-namespace HRM.API.Infrastructure.Auth;
+namespace MasterPOS.API.Infrastructure.Auth;
 
 public class CurrentUser : ICurrentUser, ICurrentUserInitializer
 {

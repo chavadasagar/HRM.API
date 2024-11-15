@@ -1,30 +1,14 @@
-﻿namespace HRM.API.Domain.Catalog;
-public class State : AuditableEntity, IAggregateRoot
+﻿namespace MasterPOS.API.Domain.Catalog;
+public class State : BaseEntity, IAggregateRoot
 {
-    public State()
-    {
-    }
-
-    public State(string name, string? latitude, string? longitude)
-    {
-        Name = name;
-        this.Latitude = latitude;
-        this.Longitude = longitude;
-    }
-
-    public State(string name, string? latitude, string? longitude, List<City>? cities)
-    {
-        Name = name;
-        this.Latitude = latitude;
-        this.Longitude = longitude;
-        Cities = cities;
-    }
-
-    
-
+    public Guid CountryId { get; set; }
     public string Name { get; set; }
-    public string? Latitude { get; set; }
-    public string? Longitude { get; set; }
-    public Guid? CountryId { get; set; }
-    public List<City>? Cities { get; set; }
+    public string NormalizedName { get; set; }
+    public virtual Country Country { get; private set; } = default!;
+    public State(string name, Guid countryId)
+    {
+        Name = name;
+        NormalizedName = name.ToUpperInvariant();
+        CountryId = countryId;
+    }
 }

@@ -1,4 +1,4 @@
-namespace HRM.API.Infrastructure.SecurityHeaders;
+namespace MasterPOS.API.Infrastructure.SecurityHeaders;
 
 public class SecurityHeaderSettings
 {

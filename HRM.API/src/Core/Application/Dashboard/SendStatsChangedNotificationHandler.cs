@@ -1,8 +1,8 @@
-using HRM.API.Domain.Common.Events;
-using HRM.API.Domain.Identity;
-using HRM.API.Shared.Events;
+using MasterPOS.API.Domain.Common.Events;
+using MasterPOS.API.Domain.Identity;
+using MasterPOS.API.Shared.Events;
 
-namespace HRM.API.Application.Dashboard;
+namespace MasterPOS.API.Application.Dashboard;
 
 public class SendStatsChangedNotificationHandler :
     IEventNotificationHandler<EntityCreatedEvent<Brand>>,

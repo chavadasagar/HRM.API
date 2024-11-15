@@ -1,8 +1,8 @@
-﻿using HRM.API.Application.Common.Caching;
+﻿using MasterPOS.API.Application.Common.Caching;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace HRM.API.Infrastructure.Caching;
+namespace MasterPOS.API.Infrastructure.Caching;
 
 internal static class Startup
 {

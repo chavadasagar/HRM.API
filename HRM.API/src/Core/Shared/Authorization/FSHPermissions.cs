@@ -1,6 +1,6 @@
 using System.Collections.ObjectModel;
 
-namespace HRM.API.Shared.Authorization;
+namespace MasterPOS.API.Shared.Authorization;
 
 public static class FSHAction
 {
@@ -18,7 +18,6 @@ public static class FSHAction
 public static class FSHResource
 {
     public const string Tenants = nameof(Tenants);
-    public const string Employee = nameof(Employee);
     public const string Company = nameof(Company);
     public const string Dashboard = nameof(Dashboard);
     public const string Hangfire = nameof(Hangfire);
@@ -49,9 +48,6 @@ public static class FSHPermissions
 
         // Hangfire
         new("View Hangfire", FSHAction.View, FSHResource.Hangfire),
-
-        // Users
-        new("View Employee", FSHAction.View, FSHResource.Employee),
 
         // Users
         new("View Users", FSHAction.View, FSHResource.Users),

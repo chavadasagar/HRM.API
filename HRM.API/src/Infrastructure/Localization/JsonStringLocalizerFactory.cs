@@ -1,7 +1,7 @@
-﻿using HRM.API.Application.Common.Caching;
+﻿using MasterPOS.API.Application.Common.Caching;
 using Microsoft.Extensions.Localization;
 
-namespace HRM.API.Infrastructure.Localization;
+namespace MasterPOS.API.Infrastructure.Localization;
 
 public class JsonStringLocalizerFactory : IStringLocalizerFactory
 {

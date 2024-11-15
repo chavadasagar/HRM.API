@@ -20,10 +20,8 @@
       "WorkerCount": 5
     },
     "Storage": {
-      //"StorageProvider": "mssql",
       "StorageProvider": "sqlite",
-      //"ConnectionString": "Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=HRM;Data Source=SAGAR\\sagar;Connect Timeout=6000",
-      "ConnectionString": "Data Source = D:\\hrm.db;Cache=Shared",
+      "ConnectionString": "Data Source=D:\\hrm.db;Cache=Shared",
       "Options": {
         "CommandBatchMaxTimeout": "00:05:00",
         "QueuePollInterval": "00:00:01",

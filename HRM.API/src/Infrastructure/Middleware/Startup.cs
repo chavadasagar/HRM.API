@@ -2,7 +2,7 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace HRM.API.Infrastructure.Middleware;
+namespace MasterPOS.API.Infrastructure.Middleware;
 
 internal static class Startup
 {

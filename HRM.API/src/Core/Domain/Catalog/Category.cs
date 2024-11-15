@@ -1,10 +1,9 @@
-﻿namespace HRM.API.Domain.Catalog;
+﻿namespace MasterPOS.API.Domain.Catalog;
 public class Category : AuditableEntity, IAggregateRoot
 {
     public string Name { get; private set; }
     public string? Description { get; private set; }
     public string? ImagePath { get; private set; }
-    public List<SubCategory>? SubCategories { get; set; }
     public bool IsActive { get; set; }
 
     public Category(string name, string? description, bool isActive, string? imagePath)

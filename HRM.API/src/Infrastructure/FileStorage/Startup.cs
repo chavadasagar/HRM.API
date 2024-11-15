@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.FileProviders;
 
-namespace HRM.API.Infrastructure.FileStorage;
+namespace MasterPOS.API.Infrastructure.FileStorage;
 
 internal static class Startup
 {

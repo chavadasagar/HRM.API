@@ -1,6 +1,6 @@
 using System.Reflection;
 
-namespace HRM.API.Infrastructure.Common.Extensions;
+namespace MasterPOS.API.Infrastructure.Common.Extensions;
 
 public static class TypeExtensions
 {

@@ -1,6 +1,6 @@
 using MediatR;
 
-namespace HRM.API.Host.Controllers;
+namespace MasterPOS.API.Host.Controllers;
 
 [ApiController]
 public class BaseApiController : ControllerBase

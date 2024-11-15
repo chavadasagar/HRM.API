@@ -1,6 +1,6 @@
-using HRM.API.Shared.Events;
+using MasterPOS.API.Shared.Events;
 
-namespace HRM.API.Domain.Common.Contracts;
+namespace MasterPOS.API.Domain.Common.Contracts;
 
 public abstract class DomainEvent : IEvent
 {

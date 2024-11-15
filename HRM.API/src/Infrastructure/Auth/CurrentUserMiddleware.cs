@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 
-namespace HRM.API.Infrastructure.Auth;
+namespace MasterPOS.API.Infrastructure.Auth;
 
 public class CurrentUserMiddleware : IMiddleware
 {

@@ -1,6 +1,6 @@
 using System.Net;
 
-namespace HRM.API.Application.Identity;
+namespace MasterPOS.API.Application.Identity;
 
 public class InternalServerException : CustomException
 {

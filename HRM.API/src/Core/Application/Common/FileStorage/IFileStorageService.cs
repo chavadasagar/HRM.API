@@ -1,4 +1,4 @@
-namespace HRM.API.Application.Common.FileStorage;
+namespace MasterPOS.API.Application.Common.FileStorage;
 
 public interface IFileStorageService : ITransientService
 {

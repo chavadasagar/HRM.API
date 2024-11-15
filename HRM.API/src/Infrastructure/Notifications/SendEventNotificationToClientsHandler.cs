@@ -1,9 +1,9 @@
-﻿using HRM.API.Application.Common.Events;
-using HRM.API.Application.Common.Interfaces;
-using HRM.API.Shared.Notifications;
+﻿using MasterPOS.API.Application.Common.Events;
+using MasterPOS.API.Application.Common.Interfaces;
+using MasterPOS.API.Shared.Notifications;
 using MediatR;
 
-namespace HRM.API.Infrastructure.Notifications;
+namespace MasterPOS.API.Infrastructure.Notifications;
 
 // Sends all events that are also an INotificationMessage to all clients
 // Note: for this to work, the Event/NotificationMessage class needs to be in the

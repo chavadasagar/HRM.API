@@ -1,4 +1,4 @@
-﻿namespace HRM.API.Shared.Notifications;
+﻿namespace MasterPOS.API.Shared.Notifications;
 
 public class BasicNotification : INotificationMessage
 {

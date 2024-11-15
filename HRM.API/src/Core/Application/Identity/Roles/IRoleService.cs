@@ -1,6 +1,6 @@
-using HRM.API.Application.Common.Wrapper;
+using MasterPOS.API.Application.Common.Wrapper;
 
-namespace HRM.API.Application.Identity.Roles;
+namespace MasterPOS.API.Application.Identity.Roles;
 
 public interface IRoleService : ITransientService
 {

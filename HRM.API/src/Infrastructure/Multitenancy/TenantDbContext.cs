@@ -1,8 +1,8 @@
 ﻿using Finbuckle.MultiTenant.Stores;
-using HRM.API.Infrastructure.Persistence.Configuration;
+using MasterPOS.API.Infrastructure.Persistence.Configuration;
 using Microsoft.EntityFrameworkCore;
 
-namespace HRM.API.Infrastructure.Multitenancy;
+namespace MasterPOS.API.Infrastructure.Multitenancy;
 
 public class TenantDbContext : EFCoreStoreDbContext<FSHTenantInfo>
 {

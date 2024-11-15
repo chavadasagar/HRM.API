@@ -1,6 +1,6 @@
-﻿using HRM.API.Shared.Multitenancy;
+﻿using MasterPOS.API.Shared.Multitenancy;
 
-namespace HRM.API.Infrastructure.OpenApi;
+namespace MasterPOS.API.Infrastructure.OpenApi;
 
 public class TenantIdHeaderAttribute : SwaggerHeaderAttribute
 {

@@ -1,4 +1,4 @@
-namespace HRM.API.Application.Common.Mailing;
+namespace MasterPOS.API.Application.Common.Mailing;
 
 public interface IEmailTemplateService : ITransientService
 {

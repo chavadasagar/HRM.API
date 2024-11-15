@@ -1,7 +1,7 @@
-using HRM.API.Application.Common.Wrapper;
-using HRM.API.Application.Identity.Roles;
+using MasterPOS.API.Application.Common.Wrapper;
+using MasterPOS.API.Application.Identity.Roles;
 
-namespace HRM.API.Host.Controllers.Identity;
+namespace MasterPOS.API.Host.Controllers.Identity;
 
 public class RolesController : VersionNeutralApiController
 {

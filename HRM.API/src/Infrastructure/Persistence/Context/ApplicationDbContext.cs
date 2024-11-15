@@ -1,19 +1,15 @@
 using Finbuckle.MultiTenant;
-using HRM.API.Application.Common.Events;
-using HRM.API.Application.Common.Interfaces;
-using HRM.API.Domain.Catalog;
-using HRM.API.Domain.Catalog.Accounting.Budgets;
-using HRM.API.Domain.Catalog.Sales.Estimates;
-using HRM.API.Domain.Catalog.Sales.Expenses;
-using HRM.API.Domain.Catalog.Sales.Invoices;
-using HRM.API.Domain.Catalog.Sales.ProvidentFunds;
-using HRM.API.Domain.Catalog.Tickets;
-using HRM.API.Domain.Configuration;
-using HRM.API.Infrastructure.Persistence.Configuration;
+using MasterPOS.API.Application.Common.Events;
+using MasterPOS.API.Application.Common.Interfaces;
+using MasterPOS.API.Domain.Catalog;
+using MasterPOS.API.Domain.Configuration;
+using MasterPOS.API.Domain.Identity;
+using MasterPOS.API.Domain.Inventory;
+using MasterPOS.API.Infrastructure.Persistence.Configuration;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 
-namespace HRM.API.Infrastructure.Persistence.Context;
+namespace MasterPOS.API.Infrastructure.Persistence.Context;
 
 public class ApplicationDbContext : BaseDbContext
 {
@@ -25,32 +21,28 @@ public class ApplicationDbContext : BaseDbContext
     public DbSet<Product> Products => Set<Product>();
     public DbSet<Brand> Brands => Set<Brand>();
     public DbSet<Category> Categories => Set<Category>();
+    public DbSet<Unit> Units => Set<Unit>();
+    public DbSet<Store> Stores => Set<Store>();
+    public DbSet<Counter> Counters => Set<Counter>();
+    public DbSet<PaymentType> PaymentTypes => Set<PaymentType>();
     public DbSet<Country> Countries => Set<Country>();
     public DbSet<State> States => Set<State>();
+    public DbSet<Customer> Customers => Set<Customer>();
     public DbSet<Company> Companies => Set<Company>();
-    public DbSet<Employee> Employee => Set<Employee>();
-    public DbSet<Holidays> Holidays => Set<Holidays>();
-    public DbSet<Project> Project => Set<Project>();
-    public DbSet<Attendance> Attendance => Set<Attendance>();
-    public DbSet<Priority> Priority => Set<Priority>();
-    public DbSet<RateType> RateType => Set<RateType>();
-    public DbSet<TimeSheet> TimeSheet => Set<TimeSheet>();
-    public DbSet<Overtime> Overtime => Set<Overtime>();
-    public DbSet<Ticket> Ticket => Set<Ticket>();
-    public DbSet<Estimate> Estimate => Set<Estimate>();
-    public DbSet<Invoice> Invoice => Set<Invoice>();
-    public DbSet<Expense> Expense => Set<Expense>();
-    public DbSet<ProjectTaskBoard> ProjectTaskBoard => Set<ProjectTaskBoard>();
-    public DbSet<ProvidentFund> ProvidentFund => Set<ProvidentFund>();
-    public DbSet<Budget> Budget => Set<Budget>();
-    public DbSet<BudgetExpenses> BudgetExpenses => Set<BudgetExpenses>();
-    public DbSet<BudgetRevenues> BudgetRevenues => Set<BudgetRevenues>();
     public DbSet<GeneralConfiguration> GeneralConfigurations => Set<GeneralConfiguration>();
+    public DbSet<Supplier> Suppliers => Set<Supplier>();
+    public DbSet<Purchase> Purchases => Set<Purchase>();
+    public DbSet<PurchaseProduct> PurchaseProducts => Set<PurchaseProduct>();
+    public DbSet<PurchasePayment> PurchasePayments => Set<PurchasePayment>();
+    public DbSet<PurchaseReturn> PurchaseReturns => Set<PurchaseReturn>();
+    public DbSet<PurchaseReturnProduct> PurchaseReturnProducts => Set<PurchaseReturnProduct>();
+    public DbSet<PurchaseReturnPayment> PurchaseReturnPayments => Set<PurchaseReturnPayment>();
+    public DbSet<ProductQuantiy> ProductQuantities => Set<ProductQuantiy>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
 
-        modelBuilder.HasDefaultSchema(SchemaNames.HRM);
+        modelBuilder.HasDefaultSchema(SchemaNames.MPOS);
     }
 }

@@ -4,7 +4,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Serilog;
 
-namespace HRM.API.Infrastructure.Notifications;
+namespace MasterPOS.API.Infrastructure.Notifications;
 
 internal static class Startup
 {

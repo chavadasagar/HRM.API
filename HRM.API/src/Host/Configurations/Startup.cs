@@ -1,4 +1,4 @@
-namespace HRM.API.Host.Configurations;
+namespace MasterPOS.API.Host.Configurations;
 
 internal static class Startup
 {

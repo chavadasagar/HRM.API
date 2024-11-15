@@ -1,4 +1,4 @@
-﻿namespace HRM.API.Application.Common;
+﻿namespace MasterPOS.API.Application.Common;
 public class StateDto : IDto
 {
     public Guid Id { get; set; }

@@ -1,4 +1,4 @@
-namespace HRM.API.Infrastructure.Caching;
+namespace MasterPOS.API.Infrastructure.Caching;
 
 public class CacheSettings
 {

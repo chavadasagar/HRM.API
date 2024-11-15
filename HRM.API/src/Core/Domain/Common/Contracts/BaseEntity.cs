@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using MassTransit;
 
-namespace HRM.API.Domain.Common.Contracts;
+namespace MasterPOS.API.Domain.Common.Contracts;
 
 public abstract class BaseEntity : BaseEntity<DefaultIdType>
 {

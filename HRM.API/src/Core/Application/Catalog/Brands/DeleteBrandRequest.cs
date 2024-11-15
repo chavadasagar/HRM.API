@@ -1,6 +1,6 @@
-﻿using HRM.API.Application.Catalog.Products;
+﻿using MasterPOS.API.Application.Catalog.Products;
 
-namespace HRM.API.Application.Catalog.Brands;
+namespace MasterPOS.API.Application.Catalog.Brands;
 
 public class DeleteBrandRequest : IRequest<string>
 {

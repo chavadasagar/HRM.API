@@ -1,4 +1,4 @@
-namespace HRM.API.Application.Identity.Tokens;
+namespace MasterPOS.API.Application.Identity.Tokens;
 
 public record TokenRequest(string Email, string Password);
 

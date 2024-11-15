@@ -1,9 +1,9 @@
-﻿using HRM.API.Infrastructure.Common.Settings;
+﻿using MasterPOS.API.Infrastructure.Common.Settings;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace HRM.API.Infrastructure.Cors;
+namespace MasterPOS.API.Infrastructure.Cors;
 
 internal static class Startup
 {

@@ -1,6 +1,6 @@
-using HRM.API.Application.Identity.Tokens;
+using MasterPOS.API.Application.Identity.Tokens;
 
-namespace HRM.API.Host.Controllers.Identity;
+namespace MasterPOS.API.Host.Controllers.Identity;
 
 public sealed class TokensController : VersionNeutralApiController
 {

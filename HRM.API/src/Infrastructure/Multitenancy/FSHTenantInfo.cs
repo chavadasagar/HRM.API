@@ -1,7 +1,7 @@
 ﻿using Finbuckle.MultiTenant;
-using HRM.API.Shared.Multitenancy;
+using MasterPOS.API.Shared.Multitenancy;
 
-namespace HRM.API.Infrastructure.Multitenancy;
+namespace MasterPOS.API.Infrastructure.Multitenancy;
 
 public class FSHTenantInfo : ITenantInfo
 {

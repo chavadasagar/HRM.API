@@ -1,4 +1,4 @@
-﻿namespace HRM.API.Application.Configuration;
+﻿namespace MasterPOS.API.Application.Configuration;
 public class ConfigurationUpdateRequest
 {
     public Guid Id { get; set; }

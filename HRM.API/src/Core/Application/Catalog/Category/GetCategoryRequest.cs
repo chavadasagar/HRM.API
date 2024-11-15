@@ -1,5 +1,5 @@
 ﻿
-using HRM.API.Application.Catalog;
+using MasterPOS.API.Application.Catalog;
 
 public class GetCategoryRequest : IRequest<CategoryDto>
 {

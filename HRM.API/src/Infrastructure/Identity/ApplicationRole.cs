@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Identity;
 
-namespace HRM.API.Infrastructure.Identity;
+namespace MasterPOS.API.Infrastructure.Identity;
 
 public class ApplicationRole : IdentityRole
 {

@@ -1,8 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <TargetFramework>net6.0</TargetFramework>
-        <RootNamespace>HRM.API.Domain</RootNamespace>
-        <AssemblyName>HRM.API.Domain</AssemblyName>
+        <RootNamespace>MasterPOS.API.Domain</RootNamespace>
+        <AssemblyName>MasterPOS.API.Domain</AssemblyName>
     </PropertyGroup>
     <ItemGroup>
         <PackageReference Include="NewId" Version="4.0.0-develop.44" />

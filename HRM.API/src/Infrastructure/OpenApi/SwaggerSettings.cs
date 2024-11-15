@@ -1,4 +1,4 @@
-namespace HRM.API.Infrastructure.OpenApi;
+namespace MasterPOS.API.Infrastructure.OpenApi;
 
 public class SwaggerSettings
 {

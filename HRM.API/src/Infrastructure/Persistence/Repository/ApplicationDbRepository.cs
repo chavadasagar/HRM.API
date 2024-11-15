@@ -1,11 +1,11 @@
 ﻿using Ardalis.Specification;
 using Ardalis.Specification.EntityFrameworkCore;
-using HRM.API.Application.Common.Persistence;
-using HRM.API.Domain.Common.Contracts;
-using HRM.API.Infrastructure.Persistence.Context;
+using MasterPOS.API.Application.Common.Persistence;
+using MasterPOS.API.Domain.Common.Contracts;
+using MasterPOS.API.Infrastructure.Persistence.Context;
 using Mapster;
 
-namespace HRM.API.Infrastructure.Persistence.Repository;
+namespace MasterPOS.API.Infrastructure.Persistence.Repository;
 
 // Inherited from Ardalis.Specification's RepositoryBase<T>
 public class ApplicationDbRepository<T> : RepositoryBase<T>, IReadRepository<T>, IRepository<T>

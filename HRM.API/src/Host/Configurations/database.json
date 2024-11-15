@@ -1,8 +1,6 @@
 {
   "DatabaseSettings": {
-    //"DBProvider": "mssql",
     "DBProvider": "sqlite",
-    //"ConnectionString": "Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=HRM;Data Source=SAGAR\\sagar;Connect Timeout=6000",
-    "ConnectionString": "Data Source=D:\\hrm.db"
+    "ConnectionString": "Data Source=D:\\hrm.db;Cache=Shared"
   }
 }

@@ -1,4 +1,4 @@
-﻿namespace HRM.API.Application.Common.Specification;
+﻿namespace MasterPOS.API.Application.Common.Specification;
 
 public class EntitiesByBaseFilterSpec<T, TResult> : Specification<T, TResult>
 {

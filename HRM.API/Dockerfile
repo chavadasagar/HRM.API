@@ -38,4 +38,4 @@ ENV ASPNETCORE_URLS=https://+:5050;http://+:5060
 EXPOSE 5050
 EXPOSE 5060
 
-ENTRYPOINT ["dotnet", "HRM.API.Host.dll"]
+ENTRYPOINT ["dotnet", "MasterPOS.API.Host.dll"]

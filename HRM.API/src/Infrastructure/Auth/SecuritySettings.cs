@@ -1,4 +1,4 @@
-namespace HRM.API.Infrastructure.Auth;
+namespace MasterPOS.API.Infrastructure.Auth;
 
 public class SecuritySettings
 {

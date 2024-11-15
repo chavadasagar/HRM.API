@@ -1,4 +1,4 @@
-﻿namespace HRM.API.Application.Common.Models;
+﻿namespace MasterPOS.API.Application.Common.Models;
 
 public class PaginationResponse<T>
 {

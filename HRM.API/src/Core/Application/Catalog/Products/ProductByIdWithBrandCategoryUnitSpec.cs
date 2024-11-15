@@ -1,4 +1,4 @@
-﻿namespace HRM.API.Application.Catalog.Products;
+﻿namespace MasterPOS.API.Application.Catalog.Products;
 
 public class ProductByIdWithBrandCategoryUnitSpec : Specification<Product, ProductDetailsDto>, ISingleResultSpecification
 {
@@ -6,5 +6,6 @@ public class ProductByIdWithBrandCategoryUnitSpec : Specification<Product, Produ
         Query
             .Where(p => p.Id == id)
             .Include(p => p.Brand)
-            .Include(p => p.Category);
+            .Include(p => p.Category)
+            .Include(p => p.Unit);
 }

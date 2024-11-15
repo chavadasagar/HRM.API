@@ -4,7 +4,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Identity.Web;
 using Serilog;
 
-namespace HRM.API.Infrastructure.Auth.AzureAd;
+namespace MasterPOS.API.Infrastructure.Auth.AzureAd;
 
 internal static class Startup
 {

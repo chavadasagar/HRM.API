@@ -1,9 +1,9 @@
-﻿using HRM.API.Application.Common.Caching;
-using HRM.API.Application.Common.Exceptions;
-using HRM.API.Shared.Authorization;
+﻿using MasterPOS.API.Application.Common.Caching;
+using MasterPOS.API.Application.Common.Exceptions;
+using MasterPOS.API.Shared.Authorization;
 using Microsoft.EntityFrameworkCore;
 
-namespace HRM.API.Infrastructure.Identity;
+namespace MasterPOS.API.Infrastructure.Identity;
 
 internal partial class UserService
 {

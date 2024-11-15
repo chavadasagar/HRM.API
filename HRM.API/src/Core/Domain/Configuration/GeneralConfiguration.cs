@@ -1,4 +1,4 @@
-﻿namespace HRM.API.Domain.Configuration;
+﻿namespace MasterPOS.API.Domain.Configuration;
 public class GeneralConfiguration : AuditableEntity, IAggregateRoot
 {
     public string ConfigKey { get; set; } = default!;

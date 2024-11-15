@@ -1,6 +1,6 @@
 ﻿using FluentValidation.Validators;
 
-namespace HRM.API.Application.Common.Validation;
+namespace MasterPOS.API.Application.Common.Validation;
 
 // SetValidator doesn't work when dealing with a nullable reference type
 // Use this SetNonNullableValidator extension method instead

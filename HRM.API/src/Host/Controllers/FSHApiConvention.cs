@@ -1,7 +1,7 @@
-﻿using HRM.API.Infrastructure.Middleware;
+﻿using MasterPOS.API.Infrastructure.Middleware;
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
 
-namespace HRM.API.Host.Controllers;
+namespace MasterPOS.API.Host.Controllers;
 
 #nullable disable
 #pragma warning disable RCS1163

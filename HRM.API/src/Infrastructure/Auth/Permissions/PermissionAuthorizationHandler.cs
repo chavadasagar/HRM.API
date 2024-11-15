@@ -1,8 +1,8 @@
 using System.Security.Claims;
-using HRM.API.Application.Identity.Users;
+using MasterPOS.API.Application.Identity.Users;
 using Microsoft.AspNetCore.Authorization;
 
-namespace HRM.API.Infrastructure.Auth.Permissions;
+namespace MasterPOS.API.Infrastructure.Auth.Permissions;
 
 internal class PermissionAuthorizationHandler : AuthorizationHandler<PermissionRequirement>
 {

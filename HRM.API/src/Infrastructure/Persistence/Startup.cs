@@ -1,17 +1,17 @@
-using HRM.API.Application.Common.Persistence;
-using HRM.API.Domain.Common.Contracts;
-using HRM.API.Infrastructure.Common;
-using HRM.API.Infrastructure.Persistence.ConnectionString;
-using HRM.API.Infrastructure.Persistence.Context;
-using HRM.API.Infrastructure.Persistence.Initialization;
-using HRM.API.Infrastructure.Persistence.Repository;
+using MasterPOS.API.Application.Common.Persistence;
+using MasterPOS.API.Domain.Common.Contracts;
+using MasterPOS.API.Infrastructure.Common;
+using MasterPOS.API.Infrastructure.Persistence.ConnectionString;
+using MasterPOS.API.Infrastructure.Persistence.Context;
+using MasterPOS.API.Infrastructure.Persistence.Initialization;
+using MasterPOS.API.Infrastructure.Persistence.Repository;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
 using Serilog;
 
-namespace HRM.API.Infrastructure.Persistence;
+namespace MasterPOS.API.Infrastructure.Persistence;
 
 internal static class Startup
 {
@@ -76,7 +76,8 @@ internal static class Startup
 
             case DbProviderKeys.Sqlite:
                 return builder.UseSqlite(connectionString, e =>
-                    e.MigrationsAssembly("Migrators.Sqlite"));
+                     e.MigrationsAssembly("Migrators.Sqlite"));
+
 
             default:
                 throw new InvalidOperationException($"DB Provider {dbProvider} is not supported.");

@@ -1,4 +1,4 @@
-namespace HRM.API.Domain.Common.Events;
+namespace MasterPOS.API.Domain.Common.Events;
 
 public static class EntityDeletedEvent
 {

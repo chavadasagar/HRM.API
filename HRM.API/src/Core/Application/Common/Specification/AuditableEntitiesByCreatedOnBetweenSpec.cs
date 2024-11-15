@@ -1,4 +1,4 @@
-﻿namespace HRM.API.Application.Common.Specification;
+﻿namespace MasterPOS.API.Application.Common.Specification;
 
 public class AuditableEntitiesByCreatedOnBetweenSpec<T> : Specification<T>
     where T : AuditableEntity

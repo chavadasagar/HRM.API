@@ -1,4 +1,4 @@
-namespace HRM.API.Infrastructure.Persistence;
+namespace MasterPOS.API.Infrastructure.Persistence;
 
 public class DatabaseSettings
 {

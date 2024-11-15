@@ -1,13 +1,13 @@
 ﻿using System.Security.Claims;
 using Finbuckle.MultiTenant;
-using HRM.API.Infrastructure.Common;
-using HRM.API.Shared.Multitenancy;
+using MasterPOS.API.Infrastructure.Common;
+using MasterPOS.API.Shared.Multitenancy;
 using Hangfire.Client;
 using Hangfire.Logging;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace HRM.API.Infrastructure.BackgroundJobs;
+namespace MasterPOS.API.Infrastructure.BackgroundJobs;
 
 public class FSHJobFilter : IClientFilter
 {

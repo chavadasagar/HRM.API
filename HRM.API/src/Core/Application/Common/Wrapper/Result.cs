@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HRM.API.Application.Common.Wrapper;
+namespace MasterPOS.API.Application.Common.Wrapper;
 public class Result : IResult
 {
     public Result()

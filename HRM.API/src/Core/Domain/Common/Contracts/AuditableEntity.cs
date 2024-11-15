@@ -1,4 +1,4 @@
-namespace HRM.API.Domain.Common.Contracts;
+namespace MasterPOS.API.Domain.Common.Contracts;
 
 public abstract class AuditableEntity : AuditableEntity<DefaultIdType>
 {

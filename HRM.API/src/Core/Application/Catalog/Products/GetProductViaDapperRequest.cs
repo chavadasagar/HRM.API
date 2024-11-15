@@ -1,6 +1,6 @@
 ﻿using Mapster;
 
-namespace HRM.API.Application.Catalog.Products;
+namespace MasterPOS.API.Application.Catalog.Products;
 
 public class GetProductViaDapperRequest : IRequest<ProductDto>
 {

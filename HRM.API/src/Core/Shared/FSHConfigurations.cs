@@ -1,13 +1,13 @@
 ﻿using System.Collections.ObjectModel;
 
-namespace HRM.API.Shared;
+namespace MasterPOS.API.Shared;
 
 public static class FSHResource
 {
     public const string General = nameof(General);
 }
 
-public static class HRMConfigurations
+public static class MPOSConfigurations
 {
     private static readonly ConfigurationModel[] _all = new ConfigurationModel[]
     {

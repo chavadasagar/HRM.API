@@ -1,6 +1,6 @@
 using System.ComponentModel;
 
-namespace HRM.API.Domain.Common;
+namespace MasterPOS.API.Domain.Common;
 
 public enum FileType
 {

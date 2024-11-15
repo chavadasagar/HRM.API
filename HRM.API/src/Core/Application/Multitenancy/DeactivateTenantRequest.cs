@@ -1,4 +1,4 @@
-namespace HRM.API.Application.Multitenancy;
+namespace MasterPOS.API.Application.Multitenancy;
 
 public class DeactivateTenantRequest : IRequest<string>
 {

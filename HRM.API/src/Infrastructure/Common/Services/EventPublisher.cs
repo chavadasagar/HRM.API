@@ -1,9 +1,9 @@
-using HRM.API.Application.Common.Events;
-using HRM.API.Shared.Events;
+using MasterPOS.API.Application.Common.Events;
+using MasterPOS.API.Shared.Events;
 using MediatR;
 using Microsoft.Extensions.Logging;
 
-namespace HRM.API.Infrastructure.Common.Services;
+namespace MasterPOS.API.Infrastructure.Common.Services;
 
 public class EventPublisher : IEventPublisher
 {

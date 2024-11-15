@@ -1,7 +1,7 @@
-using HRM.API.Domain.Common.Contracts;
+using MasterPOS.API.Domain.Common.Contracts;
 using Microsoft.AspNetCore.Identity;
 
-namespace HRM.API.Infrastructure.Identity;
+namespace MasterPOS.API.Infrastructure.Identity;
 
 public class ApplicationUser : IdentityUser, ISoftDelete
 {

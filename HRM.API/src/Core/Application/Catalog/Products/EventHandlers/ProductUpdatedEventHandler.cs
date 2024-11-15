@@ -1,6 +1,6 @@
-using HRM.API.Domain.Common.Events;
+using MasterPOS.API.Domain.Common.Events;
 
-namespace HRM.API.Application.Catalog.Products.EventHandlers;
+namespace MasterPOS.API.Application.Catalog.Products.EventHandlers;
 
 public class ProductUpdatedEventHandler : EventNotificationHandler<EntityUpdatedEvent<Product>>
 {
