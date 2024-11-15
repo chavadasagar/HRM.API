@@ -1,4 +1,4 @@
-﻿namespace MasterPOS.API.Host.Controllers;
+﻿namespace HRM.API.Host.Controllers;
 
 [Route("api/[controller]")]
 [ApiVersionNeutral]

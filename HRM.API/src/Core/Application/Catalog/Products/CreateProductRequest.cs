@@ -1,6 +1,6 @@
-using MasterPOS.API.Domain.Common.Events;
+using HRM.API.Domain.Common.Events;
 
-namespace MasterPOS.API.Application.Catalog.Products;
+namespace HRM.API.Application.Catalog.Products;
 
 public class CreateProductRequest : IRequest<Guid>
 {

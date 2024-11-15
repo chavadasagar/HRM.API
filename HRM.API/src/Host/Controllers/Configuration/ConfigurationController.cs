@@ -1,8 +1,8 @@
-﻿using MasterPOS.API.Application.Common.Wrapper;
-using MasterPOS.API.Application.Configuration;
+﻿using HRM.API.Application.Common.Wrapper;
+using HRM.API.Application.Configuration;
 using Microsoft.Extensions.Localization;
 
-namespace MasterPOS.API.Host.Controllers.Configuration;
+namespace HRM.API.Host.Controllers.Configuration;
 
 public class ConfigurationController : VersionNeutralApiController
 {

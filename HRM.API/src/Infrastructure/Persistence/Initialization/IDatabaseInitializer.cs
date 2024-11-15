@@ -1,6 +1,6 @@
-﻿using MasterPOS.API.Infrastructure.Multitenancy;
+﻿using HRM.API.Infrastructure.Multitenancy;
 
-namespace MasterPOS.API.Infrastructure.Persistence.Initialization;
+namespace HRM.API.Infrastructure.Persistence.Initialization;
 
 internal interface IDatabaseInitializer
 {

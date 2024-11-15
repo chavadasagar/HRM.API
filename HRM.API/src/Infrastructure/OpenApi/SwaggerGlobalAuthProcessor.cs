@@ -6,7 +6,7 @@ using NSwag.Generation.AspNetCore;
 using NSwag.Generation.Processors;
 using NSwag.Generation.Processors.Contexts;
 
-namespace MasterPOS.API.Infrastructure.OpenApi;
+namespace HRM.API.Infrastructure.OpenApi;
 
 internal static class ObjectExtensions
 {

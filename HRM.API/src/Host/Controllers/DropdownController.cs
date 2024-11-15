@@ -1,12 +1,12 @@
-﻿using MasterPOS.API.Application.Catalog;
-using MasterPOS.API.Application.Catalog.PaymentTypes;
-using MasterPOS.API.Application.Catalog.Products;
-using MasterPOS.API.Application.Catalog.Stores;
-using MasterPOS.API.Application.Catalog.Suppliers;
-using MasterPOS.API.Application.Common;
-using MasterPOS.API.Application.Identity.Roles;
+﻿using HRM.API.Application.Catalog;
+using HRM.API.Application.Catalog.PaymentTypes;
+using HRM.API.Application.Catalog.Products;
+using HRM.API.Application.Catalog.Stores;
+using HRM.API.Application.Catalog.Suppliers;
+using HRM.API.Application.Common;
+using HRM.API.Application.Identity.Roles;
 
-namespace MasterPOS.API.Host.Controllers;
+namespace HRM.API.Host.Controllers;
 
 public class DropdownController : VersionedApiController
 {

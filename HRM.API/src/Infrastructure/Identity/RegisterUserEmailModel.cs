@@ -1,4 +1,4 @@
-﻿namespace MasterPOS.API.Infrastructure.Identity;
+﻿namespace HRM.API.Infrastructure.Identity;
 
 public class RegisterUserEmailModel
 {

@@ -1,4 +1,4 @@
-﻿namespace MasterPOS.API.Infrastructure.Persistence.Configuration;
+﻿namespace HRM.API.Infrastructure.Persistence.Configuration;
 
 internal static class SchemaNames
 {

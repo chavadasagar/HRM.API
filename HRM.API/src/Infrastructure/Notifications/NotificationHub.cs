@@ -1,11 +1,11 @@
 ﻿using Finbuckle.MultiTenant;
-using MasterPOS.API.Application.Common.Exceptions;
-using MasterPOS.API.Application.Common.Interfaces;
+using HRM.API.Application.Common.Exceptions;
+using HRM.API.Application.Common.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.SignalR;
 using Microsoft.Extensions.Logging;
 
-namespace MasterPOS.API.Infrastructure.Notifications;
+namespace HRM.API.Infrastructure.Notifications;
 
 [Authorize]
 public class NotificationHub : Hub, ITransientService

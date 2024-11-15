@@ -1,7 +1,7 @@
-using MasterPOS.API.Application.Catalog.Counters;
-using MasterPOS.API.Domain.Inventory;
+using HRM.API.Application.Catalog.Counters;
+using HRM.API.Domain.Inventory;
 
-namespace MasterPOS.API.Application.Catalog.Stores;
+namespace HRM.API.Application.Catalog.Stores;
 
 public class UpdateStoreRequest : IRequest<Guid>
 {

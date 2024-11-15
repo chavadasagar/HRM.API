@@ -1,8 +1,8 @@
-﻿using MasterPOS.API.Application.Common.Wrapper;
-using MasterPOS.API.Application.Inventory;
+﻿using HRM.API.Application.Common.Wrapper;
+using HRM.API.Application.Inventory;
 using Microsoft.Extensions.Localization;
 
-namespace MasterPOS.API.Host.Controllers.Inventory;
+namespace HRM.API.Host.Controllers.Inventory;
 
 public class PurchaseReturnController : VersionedApiController
 {

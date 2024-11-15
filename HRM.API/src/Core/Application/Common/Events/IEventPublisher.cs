@@ -1,6 +1,6 @@
-using MasterPOS.API.Shared.Events;
+using HRM.API.Shared.Events;
 
-namespace MasterPOS.API.Application.Common.Events;
+namespace HRM.API.Application.Common.Events;
 
 public interface IEventPublisher : ITransientService
 {

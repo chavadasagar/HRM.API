@@ -1,13 +1,13 @@
 ﻿using Finbuckle.MultiTenant;
-using MasterPOS.API.Infrastructure.Auth;
-using MasterPOS.API.Infrastructure.Common;
-using MasterPOS.API.Infrastructure.Multitenancy;
-using MasterPOS.API.Shared.Multitenancy;
+using HRM.API.Infrastructure.Auth;
+using HRM.API.Infrastructure.Common;
+using HRM.API.Infrastructure.Multitenancy;
+using HRM.API.Shared.Multitenancy;
 using Hangfire;
 using Hangfire.Server;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace MasterPOS.API.Infrastructure.BackgroundJobs;
+namespace HRM.API.Infrastructure.BackgroundJobs;
 
 public class FSHJobActivator : JobActivator
 {

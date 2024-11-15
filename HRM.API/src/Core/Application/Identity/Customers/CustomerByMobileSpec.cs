@@ -1,11 +1,11 @@
-﻿using MasterPOS.API.Domain.Identity;
+﻿using HRM.API.Domain.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MasterPOS.API.Application.Identity.Customers;
+namespace HRM.API.Application.Identity.Customers;
 public class CustomerByMobileSpec : Specification<Customer>, ISingleResultSpecification
 {
     public CustomerByMobileSpec(string mobileNo)

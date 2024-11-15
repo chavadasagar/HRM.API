@@ -1,6 +1,6 @@
-﻿using Unit = MasterPOS.API.Domain.Catalog.Unit;
+﻿using Unit = HRM.API.Domain.Catalog.Unit;
 
-namespace MasterPOS.API.Application.Catalog.Units;
+namespace HRM.API.Application.Catalog.Units;
 public class UpdateStatusUnitRequest : IRequest<Guid>
 {
     public Guid Id { get; set; }

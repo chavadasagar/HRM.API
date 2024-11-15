@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MasterPOS.API.Application.Identity.Users;
+namespace HRM.API.Application.Identity.Users;
 public class UpdateUserStatusRequest
 {
     public string Id { get; set; } = default!;

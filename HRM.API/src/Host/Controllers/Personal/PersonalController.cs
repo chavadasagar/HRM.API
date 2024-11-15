@@ -1,11 +1,11 @@
 using System.Security.Claims;
-using MasterPOS.API.Application.Auditing;
-using MasterPOS.API.Application.Common.Wrapper;
-using MasterPOS.API.Application.Identity.Users;
-using MasterPOS.API.Application.Identity.Users.Password;
+using HRM.API.Application.Auditing;
+using HRM.API.Application.Common.Wrapper;
+using HRM.API.Application.Identity.Users;
+using HRM.API.Application.Identity.Users.Password;
 using Microsoft.Extensions.Localization;
 
-namespace MasterPOS.API.Host.Controllers.Identity;
+namespace HRM.API.Host.Controllers.Identity;
 
 public class PersonalController : VersionNeutralApiController
 {

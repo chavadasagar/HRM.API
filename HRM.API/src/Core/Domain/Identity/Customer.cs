@@ -1,6 +1,6 @@
-﻿using MasterPOS.API.Domain.Catalog;
+﻿using HRM.API.Domain.Catalog;
 
-namespace MasterPOS.API.Domain.Identity;
+namespace HRM.API.Domain.Identity;
 public class Customer : AuditableEntity, IAggregateRoot
 {
     public string Name { get; private set; }

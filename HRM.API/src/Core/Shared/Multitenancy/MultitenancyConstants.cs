@@ -1,4 +1,4 @@
-namespace MasterPOS.API.Shared.Multitenancy;
+namespace HRM.API.Shared.Multitenancy;
 
 public class MultitenancyConstants
 {

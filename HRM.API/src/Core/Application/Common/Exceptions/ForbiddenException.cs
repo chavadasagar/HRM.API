@@ -1,6 +1,6 @@
 using System.Net;
 
-namespace MasterPOS.API.Application.Common.Exceptions;
+namespace HRM.API.Application.Common.Exceptions;
 
 public class ForbiddenException : CustomException
 {

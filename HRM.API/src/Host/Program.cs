@@ -1,9 +1,9 @@
 using FluentValidation.AspNetCore;
-using MasterPOS.API.Application;
-using MasterPOS.API.Host.Configurations;
-using MasterPOS.API.Host.Controllers;
-using MasterPOS.API.Infrastructure;
-using MasterPOS.API.Infrastructure.Common;
+using HRM.API.Application;
+using HRM.API.Host.Configurations;
+using HRM.API.Host.Controllers;
+using HRM.API.Infrastructure;
+using HRM.API.Infrastructure.Common;
 using Serilog;
 
 [assembly: ApiConventionType(typeof(FSHApiConventions))]

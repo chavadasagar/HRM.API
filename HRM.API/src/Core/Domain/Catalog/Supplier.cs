@@ -1,6 +1,6 @@
-﻿using MasterPOS.API.Domain.Inventory;
+﻿using HRM.API.Domain.Inventory;
 
-namespace MasterPOS.API.Domain.Catalog;
+namespace HRM.API.Domain.Catalog;
 public class Supplier : AuditableEntity, IAggregateRoot
 {
     public string Name { get; private set; }

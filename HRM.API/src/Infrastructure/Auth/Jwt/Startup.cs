@@ -1,12 +1,12 @@
 ﻿using System.Security.Claims;
 using System.Text;
-using MasterPOS.API.Application.Common.Exceptions;
+using HRM.API.Application.Common.Exceptions;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 
-namespace MasterPOS.API.Infrastructure.Auth.Jwt;
+namespace HRM.API.Infrastructure.Auth.Jwt;
 
 internal static class Startup
 {

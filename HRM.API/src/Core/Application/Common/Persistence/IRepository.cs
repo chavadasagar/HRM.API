@@ -1,4 +1,4 @@
-﻿namespace MasterPOS.API.Application.Common.Persistence;
+﻿namespace HRM.API.Application.Common.Persistence;
 
 // The Repository for the Application Db
 // I(Read)RepositoryBase<T> is from Ardalis.Specification

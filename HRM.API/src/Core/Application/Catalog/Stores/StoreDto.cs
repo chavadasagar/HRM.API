@@ -1,4 +1,4 @@
-namespace MasterPOS.API.Application.Catalog.Stores;
+namespace HRM.API.Application.Catalog.Stores;
 
 public class StoreDto : IDto
 {

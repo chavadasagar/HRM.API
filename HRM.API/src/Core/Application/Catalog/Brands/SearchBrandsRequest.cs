@@ -1,4 +1,4 @@
-namespace MasterPOS.API.Application.Catalog.Brands;
+namespace HRM.API.Application.Catalog.Brands;
 
 public class SearchBrandsRequest : PaginationFilter, IRequest<PaginationResponse<BrandDto>>
 {

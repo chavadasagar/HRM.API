@@ -1,14 +1,14 @@
-using MasterPOS.API.Application.Common.Interfaces;
-using MasterPOS.API.Infrastructure.Auth.AzureAd;
-using MasterPOS.API.Infrastructure.Auth.Jwt;
-using MasterPOS.API.Infrastructure.Auth.Permissions;
-using MasterPOS.API.Infrastructure.Identity;
+using HRM.API.Application.Common.Interfaces;
+using HRM.API.Infrastructure.Auth.AzureAd;
+using HRM.API.Infrastructure.Auth.Jwt;
+using HRM.API.Infrastructure.Auth.Permissions;
+using HRM.API.Infrastructure.Identity;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace MasterPOS.API.Infrastructure.Auth;
+namespace HRM.API.Infrastructure.Auth;
 
 internal static class Startup
 {

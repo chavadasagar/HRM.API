@@ -1,6 +1,6 @@
-using MasterPOS.API.Application.Catalog.Products;
+using HRM.API.Application.Catalog.Products;
 
-namespace MasterPOS.API.Application.Catalog.Brands;
+namespace HRM.API.Application.Catalog.Brands;
 
 public class UpdateBrandRequest : IRequest<Guid>
 {

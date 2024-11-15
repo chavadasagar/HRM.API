@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MasterPOS.API.Application.Catalog.Products;
+namespace HRM.API.Application.Catalog.Products;
 public class ProductByPurchaseReturnProductDto : IDto
 {
     public Guid Id { get; set; } = default!;

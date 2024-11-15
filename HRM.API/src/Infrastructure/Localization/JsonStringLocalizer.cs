@@ -1,10 +1,10 @@
 ﻿using System.Globalization;
-using MasterPOS.API.Application.Common.Caching;
+using HRM.API.Application.Common.Caching;
 using Microsoft.Extensions.Localization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-namespace MasterPOS.API.Infrastructure.Localization;
+namespace HRM.API.Infrastructure.Localization;
 
 public class JsonStringLocalizer : IStringLocalizer
 {

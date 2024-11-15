@@ -1,6 +1,6 @@
-﻿using MasterPOS.API.Domain.Inventory;
+﻿using HRM.API.Domain.Inventory;
 
-namespace MasterPOS.API.Application.Catalog.Stores;
+namespace HRM.API.Application.Catalog.Stores;
 public class PurchaseByStoreSpec : Specification<Purchase>
 {
     public PurchaseByStoreSpec(Guid StoreId) =>

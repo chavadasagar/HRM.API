@@ -1,6 +1,6 @@
 using System.Collections.ObjectModel;
 
-namespace MasterPOS.API.Shared.Authorization;
+namespace HRM.API.Shared.Authorization;
 
 public static class FSHRoles
 {

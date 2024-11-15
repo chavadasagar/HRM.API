@@ -1,4 +1,4 @@
-﻿namespace MasterPOS.API.Application.Catalog.PaymentTypes;
+﻿namespace HRM.API.Application.Catalog.PaymentTypes;
 public class UpdateStatusPaymentTypeRequest : IRequest<Guid>
 {
     public Guid Id { get; set; }

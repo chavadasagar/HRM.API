@@ -1,4 +1,4 @@
-﻿namespace MasterPOS.API.Infrastructure.Mapping;
+﻿namespace HRM.API.Infrastructure.Mapping;
 
 public class MapsterSettings
 {

@@ -1,4 +1,4 @@
-namespace MasterPOS.API.Application.Common.Validation;
+namespace HRM.API.Application.Common.Validation;
 
 public class CustomValidator<T> : AbstractValidator<T>
 {

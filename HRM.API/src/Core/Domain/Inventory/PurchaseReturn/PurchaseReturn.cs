@@ -1,6 +1,6 @@
-﻿using MasterPOS.API.Domain.Catalog;
+﻿using HRM.API.Domain.Catalog;
 
-namespace MasterPOS.API.Domain.Inventory;
+namespace HRM.API.Domain.Inventory;
 public class PurchaseReturn : AuditableEntity, IAggregateRoot
 {
     public long PRIId { get; set; }

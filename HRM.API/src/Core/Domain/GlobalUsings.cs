@@ -1,1 +1,1 @@
-﻿global using MasterPOS.API.Domain.Common.Contracts;
+﻿global using HRM.API.Domain.Common.Contracts;

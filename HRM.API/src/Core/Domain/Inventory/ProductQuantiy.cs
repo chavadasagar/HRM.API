@@ -1,4 +1,4 @@
-﻿namespace MasterPOS.API.Domain.Inventory;
+﻿namespace HRM.API.Domain.Inventory;
 public class ProductQuantiy : AuditableEntity, IAggregateRoot
 {
     public Guid ProductId { get; private set; } = default!;

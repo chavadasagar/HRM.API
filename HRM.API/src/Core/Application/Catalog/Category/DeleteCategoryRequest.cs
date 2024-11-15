@@ -1,6 +1,6 @@
-﻿using MasterPOS.API.Application.Catalog;
+﻿using HRM.API.Application.Catalog;
 
-namespace MasterPOS.API.Domain.Catalog;
+namespace HRM.API.Domain.Catalog;
 
 public class DeleteCategoryRequest : IRequest<string>
 {

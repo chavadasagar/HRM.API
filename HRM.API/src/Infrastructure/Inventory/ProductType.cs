@@ -1,4 +1,4 @@
-﻿namespace MasterPOS.API.Infrastructure.Inventory;
+﻿namespace HRM.API.Infrastructure.Inventory;
 public enum ProductType : short
 {
     Purchase = 1,

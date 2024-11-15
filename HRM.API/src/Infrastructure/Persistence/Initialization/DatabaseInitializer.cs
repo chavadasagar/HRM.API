@@ -1,12 +1,12 @@
 ﻿using Finbuckle.MultiTenant;
-using MasterPOS.API.Infrastructure.Multitenancy;
-using MasterPOS.API.Shared.Multitenancy;
+using HRM.API.Infrastructure.Multitenancy;
+using HRM.API.Shared.Multitenancy;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 
-namespace MasterPOS.API.Infrastructure.Persistence.Initialization;
+namespace HRM.API.Infrastructure.Persistence.Initialization;
 
 internal class DatabaseInitializer : IDatabaseInitializer
 {

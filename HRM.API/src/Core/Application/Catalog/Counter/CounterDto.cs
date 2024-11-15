@@ -1,6 +1,6 @@
-using MasterPOS.API.Application.Catalog.Stores;
+using HRM.API.Application.Catalog.Stores;
 
-namespace MasterPOS.API.Application.Catalog.Counters;
+namespace HRM.API.Application.Catalog.Counters;
 
 public class CounterDto : IDto
 {

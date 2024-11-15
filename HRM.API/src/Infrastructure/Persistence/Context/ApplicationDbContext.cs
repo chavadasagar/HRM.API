@@ -1,15 +1,15 @@
 using Finbuckle.MultiTenant;
-using MasterPOS.API.Application.Common.Events;
-using MasterPOS.API.Application.Common.Interfaces;
-using MasterPOS.API.Domain.Catalog;
-using MasterPOS.API.Domain.Configuration;
-using MasterPOS.API.Domain.Identity;
-using MasterPOS.API.Domain.Inventory;
-using MasterPOS.API.Infrastructure.Persistence.Configuration;
+using HRM.API.Application.Common.Events;
+using HRM.API.Application.Common.Interfaces;
+using HRM.API.Domain.Catalog;
+using HRM.API.Domain.Configuration;
+using HRM.API.Domain.Identity;
+using HRM.API.Domain.Inventory;
+using HRM.API.Infrastructure.Persistence.Configuration;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 
-namespace MasterPOS.API.Infrastructure.Persistence.Context;
+namespace HRM.API.Infrastructure.Persistence.Context;
 
 public class ApplicationDbContext : BaseDbContext
 {

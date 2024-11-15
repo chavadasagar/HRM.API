@@ -1,18 +1,18 @@
-﻿using MasterPOS.API.Domain.Catalog;
-using MasterPOS.API.Domain.Configuration;
-using MasterPOS.API.Domain.Identity;
-using MasterPOS.API.Infrastructure.Identity;
-using MasterPOS.API.Infrastructure.Multitenancy;
-using MasterPOS.API.Infrastructure.Persistence.Context;
-using MasterPOS.API.Shared;
-using MasterPOS.API.Shared.Authorization;
-using MasterPOS.API.Shared.Catalog;
-using MasterPOS.API.Shared.Multitenancy;
+﻿using HRM.API.Domain.Catalog;
+using HRM.API.Domain.Configuration;
+using HRM.API.Domain.Identity;
+using HRM.API.Infrastructure.Identity;
+using HRM.API.Infrastructure.Multitenancy;
+using HRM.API.Infrastructure.Persistence.Context;
+using HRM.API.Shared;
+using HRM.API.Shared.Authorization;
+using HRM.API.Shared.Catalog;
+using HRM.API.Shared.Multitenancy;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 
-namespace MasterPOS.API.Infrastructure.Persistence.Initialization;
+namespace HRM.API.Infrastructure.Persistence.Initialization;
 
 internal class ApplicationDbSeeder
 {

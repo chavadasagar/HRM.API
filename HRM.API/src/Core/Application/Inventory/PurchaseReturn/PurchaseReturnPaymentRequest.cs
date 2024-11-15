@@ -1,4 +1,4 @@
-﻿namespace MasterPOS.API.Application.Inventory;
+﻿namespace HRM.API.Application.Inventory;
 public class PurchaseReturnPaymentRequest
 {
     public Guid PaymentTypeId { get; set; } = default!;

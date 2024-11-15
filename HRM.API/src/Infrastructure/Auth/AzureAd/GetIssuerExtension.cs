@@ -1,4 +1,4 @@
-using MasterPOS.API.Infrastructure.Auth.AzureAd;
+using HRM.API.Infrastructure.Auth.AzureAd;
 
 namespace System.Security.Claims;
 

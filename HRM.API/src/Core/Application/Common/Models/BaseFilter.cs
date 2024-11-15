@@ -1,4 +1,4 @@
-namespace MasterPOS.API.Application.Common.Models;
+namespace HRM.API.Application.Common.Models;
 
 public class BaseFilter
 {

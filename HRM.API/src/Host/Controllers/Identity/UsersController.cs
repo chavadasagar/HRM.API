@@ -1,10 +1,10 @@
-using MasterPOS.API.Application.Common.Wrapper;
-using MasterPOS.API.Application.Identity.Users;
-using MasterPOS.API.Application.Identity.Users.Password;
+using HRM.API.Application.Common.Wrapper;
+using HRM.API.Application.Identity.Users;
+using HRM.API.Application.Identity.Users.Password;
 using Microsoft.Extensions.Localization;
 using System.Security.Claims;
 
-namespace MasterPOS.API.Host.Controllers.Identity;
+namespace HRM.API.Host.Controllers.Identity;
 
 public class UsersController : VersionNeutralApiController
 {

@@ -1,4 +1,4 @@
-﻿namespace MasterPOS.API.Domain.Catalog;
+﻿namespace HRM.API.Domain.Catalog;
 public class Unit : AuditableEntity, IAggregateRoot
 {
     public string Name { get; private set; }

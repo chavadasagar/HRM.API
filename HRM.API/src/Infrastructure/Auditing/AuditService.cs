@@ -1,9 +1,9 @@
-using MasterPOS.API.Application.Auditing;
-using MasterPOS.API.Infrastructure.Persistence.Context;
+using HRM.API.Application.Auditing;
+using HRM.API.Infrastructure.Persistence.Context;
 using Mapster;
 using Microsoft.EntityFrameworkCore;
 
-namespace MasterPOS.API.Infrastructure.Auditing;
+namespace HRM.API.Infrastructure.Auditing;
 
 public class AuditService : IAuditService
 {

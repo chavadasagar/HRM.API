@@ -1,4 +1,4 @@
-﻿namespace MasterPOS.API.Shared.Authorization;
+﻿namespace HRM.API.Shared.Authorization;
 
 public static class FSHClaims
 {

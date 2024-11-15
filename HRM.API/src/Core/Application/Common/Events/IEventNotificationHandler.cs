@@ -1,6 +1,6 @@
-﻿using MasterPOS.API.Shared.Events;
+﻿using HRM.API.Shared.Events;
 
-namespace MasterPOS.API.Application.Common.Events;
+namespace HRM.API.Application.Common.Events;
 
 // This is just a shorthand to make it a bit easier to create event handlers for specific events.
 public interface IEventNotificationHandler<TEvent> : INotificationHandler<EventNotification<TEvent>>

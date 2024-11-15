@@ -1,6 +1,6 @@
-﻿using MasterPOS.API.Domain.Inventory;
+﻿using HRM.API.Domain.Inventory;
 
-namespace MasterPOS.API.Application.Catalog.Products;
+namespace HRM.API.Application.Catalog.Products;
 public class UpdateStatusProductRequest : IRequest<Guid>
 {
     public Guid Id { get; set; }

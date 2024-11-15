@@ -1,10 +1,10 @@
 using System.Text;
-using MasterPOS.API.Application.Common.Caching;
-using MasterPOS.API.Application.Common.Interfaces;
+using HRM.API.Application.Common.Caching;
+using HRM.API.Application.Common.Interfaces;
 using Microsoft.Extensions.Caching.Distributed;
 using Microsoft.Extensions.Logging;
 
-namespace MasterPOS.API.Infrastructure.Caching;
+namespace HRM.API.Infrastructure.Caching;
 
 #pragma warning disable CA2254
 public class DistributedCacheService : ICacheService

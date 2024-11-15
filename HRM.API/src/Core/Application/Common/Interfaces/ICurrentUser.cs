@@ -1,6 +1,6 @@
 using System.Security.Claims;
 
-namespace MasterPOS.API.Application.Common.Interfaces;
+namespace HRM.API.Application.Common.Interfaces;
 
 public interface ICurrentUser
 {

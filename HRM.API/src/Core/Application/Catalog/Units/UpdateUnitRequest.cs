@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Unit = MasterPOS.API.Domain.Catalog.Unit;
+using Unit = HRM.API.Domain.Catalog.Unit;
 
-namespace MasterPOS.API.Application.Catalog.Units;
+namespace HRM.API.Application.Catalog.Units;
 public class UpdateUnitRequest : IRequest<Guid>
 {
     public Guid Id { get; set; }

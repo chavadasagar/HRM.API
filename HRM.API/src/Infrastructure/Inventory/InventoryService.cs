@@ -1,5 +1,5 @@
-﻿using MasterPOS.API.Application.Inventory;
-using MasterPOS.API.Infrastructure.Persistence.Context;
+﻿using HRM.API.Application.Inventory;
+using HRM.API.Infrastructure.Persistence.Context;
 using Microsoft.Extensions.Localization;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MasterPOS.API.Infrastructure.Inventory;
+namespace HRM.API.Infrastructure.Inventory;
 public class InventoryService : IInventoryService
 {
     private readonly ApplicationDbContext _context;

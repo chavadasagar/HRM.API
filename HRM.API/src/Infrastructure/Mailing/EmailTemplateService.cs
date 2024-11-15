@@ -1,8 +1,8 @@
 using System.Text;
-using MasterPOS.API.Application.Common.Mailing;
+using HRM.API.Application.Common.Mailing;
 using RazorEngineCore;
 
-namespace MasterPOS.API.Infrastructure.Mailing;
+namespace HRM.API.Infrastructure.Mailing;
 
 public class EmailTemplateService : IEmailTemplateService
 {

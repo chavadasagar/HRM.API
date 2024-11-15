@@ -1,6 +1,6 @@
-﻿using MasterPOS.API.Domain.Inventory;
+﻿using HRM.API.Domain.Inventory;
 
-namespace MasterPOS.API.Application.Inventory;
+namespace HRM.API.Application.Inventory;
 public class PurchaseProductRequest
 {
     public Guid? Id { get; set; }

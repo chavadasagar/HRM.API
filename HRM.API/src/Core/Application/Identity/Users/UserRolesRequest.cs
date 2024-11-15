@@ -1,4 +1,4 @@
-namespace MasterPOS.API.Application.Identity.Users;
+namespace HRM.API.Application.Identity.Users;
 
 public class UserRolesRequest
 {

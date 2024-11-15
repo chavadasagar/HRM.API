@@ -1,6 +1,6 @@
-﻿using MasterPOS.API.Domain.Inventory;
+﻿using HRM.API.Domain.Inventory;
 
-namespace MasterPOS.API.Application.Catalog.Suppliers;
+namespace HRM.API.Application.Catalog.Suppliers;
 public class UpdateStatusSupplierRequest : IRequest<Guid>
 {
     public Guid Id { get; set; }

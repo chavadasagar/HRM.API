@@ -1,11 +1,11 @@
-using MasterPOS.API.Application.Common.Mailing;
+using HRM.API.Application.Common.Mailing;
 using MailKit.Net.Smtp;
 using MailKit.Security;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using MimeKit;
 
-namespace MasterPOS.API.Infrastructure.Mailing;
+namespace HRM.API.Infrastructure.Mailing;
 
 public class SmtpMailService : IMailService
 {

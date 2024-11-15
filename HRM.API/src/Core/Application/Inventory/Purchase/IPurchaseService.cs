@@ -1,6 +1,6 @@
-﻿using MasterPOS.API.Application.Common.Wrapper;
+﻿using HRM.API.Application.Common.Wrapper;
 
-namespace MasterPOS.API.Application.Inventory;
+namespace HRM.API.Application.Inventory;
 public interface IPurchaseService : ITransientService
 {
     Task<long> GeneratePurchaseInvoiceId();

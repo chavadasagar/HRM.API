@@ -1,6 +1,6 @@
-using MasterPOS.API.Domain.Common.Events;
+using HRM.API.Domain.Common.Events;
 
-namespace MasterPOS.API.Application.Catalog.Products.EventHandlers;
+namespace HRM.API.Application.Catalog.Products.EventHandlers;
 
 public class ProductCreatedEventHandler : EventNotificationHandler<EntityCreatedEvent<Product>>
 {

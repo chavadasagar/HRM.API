@@ -1,9 +1,9 @@
-﻿using MasterPOS.API.Application.Catalog.Stores;
-using MasterPOS.API.Domain.Common;
-using MasterPOS.API.Infrastructure.Persistence.Context;
+﻿using HRM.API.Application.Catalog.Stores;
+using HRM.API.Domain.Common;
+using HRM.API.Infrastructure.Persistence.Context;
 using Microsoft.EntityFrameworkCore;
 
-namespace MasterPOS.API.Infrastructure.Common.Services;
+namespace HRM.API.Infrastructure.Common.Services;
 public class StoreService : IStoreService
 {
     private readonly ApplicationDbContext _context = default!;

@@ -1,4 +1,4 @@
-﻿namespace MasterPOS.API.Infrastructure.SecurityHeaders;
+﻿namespace HRM.API.Infrastructure.SecurityHeaders;
 
 internal class HeaderNames
 {

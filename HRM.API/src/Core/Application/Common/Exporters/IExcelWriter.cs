@@ -1,4 +1,4 @@
-﻿namespace MasterPOS.API.Application.Common.Exporters;
+﻿namespace HRM.API.Application.Common.Exporters;
 
 public interface IExcelWriter : ITransientService
 {

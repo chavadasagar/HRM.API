@@ -1,9 +1,9 @@
-using MasterPOS.API.Application.Common.Interfaces;
+using HRM.API.Application.Common.Interfaces;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Serialization;
 
-namespace MasterPOS.API.Infrastructure.Common.Services;
+namespace HRM.API.Infrastructure.Common.Services;
 
 public class NewtonSoftService : ISerializerService
 {

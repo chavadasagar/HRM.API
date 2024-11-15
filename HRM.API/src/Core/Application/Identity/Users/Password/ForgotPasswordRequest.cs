@@ -1,4 +1,4 @@
-namespace MasterPOS.API.Application.Identity.Users.Password;
+namespace HRM.API.Application.Identity.Users.Password;
 
 public class ForgotPasswordRequest
 {

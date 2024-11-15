@@ -1,6 +1,6 @@
-using Unit = MasterPOS.API.Domain.Catalog.Unit;
+using Unit = HRM.API.Domain.Catalog.Unit;
 
-namespace MasterPOS.API.Application.Catalog.Products;
+namespace HRM.API.Application.Catalog.Products;
 
 public class CreateProductRequestValidator : CustomValidator<CreateProductRequest>
 {

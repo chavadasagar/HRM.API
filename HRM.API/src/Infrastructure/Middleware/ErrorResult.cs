@@ -1,4 +1,4 @@
-﻿namespace MasterPOS.API.Infrastructure.Middleware;
+﻿namespace HRM.API.Infrastructure.Middleware;
 
 public class ErrorResult
 {

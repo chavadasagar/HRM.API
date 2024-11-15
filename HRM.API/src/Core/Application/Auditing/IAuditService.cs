@@ -1,4 +1,4 @@
-namespace MasterPOS.API.Application.Auditing;
+namespace HRM.API.Application.Auditing;
 
 public interface IAuditService : ITransientService
 {

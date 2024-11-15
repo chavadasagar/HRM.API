@@ -1,6 +1,6 @@
 ﻿using System.Security.Claims;
 
-namespace MasterPOS.API.Infrastructure.Auth;
+namespace HRM.API.Infrastructure.Auth;
 
 public interface ICurrentUserInitializer
 {

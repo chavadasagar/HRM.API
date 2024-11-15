@@ -6,13 +6,13 @@ using Hangfire.PostgreSql;
 using Hangfire.SQLite;
 using Hangfire.SqlServer;
 using HangfireBasicAuthenticationFilter;
-using MasterPOS.API.Infrastructure.Common;
+using HRM.API.Infrastructure.Common;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Serilog;
 
-namespace MasterPOS.API.Infrastructure.BackgroundJobs;
+namespace HRM.API.Infrastructure.BackgroundJobs;
 
 internal static class Startup
 {

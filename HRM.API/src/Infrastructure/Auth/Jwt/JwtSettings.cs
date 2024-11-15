@@ -1,4 +1,4 @@
-namespace MasterPOS.API.Infrastructure.Auth.Jwt;
+namespace HRM.API.Infrastructure.Auth.Jwt;
 
 public class JwtSettings
 {

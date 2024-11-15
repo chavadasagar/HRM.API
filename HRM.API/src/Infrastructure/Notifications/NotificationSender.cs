@@ -1,10 +1,10 @@
 ﻿using Finbuckle.MultiTenant;
-using MasterPOS.API.Application.Common.Interfaces;
-using MasterPOS.API.Shared.Notifications;
+using HRM.API.Application.Common.Interfaces;
+using HRM.API.Shared.Notifications;
 using Microsoft.AspNetCore.SignalR;
-using static MasterPOS.API.Shared.Notifications.NotificationConstants;
+using static HRM.API.Shared.Notifications.NotificationConstants;
 
-namespace MasterPOS.API.Infrastructure.Notifications;
+namespace HRM.API.Infrastructure.Notifications;
 
 public class NotificationSender : INotificationSender
 {

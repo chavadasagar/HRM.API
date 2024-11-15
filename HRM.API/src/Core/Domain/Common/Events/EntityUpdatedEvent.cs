@@ -1,4 +1,4 @@
-namespace MasterPOS.API.Domain.Common.Events;
+namespace HRM.API.Domain.Common.Events;
 
 public static class EntityUpdatedEvent
 {

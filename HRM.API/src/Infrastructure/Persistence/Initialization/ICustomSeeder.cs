@@ -1,4 +1,4 @@
-namespace MasterPOS.API.Infrastructure.Persistence.Initialization;
+namespace HRM.API.Infrastructure.Persistence.Initialization;
 
 public interface ICustomSeeder
 {

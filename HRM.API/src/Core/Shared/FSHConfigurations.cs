@@ -1,6 +1,6 @@
 ﻿using System.Collections.ObjectModel;
 
-namespace MasterPOS.API.Shared;
+namespace HRM.API.Shared;
 
 public static class FSHResource
 {

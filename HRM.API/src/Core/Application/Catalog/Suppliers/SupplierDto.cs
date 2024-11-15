@@ -1,6 +1,6 @@
-using MasterPOS.API.Application.Inventory;
+using HRM.API.Application.Inventory;
 
-namespace MasterPOS.API.Application.Catalog.Suppliers;
+namespace HRM.API.Application.Catalog.Suppliers;
 
 public class SupplierDto : IDto
 {

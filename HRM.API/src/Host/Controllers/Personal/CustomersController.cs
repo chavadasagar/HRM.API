@@ -1,8 +1,8 @@
-﻿using MasterPOS.API.Application.Common.Wrapper;
-using MasterPOS.API.Application.Identity.Customers;
+﻿using HRM.API.Application.Common.Wrapper;
+using HRM.API.Application.Identity.Customers;
 using Microsoft.Extensions.Localization;
 
-namespace MasterPOS.API.Host.Controllers.Identity;
+namespace HRM.API.Host.Controllers.Identity;
 
 public class CustomersController : VersionedApiController
 {

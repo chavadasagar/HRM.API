@@ -1,10 +1,10 @@
-﻿using MasterPOS.API.Application.Common.Persistence;
+﻿using HRM.API.Application.Common.Persistence;
 using Infrastructure.Test.Multitenancy.Fixtures;
 using Xunit;
 using Xunit.Abstractions;
 using Xunit.Microsoft.DependencyInjection.Abstracts;
 
-namespace MasterPOS.API.Infrastructure.Multitenancy.Tests;
+namespace HRM.API.Infrastructure.Multitenancy.Tests;
 
 public class ConnectionStringSecurerTests : TestBed<TestFixture>
 {

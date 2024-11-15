@@ -1,17 +1,17 @@
 ﻿using Finbuckle.MultiTenant;
-using MasterPOS.API.Application.Common.Events;
-using MasterPOS.API.Application.Common.Exceptions;
-using MasterPOS.API.Application.Common.Interfaces;
-using MasterPOS.API.Application.Common.Wrapper;
-using MasterPOS.API.Application.Inventory;
-using MasterPOS.API.Domain.Common;
-using MasterPOS.API.Domain.Inventory;
-using MasterPOS.API.Infrastructure.Persistence.Context;
+using HRM.API.Application.Common.Events;
+using HRM.API.Application.Common.Exceptions;
+using HRM.API.Application.Common.Interfaces;
+using HRM.API.Application.Common.Wrapper;
+using HRM.API.Application.Inventory;
+using HRM.API.Domain.Common;
+using HRM.API.Domain.Inventory;
+using HRM.API.Infrastructure.Persistence.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage;
 using Microsoft.Extensions.Localization;
 
-namespace MasterPOS.API.Infrastructure.Inventory;
+namespace HRM.API.Infrastructure.Inventory;
 public class PurchaseReturnService : IPurchaseReturnService
 {
     private readonly ApplicationDbContext _context;

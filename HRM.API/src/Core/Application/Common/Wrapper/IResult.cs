@@ -1,4 +1,4 @@
-﻿namespace MasterPOS.API.Application.Common.Wrapper;
+﻿namespace HRM.API.Application.Common.Wrapper;
 public interface IResult
 {
     List<string> Messages { get; set; }

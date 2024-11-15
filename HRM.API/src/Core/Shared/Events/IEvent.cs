@@ -1,4 +1,4 @@
-﻿namespace MasterPOS.API.Shared.Events;
+﻿namespace HRM.API.Shared.Events;
 
 public interface IEvent
 {

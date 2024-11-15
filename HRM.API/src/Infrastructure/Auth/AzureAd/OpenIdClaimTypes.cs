@@ -1,4 +1,4 @@
-﻿namespace MasterPOS.API.Infrastructure.Auth.AzureAd;
+﻿namespace HRM.API.Infrastructure.Auth.AzureAd;
 
 internal static class OpenIdConnectClaimTypes
 {

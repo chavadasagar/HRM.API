@@ -1,10 +1,10 @@
-﻿using MasterPOS.API.Application.Common.Exceptions;
-using MasterPOS.API.Application.Common.Mailing;
-using MasterPOS.API.Application.Identity;
-using MasterPOS.API.Application.Identity.Users.Password;
+﻿using HRM.API.Application.Common.Exceptions;
+using HRM.API.Application.Common.Mailing;
+using HRM.API.Application.Identity;
+using HRM.API.Application.Identity.Users.Password;
 using Microsoft.AspNetCore.WebUtilities;
 
-namespace MasterPOS.API.Infrastructure.Identity;
+namespace HRM.API.Infrastructure.Identity;
 
 internal partial class UserService
 {

@@ -1,6 +1,6 @@
-using MasterPOS.API.Application.Multitenancy;
+using HRM.API.Application.Multitenancy;
 
-namespace MasterPOS.API.Host.Controllers.Multitenancy;
+namespace HRM.API.Host.Controllers.Multitenancy;
 
 
 public class TenantsController : VersionNeutralApiController

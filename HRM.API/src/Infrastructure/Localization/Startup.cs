@@ -1,12 +1,12 @@
 ﻿using System.Globalization;
-using MasterPOS.API.Infrastructure.Middleware;
+using HRM.API.Infrastructure.Middleware;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Localization;
 
-namespace MasterPOS.API.Infrastructure.Localization;
+namespace HRM.API.Infrastructure.Localization;
 
 internal static class Startup
 {

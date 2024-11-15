@@ -1,4 +1,4 @@
-namespace MasterPOS.API.Infrastructure.BackgroundJobs;
+namespace HRM.API.Infrastructure.BackgroundJobs;
 
 public class HangfireStorageSettings
 {

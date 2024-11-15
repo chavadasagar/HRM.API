@@ -1,7 +1,7 @@
-﻿using MasterPOS.API.Application.Catalog;
-using MasterPOS.API.Application.Common.Wrapper;
-using MasterPOS.API.Domain.Catalog;
-using MasterPOS.API.Host.Controllers;
+﻿using HRM.API.Application.Catalog;
+using HRM.API.Application.Common.Wrapper;
+using HRM.API.Domain.Catalog;
+using HRM.API.Host.Controllers;
 using Microsoft.Extensions.Localization;
 
 namespace FSH.WebApi.Host.Controllers.Catalog;

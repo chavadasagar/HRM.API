@@ -1,7 +1,7 @@
-﻿using MasterPOS.API.Application.Common.Interfaces;
+﻿using HRM.API.Application.Common.Interfaces;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace MasterPOS.API.Infrastructure.Common;
+namespace HRM.API.Infrastructure.Common;
 
 internal static class Startup
 {

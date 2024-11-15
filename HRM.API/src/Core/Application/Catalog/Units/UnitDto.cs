@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MasterPOS.API.Application.Catalog.Units;
+namespace HRM.API.Application.Catalog.Units;
 public class UnitDto : IDto
 {
     public Guid Id { get; set; }

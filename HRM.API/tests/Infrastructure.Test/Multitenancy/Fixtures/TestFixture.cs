@@ -1,5 +1,5 @@
-﻿using MasterPOS.API.Application.Common.Persistence;
-using MasterPOS.API.Infrastructure.Persistence.ConnectionString;
+﻿using HRM.API.Application.Common.Persistence;
+using HRM.API.Infrastructure.Persistence.ConnectionString;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Xunit.Microsoft.DependencyInjection.Abstracts;

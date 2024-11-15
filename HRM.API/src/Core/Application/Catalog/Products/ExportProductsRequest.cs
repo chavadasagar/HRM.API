@@ -1,6 +1,6 @@
-﻿using MasterPOS.API.Application.Common.Exporters;
+﻿using HRM.API.Application.Common.Exporters;
 
-namespace MasterPOS.API.Application.Catalog.Products;
+namespace HRM.API.Application.Catalog.Products;
 
 public class ExportProductsRequest : BaseFilter, IRequest<Stream>
 {

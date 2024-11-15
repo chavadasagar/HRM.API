@@ -1,7 +1,7 @@
 using System.ComponentModel;
 using System.Text.RegularExpressions;
 
-namespace MasterPOS.API.Infrastructure.Common.Extensions;
+namespace HRM.API.Infrastructure.Common.Extensions;
 
 public static class EnumExtensions
 {

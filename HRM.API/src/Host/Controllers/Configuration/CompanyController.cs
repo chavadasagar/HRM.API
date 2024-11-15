@@ -1,10 +1,10 @@
-﻿using MasterPOS.API.Application.Common.Wrapper;
-using MasterPOS.API.Application.Configuration;
-using MasterPOS.API.Application.Multitenancy;
-using MasterPOS.API.Infrastructure.Multitenancy;
+﻿using HRM.API.Application.Common.Wrapper;
+using HRM.API.Application.Configuration;
+using HRM.API.Application.Multitenancy;
+using HRM.API.Infrastructure.Multitenancy;
 using Microsoft.Extensions.Localization;
 
-namespace MasterPOS.API.Host.Controllers.Company;
+namespace HRM.API.Host.Controllers.Company;
 
 public class CompanyController : VersionNeutralApiController
 {

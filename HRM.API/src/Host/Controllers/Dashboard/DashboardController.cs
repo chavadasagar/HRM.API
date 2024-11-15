@@ -1,6 +1,6 @@
-using MasterPOS.API.Application.Dashboard;
+using HRM.API.Application.Dashboard;
 
-namespace MasterPOS.API.Host.Controllers.Dashboard;
+namespace HRM.API.Host.Controllers.Dashboard;
 
 public class DashboardController : VersionedApiController
 {

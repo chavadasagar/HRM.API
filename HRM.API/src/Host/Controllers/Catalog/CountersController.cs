@@ -1,9 +1,9 @@
-﻿using MasterPOS.API.Application.Catalog.Counters;
-using MasterPOS.API.Application.Catalog.Stores;
-using MasterPOS.API.Application.Common.Wrapper;
+﻿using HRM.API.Application.Catalog.Counters;
+using HRM.API.Application.Catalog.Stores;
+using HRM.API.Application.Common.Wrapper;
 using Microsoft.Extensions.Localization;
 
-namespace MasterPOS.API.Host.Controllers.Catalog;
+namespace HRM.API.Host.Controllers.Catalog;
 
 public class CountersController : VersionedApiController
 {

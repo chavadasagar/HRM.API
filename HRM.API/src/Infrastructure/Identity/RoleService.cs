@@ -1,23 +1,23 @@
 using Finbuckle.MultiTenant;
-using MasterPOS.API.Application.Common.Events;
-using MasterPOS.API.Application.Common.Exceptions;
-using MasterPOS.API.Application.Common.Interfaces;
-using MasterPOS.API.Application.Identity;
-using MasterPOS.API.Application.Identity.Roles;
-using MasterPOS.API.Domain.Identity;
-using MasterPOS.API.Infrastructure.Persistence.Context;
-using MasterPOS.API.Shared.Authorization;
-using MasterPOS.API.Shared.Multitenancy;
+using HRM.API.Application.Common.Events;
+using HRM.API.Application.Common.Exceptions;
+using HRM.API.Application.Common.Interfaces;
+using HRM.API.Application.Identity;
+using HRM.API.Application.Identity.Roles;
+using HRM.API.Domain.Identity;
+using HRM.API.Infrastructure.Persistence.Context;
+using HRM.API.Shared.Authorization;
+using HRM.API.Shared.Multitenancy;
 using Mapster;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Localization;
-using MasterPOS.API.Application.Common.Models;
-using MasterPOS.API.Application.Common.Specification;
+using HRM.API.Application.Common.Models;
+using HRM.API.Application.Common.Specification;
 using Ardalis.Specification.EntityFrameworkCore;
-using MasterPOS.API.Application.Common.Wrapper;
+using HRM.API.Application.Common.Wrapper;
 
-namespace MasterPOS.API.Infrastructure.Identity;
+namespace HRM.API.Infrastructure.Identity;
 
 internal class RoleService : IRoleService
 {

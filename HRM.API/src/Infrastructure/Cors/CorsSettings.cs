@@ -1,4 +1,4 @@
-namespace MasterPOS.API.Infrastructure.Common.Settings;
+namespace HRM.API.Infrastructure.Common.Settings;
 
 public class CorsSettings
 {

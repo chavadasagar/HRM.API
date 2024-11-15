@@ -1,7 +1,7 @@
-﻿using MasterPOS.API.Application.Identity.Roles;
-using MasterPOS.API.Application.Identity.Users;
+﻿using HRM.API.Application.Identity.Roles;
+using HRM.API.Application.Identity.Users;
 
-namespace MasterPOS.API.Application.Dashboard;
+namespace HRM.API.Application.Dashboard;
 
 public class GetStatsRequest : IRequest<StatsDto>
 {

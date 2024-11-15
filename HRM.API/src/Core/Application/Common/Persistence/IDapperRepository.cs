@@ -1,6 +1,6 @@
 using System.Data;
 
-namespace MasterPOS.API.Application.Common.Persistence;
+namespace HRM.API.Application.Common.Persistence;
 
 public interface IDapperRepository : ITransientService
 {

@@ -1,9 +1,9 @@
-using MasterPOS.API.Application.Common.Interfaces;
+using HRM.API.Application.Common.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Serilog;
 using Serilog.Context;
 
-namespace MasterPOS.API.Infrastructure.Middleware;
+namespace HRM.API.Infrastructure.Middleware;
 
 public class ResponseLoggingMiddleware : IMiddleware
 {

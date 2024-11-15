@@ -1,7 +1,7 @@
-﻿using MasterPOS.API.Application.Catalog.Counters;
-using MasterPOS.API.Domain.Identity;
+﻿using HRM.API.Application.Catalog.Counters;
+using HRM.API.Domain.Identity;
 
-namespace MasterPOS.API.Application.Identity.Customers;
+namespace HRM.API.Application.Identity.Customers;
 public class DeleteCustomerRequest : IRequest<string>
 {
     public Guid Id { get; set; }

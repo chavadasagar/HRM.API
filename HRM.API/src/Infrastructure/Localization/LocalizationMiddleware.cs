@@ -1,7 +1,7 @@
 using System.Globalization;
 using Microsoft.AspNetCore.Http;
 
-namespace MasterPOS.API.Infrastructure.Localization;
+namespace HRM.API.Infrastructure.Localization;
 
 public class LocalizationMiddleware : IMiddleware
 {

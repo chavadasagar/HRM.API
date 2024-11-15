@@ -1,6 +1,6 @@
-﻿using MasterPOS.API.Domain.Catalog;
+﻿using HRM.API.Domain.Catalog;
 
-namespace MasterPOS.API.Domain.Inventory;
+namespace HRM.API.Domain.Inventory;
 public class PurchaseProduct : AuditableEntity, IAggregateRoot
 {
     public Guid PurchaseId { get; private set; } = default!;

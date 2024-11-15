@@ -1,4 +1,4 @@
-﻿namespace MasterPOS.API.Shared.Notifications;
+﻿namespace HRM.API.Shared.Notifications;
 
 public static class NotificationConstants
 {

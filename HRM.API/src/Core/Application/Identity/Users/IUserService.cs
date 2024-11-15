@@ -1,7 +1,7 @@
 using System.Security.Claims;
-using MasterPOS.API.Application.Identity.Users.Password;
+using HRM.API.Application.Identity.Users.Password;
 
-namespace MasterPOS.API.Application.Identity.Users;
+namespace HRM.API.Application.Identity.Users;
 
 public interface IUserService : ITransientService
 {

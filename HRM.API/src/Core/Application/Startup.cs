@@ -1,7 +1,7 @@
 using System.Reflection;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace MasterPOS.API.Application;
+namespace HRM.API.Application;
 
 public static class Startup
 {

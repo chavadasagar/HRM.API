@@ -1,4 +1,4 @@
-﻿namespace MasterPOS.API.Infrastructure.Common;
+﻿namespace HRM.API.Infrastructure.Common;
 
 internal class DbProviderKeys
 {

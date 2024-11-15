@@ -1,4 +1,4 @@
-using MasterPOS.API.Shared.Authorization;
+using HRM.API.Shared.Authorization;
 
 namespace System.Security.Claims;
 

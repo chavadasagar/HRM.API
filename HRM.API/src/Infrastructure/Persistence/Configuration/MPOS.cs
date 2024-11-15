@@ -1,12 +1,12 @@
 ﻿using Finbuckle.MultiTenant.EntityFrameworkCore;
-using MasterPOS.API.Domain.Catalog;
-using MasterPOS.API.Domain.Configuration;
-using MasterPOS.API.Domain.Identity;
-using MasterPOS.API.Domain.Inventory;
+using HRM.API.Domain.Catalog;
+using HRM.API.Domain.Configuration;
+using HRM.API.Domain.Identity;
+using HRM.API.Domain.Inventory;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace MasterPOS.API.Infrastructure.Persistence.Configuration;
+namespace HRM.API.Infrastructure.Persistence.Configuration;
 
 public class BrandConfig : IEntityTypeConfiguration<Brand>
 {

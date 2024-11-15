@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace MasterPOS.API.Infrastructure.Mailing;
+namespace HRM.API.Infrastructure.Mailing;
 
 internal static class Startup
 {

@@ -1,20 +1,20 @@
 using System.Reflection;
-using MasterPOS.API.Infrastructure.Auth;
-using MasterPOS.API.Infrastructure.BackgroundJobs;
-using MasterPOS.API.Infrastructure.Caching;
-using MasterPOS.API.Infrastructure.Common;
-using MasterPOS.API.Infrastructure.Cors;
-using MasterPOS.API.Infrastructure.FileStorage;
-using MasterPOS.API.Infrastructure.Localization;
-using MasterPOS.API.Infrastructure.Mailing;
-using MasterPOS.API.Infrastructure.Mapping;
-using MasterPOS.API.Infrastructure.Middleware;
-using MasterPOS.API.Infrastructure.Multitenancy;
-using MasterPOS.API.Infrastructure.Notifications;
-using MasterPOS.API.Infrastructure.OpenApi;
-using MasterPOS.API.Infrastructure.Persistence;
-using MasterPOS.API.Infrastructure.Persistence.Initialization;
-using MasterPOS.API.Infrastructure.SecurityHeaders;
+using HRM.API.Infrastructure.Auth;
+using HRM.API.Infrastructure.BackgroundJobs;
+using HRM.API.Infrastructure.Caching;
+using HRM.API.Infrastructure.Common;
+using HRM.API.Infrastructure.Cors;
+using HRM.API.Infrastructure.FileStorage;
+using HRM.API.Infrastructure.Localization;
+using HRM.API.Infrastructure.Mailing;
+using HRM.API.Infrastructure.Mapping;
+using HRM.API.Infrastructure.Middleware;
+using HRM.API.Infrastructure.Multitenancy;
+using HRM.API.Infrastructure.Notifications;
+using HRM.API.Infrastructure.OpenApi;
+using HRM.API.Infrastructure.Persistence;
+using HRM.API.Infrastructure.Persistence.Initialization;
+using HRM.API.Infrastructure.SecurityHeaders;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Mvc;
@@ -22,7 +22,7 @@ using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace MasterPOS.API.Infrastructure;
+namespace HRM.API.Infrastructure;
 
 public static class Startup
 {

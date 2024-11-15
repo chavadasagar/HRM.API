@@ -1,4 +1,4 @@
-namespace MasterPOS.API.Application.Identity.Roles;
+namespace HRM.API.Application.Identity.Roles;
 
 public class CreateOrUpdateRoleRequest
 {

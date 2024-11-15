@@ -1,7 +1,7 @@
-﻿using MasterPOS.API.Application.Multitenancy;
-using MasterPOS.API.Domain.Configuration;
+﻿using HRM.API.Application.Multitenancy;
+using HRM.API.Domain.Configuration;
 
-namespace MasterPOS.API.Application.Configuration;
+namespace HRM.API.Application.Configuration;
 public class UpdateCompanyRequest : IRequest<string>
 {
     public Guid Id { get; set; }

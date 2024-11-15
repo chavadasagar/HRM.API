@@ -8,7 +8,7 @@ using NSwag.AspNetCore;
 using NSwag.Generation.Processors.Security;
 using ZymLabs.NSwag.FluentValidation;
 
-namespace MasterPOS.API.Infrastructure.OpenApi;
+namespace HRM.API.Infrastructure.OpenApi;
 
 internal static class Startup
 {

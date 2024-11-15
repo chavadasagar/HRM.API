@@ -1,10 +1,10 @@
 using System.Runtime.InteropServices;
 using System.Text.RegularExpressions;
-using MasterPOS.API.Application.Common.FileStorage;
-using MasterPOS.API.Domain.Common;
-using MasterPOS.API.Infrastructure.Common.Extensions;
+using HRM.API.Application.Common.FileStorage;
+using HRM.API.Domain.Common;
+using HRM.API.Infrastructure.Common.Extensions;
 
-namespace MasterPOS.API.Infrastructure.FileStorage;
+namespace HRM.API.Infrastructure.FileStorage;
 
 public class LocalFileStorageService : IFileStorageService
 {

@@ -1,9 +1,9 @@
 ﻿using Finbuckle.MultiTenant.EntityFrameworkCore;
-using MasterPOS.API.Infrastructure.Auditing;
+using HRM.API.Infrastructure.Auditing;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace MasterPOS.API.Infrastructure.Persistence.Configuration;
+namespace HRM.API.Infrastructure.Persistence.Configuration;
 
 public class AuditTrailConfig : IEntityTypeConfiguration<Trail>
 {

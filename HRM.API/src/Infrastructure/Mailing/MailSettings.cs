@@ -1,4 +1,4 @@
-namespace MasterPOS.API.Infrastructure.Mailing;
+namespace HRM.API.Infrastructure.Mailing;
 
 public class MailSettings
 {

@@ -2,7 +2,7 @@ using System.Linq.Expressions;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Query;
 
-namespace MasterPOS.API.Infrastructure.Persistence.Context;
+namespace HRM.API.Infrastructure.Persistence.Context;
 
 internal static class ModelBuilderExtensions
 {

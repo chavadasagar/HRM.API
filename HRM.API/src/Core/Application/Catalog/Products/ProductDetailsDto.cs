@@ -1,8 +1,8 @@
-using MasterPOS.API.Application.Catalog.Brands;
-using MasterPOS.API.Application.Catalog.Units;
-using MasterPOS.API.Application.Inventory;
+using HRM.API.Application.Catalog.Brands;
+using HRM.API.Application.Catalog.Units;
+using HRM.API.Application.Inventory;
 
-namespace MasterPOS.API.Application.Catalog.Products;
+namespace HRM.API.Application.Catalog.Products;
 
 public class ProductDetailsDto : IDto
 {

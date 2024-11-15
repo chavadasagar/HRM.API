@@ -1,14 +1,14 @@
-using MasterPOS.API.Application.Multitenancy;
-using MasterPOS.API.Infrastructure.Persistence;
-using MasterPOS.API.Shared.Authorization;
-using MasterPOS.API.Shared.Multitenancy;
+using HRM.API.Application.Multitenancy;
+using HRM.API.Infrastructure.Persistence;
+using HRM.API.Shared.Authorization;
+using HRM.API.Shared.Multitenancy;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Primitives;
 
-namespace MasterPOS.API.Infrastructure.Multitenancy;
+namespace HRM.API.Infrastructure.Multitenancy;
 
 internal static class Startup
 {

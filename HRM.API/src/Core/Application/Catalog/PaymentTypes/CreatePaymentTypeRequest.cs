@@ -1,4 +1,4 @@
-namespace MasterPOS.API.Application.Catalog.PaymentTypes;
+namespace HRM.API.Application.Catalog.PaymentTypes;
 
 public class CreatePaymentTypeRequest : IRequest<Guid>
 {

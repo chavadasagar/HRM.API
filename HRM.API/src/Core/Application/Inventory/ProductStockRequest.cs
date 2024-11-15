@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MasterPOS.API.Application.Inventory;
+namespace HRM.API.Application.Inventory;
 public class ProductStockRequest
 {
     public Guid ProductId { get; set; } = default!;

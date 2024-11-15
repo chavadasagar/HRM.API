@@ -1,12 +1,12 @@
 using System.Data;
 using Dapper;
 using Finbuckle.MultiTenant.EntityFrameworkCore;
-using MasterPOS.API.Application.Common.Exceptions;
-using MasterPOS.API.Application.Common.Persistence;
-using MasterPOS.API.Domain.Common.Contracts;
-using MasterPOS.API.Infrastructure.Persistence.Context;
+using HRM.API.Application.Common.Exceptions;
+using HRM.API.Application.Common.Persistence;
+using HRM.API.Domain.Common.Contracts;
+using HRM.API.Infrastructure.Persistence.Context;
 
-namespace MasterPOS.API.Infrastructure.Persistence.Repository;
+namespace HRM.API.Infrastructure.Persistence.Repository;
 
 public class DapperRepository : IDapperRepository
 {

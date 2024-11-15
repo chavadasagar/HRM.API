@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace MasterPOS.API.Application.Catalog.Brands;
+namespace HRM.API.Application.Catalog.Brands;
 
 public interface IBrandGeneratorJob : IScopedService
 {

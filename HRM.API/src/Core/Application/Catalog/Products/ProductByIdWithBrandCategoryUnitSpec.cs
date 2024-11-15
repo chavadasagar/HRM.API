@@ -1,4 +1,4 @@
-﻿namespace MasterPOS.API.Application.Catalog.Products;
+﻿namespace HRM.API.Application.Catalog.Products;
 
 public class ProductByIdWithBrandCategoryUnitSpec : Specification<Product, ProductDetailsDto>, ISingleResultSpecification
 {

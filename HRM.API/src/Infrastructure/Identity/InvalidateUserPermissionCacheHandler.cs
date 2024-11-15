@@ -1,9 +1,9 @@
-﻿using MasterPOS.API.Application.Common.Events;
-using MasterPOS.API.Application.Identity.Users;
-using MasterPOS.API.Domain.Identity;
+﻿using HRM.API.Application.Common.Events;
+using HRM.API.Application.Identity.Users;
+using HRM.API.Domain.Identity;
 using Microsoft.AspNetCore.Identity;
 
-namespace MasterPOS.API.Infrastructure.Identity;
+namespace HRM.API.Infrastructure.Identity;
 
 internal class InvalidateUserPermissionCacheHandler :
     IEventNotificationHandler<ApplicationUserUpdatedEvent>,

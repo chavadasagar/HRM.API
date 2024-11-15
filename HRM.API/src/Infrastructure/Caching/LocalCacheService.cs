@@ -1,8 +1,8 @@
-using MasterPOS.API.Application.Common.Caching;
+using HRM.API.Application.Common.Caching;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Logging;
 
-namespace MasterPOS.API.Infrastructure.Caching;
+namespace HRM.API.Infrastructure.Caching;
 
 public class LocalCacheService : ICacheService
 {

@@ -1,6 +1,6 @@
-using MasterPOS.API.Domain.Common.Events;
+using HRM.API.Domain.Common.Events;
 
-namespace MasterPOS.API.Application.Catalog.Counters.EventHandlers;
+namespace HRM.API.Application.Catalog.Counters.EventHandlers;
 
 public class CounterUpdatedEventHandler : EventNotificationHandler<EntityUpdatedEvent<Counter>>
 {

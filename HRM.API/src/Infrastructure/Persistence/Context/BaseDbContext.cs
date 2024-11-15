@@ -1,16 +1,16 @@
 using System.Data;
 using Finbuckle.MultiTenant;
-using MasterPOS.API.Application.Common.Events;
-using MasterPOS.API.Application.Common.Interfaces;
-using MasterPOS.API.Domain.Common.Contracts;
-using MasterPOS.API.Infrastructure.Auditing;
-using MasterPOS.API.Infrastructure.Identity;
+using HRM.API.Application.Common.Events;
+using HRM.API.Application.Common.Interfaces;
+using HRM.API.Domain.Common.Contracts;
+using HRM.API.Infrastructure.Auditing;
+using HRM.API.Infrastructure.Identity;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.Extensions.Options;
 
-namespace MasterPOS.API.Infrastructure.Persistence.Context;
+namespace HRM.API.Infrastructure.Persistence.Context;
 
 public abstract class BaseDbContext : MultiTenantIdentityDbContext<ApplicationUser, ApplicationRole, string, IdentityUserClaim<string>, IdentityUserRole<string>, IdentityUserLogin<string>, ApplicationRoleClaim, IdentityUserToken<string>>
 {

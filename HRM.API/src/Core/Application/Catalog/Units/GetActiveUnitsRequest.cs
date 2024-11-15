@@ -1,6 +1,6 @@
-﻿using Unit = MasterPOS.API.Domain.Catalog.Unit;
+﻿using Unit = HRM.API.Domain.Catalog.Unit;
 
-namespace MasterPOS.API.Application.Catalog;
+namespace HRM.API.Application.Catalog;
 
 public class GetActiveUnitsRequest : IRequest<List<UnitDropdownDto>>
 {

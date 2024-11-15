@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 
-namespace MasterPOS.API.Infrastructure.SecurityHeaders;
+namespace HRM.API.Infrastructure.SecurityHeaders;
 
 internal static class Startup
 {

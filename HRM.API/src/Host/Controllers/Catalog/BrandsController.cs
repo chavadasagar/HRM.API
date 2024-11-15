@@ -1,8 +1,8 @@
-﻿using MasterPOS.API.Application.Catalog.Brands;
-using MasterPOS.API.Application.Common.Wrapper;
+﻿using HRM.API.Application.Catalog.Brands;
+using HRM.API.Application.Common.Wrapper;
 using Microsoft.Extensions.Localization;
 
-namespace MasterPOS.API.Host.Controllers.Catalog;
+namespace HRM.API.Host.Controllers.Catalog;
 
 public class BrandsController : VersionedApiController
 {

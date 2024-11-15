@@ -1,4 +1,4 @@
-﻿namespace MasterPOS.API.Application.Configuration;
+﻿namespace HRM.API.Application.Configuration;
 public class CompanyModel
 {
     public Guid Id { get; set; }

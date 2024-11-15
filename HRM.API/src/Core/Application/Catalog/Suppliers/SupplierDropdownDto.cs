@@ -1,4 +1,4 @@
-﻿namespace MasterPOS.API.Application.Catalog.Suppliers;
+﻿namespace HRM.API.Application.Catalog.Suppliers;
 public class SupplierDropdownDto
 {
     public Guid Id { get; set; }

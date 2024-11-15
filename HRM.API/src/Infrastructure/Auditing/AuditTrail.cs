@@ -1,7 +1,7 @@
-using MasterPOS.API.Application.Common.Interfaces;
+using HRM.API.Application.Common.Interfaces;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 
-namespace MasterPOS.API.Infrastructure.Auditing;
+namespace HRM.API.Infrastructure.Auditing;
 
 public class AuditTrail
 {

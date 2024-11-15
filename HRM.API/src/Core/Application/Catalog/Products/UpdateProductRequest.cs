@@ -1,7 +1,7 @@
-using MasterPOS.API.Domain.Common.Events;
-using MasterPOS.API.Domain.Inventory;
+using HRM.API.Domain.Common.Events;
+using HRM.API.Domain.Inventory;
 
-namespace MasterPOS.API.Application.Catalog.Products;
+namespace HRM.API.Application.Catalog.Products;
 
 public class UpdateProductRequest : IRequest<Guid>
 {

@@ -1,7 +1,7 @@
-using MasterPOS.API.Shared.Authorization;
+using HRM.API.Shared.Authorization;
 using Microsoft.AspNetCore.Authorization;
 
-namespace MasterPOS.API.Infrastructure.Auth.Permissions;
+namespace HRM.API.Infrastructure.Auth.Permissions;
 
 public class MustHavePermissionAttribute : AuthorizeAttribute
 {

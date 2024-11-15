@@ -1,5 +1,5 @@
 ﻿
-using MasterPOS.API.Application.Catalog;
+using HRM.API.Application.Catalog;
 
 public class SearchCategoriesRequest : PaginationFilter, IRequest<PaginationResponse<CategoryDto>>
 {

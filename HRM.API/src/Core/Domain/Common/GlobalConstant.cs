@@ -1,4 +1,4 @@
-﻿namespace MasterPOS.API.Domain.Common;
+﻿namespace HRM.API.Domain.Common;
 public static class GlobalConstant
 {
 

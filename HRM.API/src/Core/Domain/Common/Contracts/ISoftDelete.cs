@@ -1,4 +1,4 @@
-namespace MasterPOS.API.Domain.Common.Contracts;
+namespace HRM.API.Domain.Common.Contracts;
 
 public interface ISoftDelete
 {

@@ -1,10 +1,10 @@
 ﻿using System.Security.Claims;
 using Finbuckle.MultiTenant;
-using MasterPOS.API.Application.Common.Exceptions;
-using MasterPOS.API.Application.Identity.Users;
-using MasterPOS.API.Infrastructure.Multitenancy;
-using MasterPOS.API.Shared.Authorization;
-using MasterPOS.API.Shared.Multitenancy;
+using HRM.API.Application.Common.Exceptions;
+using HRM.API.Application.Identity.Users;
+using HRM.API.Infrastructure.Multitenancy;
+using HRM.API.Shared.Authorization;
+using HRM.API.Shared.Multitenancy;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -12,7 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Identity.Web;
 using Serilog;
 
-namespace MasterPOS.API.Infrastructure.Auth.AzureAd;
+namespace HRM.API.Infrastructure.Auth.AzureAd;
 
 internal class AzureAdJwtBearerEvents : JwtBearerEvents
 {

@@ -1,4 +1,4 @@
-﻿namespace MasterPOS.API.Application.Catalog.Counters;
+﻿namespace HRM.API.Application.Catalog.Counters;
 public class UpdateStatusCounterRequest : IRequest<Guid>
 {
     public Guid Id { get; set; }

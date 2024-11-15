@@ -1,4 +1,4 @@
-﻿namespace MasterPOS.API.Domain.Identity;
+﻿namespace HRM.API.Domain.Identity;
 
 public abstract class ApplicationRoleEvent : DomainEvent
 {
