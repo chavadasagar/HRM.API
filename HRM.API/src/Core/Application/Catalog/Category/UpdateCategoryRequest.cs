@@ -30,12 +30,11 @@ public class UpdateCategoryRequestHandler : IRequestHandler<UpdateCategoryReques
 {
     // Add Domain Events automatically by using IRepositoryWithEvents
     private readonly IRepositoryWithEvents<Category> _repository;
-    private readonly IReadRepository<Product> _productRepo;
     private readonly IStringLocalizer<UpdateCategoryRequestHandler> _localizer;
     private readonly IFileStorageService _file;
 
-    public UpdateCategoryRequestHandler(IRepositoryWithEvents<Category> repository, IReadRepository<Product> productRepo, IStringLocalizer<UpdateCategoryRequestHandler> localizer, IFileStorageService file) =>
-        (_repository, _productRepo, _localizer, _file) = (repository, productRepo, localizer, file);
+    public UpdateCategoryRequestHandler(IRepositoryWithEvents<Category> repository, IStringLocalizer<UpdateCategoryRequestHandler> localizer, IFileStorageService file) =>
+        (_repository, _localizer, _file) = (repository, localizer, file);
 
     public async Task<Guid> Handle(UpdateCategoryRequest request, CancellationToken cancellationToken)
     {
@@ -43,7 +42,7 @@ public class UpdateCategoryRequestHandler : IRequestHandler<UpdateCategoryReques
 
         _ = category ?? throw new NotFoundException(string.Format(_localizer["category.notfound"], request.Id));
 
-        if (request.IsActive == false && category.IsActive == true && (await _productRepo.AnyAsync(new ProductsByCategorySpec(request.Id), cancellationToken)))
+        if (request.IsActive == false && category.IsActive == true)
         {
             throw new ConflictException(_localizer["category.cannotbeinactive"]);
         }

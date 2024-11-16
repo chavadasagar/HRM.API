@@ -1,5 +1,3 @@
-using HRM.API.Application.Catalog.Products;
-
 namespace HRM.API.Application.Catalog.Brands;
 
 public class UpdateBrandRequest : IRequest<Guid>
@@ -27,12 +25,11 @@ public class UpdateBrandRequestHandler : IRequestHandler<UpdateBrandRequest, Gui
 {
     // Add Domain Events automatically by using IRepositoryWithEvents
     private readonly IRepositoryWithEvents<Brand> _repository;
-    private readonly IReadRepository<Product> _productRepo;
     private readonly IStringLocalizer<UpdateBrandRequestHandler> _localizer;
     private readonly IFileStorageService _file;
 
-    public UpdateBrandRequestHandler(IRepositoryWithEvents<Brand> repository, IReadRepository<Product> productRepo, IStringLocalizer<UpdateBrandRequestHandler> localizer, IFileStorageService file) =>
-        (_repository, _productRepo, _localizer, _file) = (repository, productRepo, localizer, file);
+    public UpdateBrandRequestHandler(IRepositoryWithEvents<Brand> repository, IStringLocalizer<UpdateBrandRequestHandler> localizer, IFileStorageService file) =>
+        (_repository, _localizer, _file) = (repository, localizer, file);
 
     public async Task<Guid> Handle(UpdateBrandRequest request, CancellationToken cancellationToken)
     {
@@ -40,7 +37,7 @@ public class UpdateBrandRequestHandler : IRequestHandler<UpdateBrandRequest, Gui
 
         _ = brand ?? throw new NotFoundException(string.Format(_localizer["brand.notfound"], request.Id));
 
-        if (request.IsActive == false && brand.IsActive == true && (await _productRepo.AnyAsync(new ProductsByBrandSpec(request.Id), cancellationToken)))
+        if (request.IsActive == false && brand.IsActive == true)
         {
             throw new ConflictException(_localizer["brand.cannotbeinactive"]);
         }

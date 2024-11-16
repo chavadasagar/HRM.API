@@ -12,20 +12,14 @@ public class DeleteCategoryRequest : IRequest<string>
 public class DeleteCategoryRequestHandler : IRequestHandler<DeleteCategoryRequest, string>
 {
     private readonly IRepositoryWithEvents<Category> _categoryRepo;
-    private readonly IReadRepository<Product> _productRepo;
     private readonly IStringLocalizer<DeleteCategoryRequestHandler> _localizer;
     private readonly IFileStorageService _file;
 
-    public DeleteCategoryRequestHandler(IRepositoryWithEvents<Category> categoryRepo, IReadRepository<Product> productRepo, IStringLocalizer<DeleteCategoryRequestHandler> localizer, IFileStorageService file) =>
-        (_categoryRepo, _productRepo, _localizer, _file) = (categoryRepo, productRepo, localizer, file);
+    public DeleteCategoryRequestHandler(IRepositoryWithEvents<Category> categoryRepo, IStringLocalizer<DeleteCategoryRequestHandler> localizer, IFileStorageService file) =>
+        (_categoryRepo, _localizer, _file) = (categoryRepo, localizer, file);
 
     public async Task<string> Handle(DeleteCategoryRequest request, CancellationToken cancellationToken)
     {
-        if (await _productRepo.AnyAsync(new ProductsByCategorySpec(request.Id), cancellationToken))
-        {
-            throw new ConflictException(_localizer["category.cannotbedeleted"]);
-        }
-
         var category = await _categoryRepo.GetByIdAsync(request.Id);
 
         _ = category ?? throw new NotFoundException(_localizer["category.notfound"]);

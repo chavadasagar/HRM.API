@@ -1,5 +1,4 @@
-﻿using HRM.API.Application.Catalog.Counters;
-using HRM.API.Domain.Identity;
+﻿using HRM.API.Domain.Identity;
 
 namespace HRM.API.Application.Identity.Customers;
 public class DeleteCustomerRequest : IRequest<string>

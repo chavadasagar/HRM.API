@@ -1,8 +1,4 @@
 ﻿using HRM.API.Application.Catalog;
-using HRM.API.Application.Catalog.PaymentTypes;
-using HRM.API.Application.Catalog.Products;
-using HRM.API.Application.Catalog.Stores;
-using HRM.API.Application.Catalog.Suppliers;
 using HRM.API.Application.Common;
 using HRM.API.Application.Identity.Roles;
 
@@ -14,13 +10,6 @@ public class DropdownController : VersionedApiController
     private readonly IRoleService _roleService;
 
     public DropdownController(IRoleService roleService) => _roleService = roleService;
-
-    [HttpGet("stores")]
-    [OpenApiOperation("get store list.", "")]
-    public async Task<List<StoreDropdownDto>> GetStoresAsync()
-    {
-        return await Mediator.Send(new GetActiveStoresRequest());
-    }
 
     [HttpGet("brands")]
     [OpenApiOperation("get brand list.", "")]
@@ -34,34 +23,6 @@ public class DropdownController : VersionedApiController
     public async Task<List<CategoryDropdownDto>> GetCategoriesAsync()
     {
         return await Mediator.Send(new GetActiveCategoriesRequest());
-    }
-
-    [HttpGet("products")]
-    [OpenApiOperation("get product list.", "")]
-    public async Task<List<ProductDropdownDto>> GetProductsAsync()
-    {
-        return await Mediator.Send(new GetActiveProductsRequest());
-    }
-
-    [HttpGet("suppliers")]
-    [OpenApiOperation("get Supplier list.", "")]
-    public async Task<List<SupplierDropdownDto>> GetSuppliersAsync()
-    {
-        return await Mediator.Send(new GetActiveSuppliersRequest());
-    }
-
-    [HttpGet("paymenttypes")]
-    [OpenApiOperation("get Payment Type list.", "")]
-    public async Task<List<PaymentTypeDropdownDto>> GetPaymentTypesAsync()
-    {
-        return await Mediator.Send(new GetActivePaymentTypesRequest());
-    }
-
-    [HttpGet("units")]
-    [OpenApiOperation("get unit list.", "")]
-    public async Task<List<UnitDropdownDto>> GetUnitsAsync()
-    {
-        return await Mediator.Send(new GetActiveUnitsRequest());
     }
 
     [HttpGet("countries")]
