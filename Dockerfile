@@ -21,7 +21,7 @@ RUN dotnet restore "HRM.API/src/Host/Host.csproj" --disable-parallel
 # Copy everything else and build
 COPY . .
 WORKDIR "HRM.API/src/Host"
-RUN dotnet publish "HRM.API/src/Host.csproj" -c Release -o /app/publish
+RUN dotnet publish "HRM.API/HRM.API/src/Host.csproj" -c Release -o /app/publish
 
 # Build the runtime image
 FROM mcr.microsoft.com/dotnet/aspnet:6.0
