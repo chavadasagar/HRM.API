@@ -16,7 +16,7 @@ COPY ["HRM.API/src/Migrators/Migrators.MySQL/Migrators.MySQL.csproj", "src/Migra
 COPY ["HRM.API/src/Migrators/Migrators.PostgreSQL/Migrators.PostgreSQL.csproj", "src/Migrators/Migrators.PostgreSQL/"]
 COPY ["HRM.API/src/Migrators/Migrators.Oracle/Migrators.Oracle.csproj", "src/Migrators/Migrators.Oracle/"]
 
-RUN dotnet restore "HRM.API/src/Host/Host.csproj" --disable-parallel
+RUN dotnet restore "HRM.API/HRM.API/src/Host/Host.csproj" --disable-parallel
 
 # Copy everything else and build
 COPY . .
