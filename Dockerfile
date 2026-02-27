@@ -37,7 +37,7 @@ COPY --from=build /app/publish .
 RUN adduser -u 5678 --disabled-password --gecos "" appuser && chown -R appuser /app
 USER appuser
 
-ENV ASPNETCORE_URLS=https://+:5050;http://+:5060
+ENV ASPNETCORE_URLS=http://+:5050;http://+:5060
 EXPOSE 5050
 EXPOSE 5060
 
