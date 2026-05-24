@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\.Net\\HRM.API\\src\\Core\\Domain\\Domain.csproj": {}
+    "D:\\HRM.API\\HRM.API\\src\\Core\\Domain\\Domain.csproj": {}
   },
   "projects": {
-    "D:\\.Net\\HRM.API\\src\\Core\\Domain\\Domain.csproj": {
+    "D:\\HRM.API\\HRM.API\\src\\Core\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\.Net\\HRM.API\\src\\Core\\Domain\\Domain.csproj",
-        "projectName": "HRM.API.Domain",
-        "projectPath": "D:\\.Net\\HRM.API\\src\\Core\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\sagar\\.nuget\\packages\\",
-        "outputPath": "D:\\.Net\\HRM.API\\src\\Core\\Domain\\obj\\",
+        "projectUniqueName": "D:\\HRM.API\\HRM.API\\src\\Core\\Domain\\Domain.csproj",
+        "projectName": "MasterPOS.API.Domain",
+        "projectPath": "D:\\HRM.API\\HRM.API\\src\\Core\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\Sagar\\.nuget\\packages\\",
+        "outputPath": "D:\\HRM.API\\HRM.API\\src\\Core\\Domain\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\sagar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Sagar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,10 +30,11 @@
         },
         "frameworks": {
           "net6.0": {
+            "framework": "net6.0",
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\.Net\\HRM.API\\src\\Core\\Shared\\Shared.csproj": {
-                "projectPath": "D:\\.Net\\HRM.API\\src\\Core\\Shared\\Shared.csproj"
+              "D:\\HRM.API\\HRM.API\\src\\Core\\Shared\\Shared.csproj": {
+                "projectPath": "D:\\HRM.API\\HRM.API\\src\\Core\\Shared\\Shared.csproj"
               }
             }
           }
@@ -38,10 +43,17 @@
           "warnAsError": [
             "NU1605"
           ]
-        }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.300"
       },
       "frameworks": {
         "net6.0": {
+          "framework": "net6.0",
           "targetAlias": "net6.0",
           "dependencies": {
             "NewId": {
@@ -77,21 +89,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\.Net\\HRM.API\\src\\Core\\Shared\\Shared.csproj": {
+    "D:\\HRM.API\\HRM.API\\src\\Core\\Shared\\Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\.Net\\HRM.API\\src\\Core\\Shared\\Shared.csproj",
-        "projectName": "HRM.API.Shared",
-        "projectPath": "D:\\.Net\\HRM.API\\src\\Core\\Shared\\Shared.csproj",
-        "packagesPath": "C:\\Users\\sagar\\.nuget\\packages\\",
-        "outputPath": "D:\\.Net\\HRM.API\\src\\Core\\Shared\\obj\\",
+        "projectUniqueName": "D:\\HRM.API\\HRM.API\\src\\Core\\Shared\\Shared.csproj",
+        "projectName": "MasterPOS.API.Shared",
+        "projectPath": "D:\\HRM.API\\HRM.API\\src\\Core\\Shared\\Shared.csproj",
+        "packagesPath": "C:\\Users\\Sagar\\.nuget\\packages\\",
+        "outputPath": "D:\\HRM.API\\HRM.API\\src\\Core\\Shared\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\sagar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Sagar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -103,6 +119,7 @@
         },
         "frameworks": {
           "net6.0": {
+            "framework": "net6.0",
             "targetAlias": "net6.0",
             "projectReferences": {}
           }
@@ -111,10 +128,17 @@
           "warnAsError": [
             "NU1605"
           ]
-        }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.300"
       },
       "frameworks": {
         "net6.0": {
+          "framework": "net6.0",
           "targetAlias": "net6.0",
           "dependencies": {
             "Roslynator.Analyzers": {
@@ -146,7 +170,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     }

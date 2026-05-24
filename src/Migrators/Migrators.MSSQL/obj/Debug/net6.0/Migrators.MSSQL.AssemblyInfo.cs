@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Migrators.MSSQL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7c151203afc586f83e383547a5c64cf9e313626c")]
 [assembly: System.Reflection.AssemblyProductAttribute("Migrators.MSSQL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Migrators.MSSQL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
