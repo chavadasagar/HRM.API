@@ -1,5 +1,4 @@
-# MasterPOS
-
+# HRM
 
 
 ## Getting started
